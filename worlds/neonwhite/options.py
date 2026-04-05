@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 
-from Options import Choice, DeathLink, DefaultOnToggle, PerGameCommonOptions, StartInventoryPool
+from Options import Choice, DeathLink, DefaultOnToggle, PerGameCommonOptions, Range, StartInventoryPool
 
 
 class Difficulty(Choice):
@@ -31,6 +31,27 @@ class MedalCap(Choice):
     option_dev = 5
     default = 3
 
+class RankRequirement(Range):
+    """
+    The amount of Neon Ranks required to get to the last mission when mission randomization is enabled.
+    The rest of the mission requirements will scale accordingly.
+    """
+    display_name = "Rank Requirement"
+    range_start = 50
+    default = 100
+    range_end = 500
+
+
+class MissionCount(Range):
+    """
+    The amount of Missions for the game to have when mission randomization is enabled.
+    Spreads evenly across all levels, then spreads across the later half with the remainder.
+    """
+    display_name = "Mission Count"
+    range_start = 3
+    default = 11
+    range_end = 60
+
 class ProgressiveChecks(DefaultOnToggle):
     """
     If every medal up to the medal cap should count for checks, or if only 1 check occurs for achieving the cap medal.
@@ -56,4 +77,6 @@ class NeonWhiteOptions(PerGameCommonOptions):
     bad_effects: Traps
     progressive_checks: ProgressiveChecks
     medal_cap: MedalCap
+    rank_requirement: RankRequirement
+    mission_count: MissionCount
     difficulty: Difficulty

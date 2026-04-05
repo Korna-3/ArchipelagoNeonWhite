@@ -33,7 +33,7 @@ class Medal(IntEnum):
 # ruff: disable[E701]
 # fmt: off
 def medal_from_medal_cap(medal_cap: MedalCap) -> Medal:
-    match medal_cap:
+    match int(medal_cap):
         case 1: return Medal.Bronze
         case 2: return Medal.Silver
         case 3: return Medal.Gold
@@ -236,21 +236,18 @@ def level_rando(world: "NeonWhiteWorld", requirements: LevelRequirementSet) -> l
 
     # Shuffle the rest, append, then put Absolution at the end
     world.random.shuffle(level_queue)
-    ret = fist_only_levels + level_queue + ["Absolution"]
-    print(ret)
-    print(len(ret))
-    return ret
+    return fist_only_levels + level_queue + ["Absolution"]
 
 # Mission is 1-indexed
-def get_required_rank_for_mission(total_rank_count: int, mission:int) -> int:
+def get_required_rank_for_mission(total_rank_count: int, mission: int, mission_count: int) -> int:
     # Neon rank requirement is exponential, requiring a tiny number of neon ranks for the first missions but quickly increasing
     # total_rank_count /= 10
-    mission_fraction = mission / 11
+    mission_fraction = mission / mission_count
     lenience_value = 10
     normal_value = (pow(lenience_value, mission_fraction) - 1) / (lenience_value - 1)
     return floor(total_rank_count * normal_value)
 
-def set_rules(multiworld: MultiWorld, world: "NeonWhiteWorld", options: NeonWhiteOptions, total_rank_count: int):
+def set_rules(multiworld: MultiWorld, world: "NeonWhiteWorld", options: NeonWhiteOptions):
     requirements = import_csv_to_data(options.difficulty)
 
     medal_cap_typed = medal_from_medal_cap(options.medal_cap)
@@ -258,9 +255,12 @@ def set_rules(multiworld: MultiWorld, world: "NeonWhiteWorld", options: NeonWhit
     if not world.ordered_levels:
         world.ordered_levels = level_rando(world, requirements)
 
+    levels_norm = len(world.ordered_levels) // world.mission_count
+    offset = world.mission_count - (len(world.ordered_levels) % world.mission_count)
+
     # Place one relevant discard ability into the early items pool to give the player something to work with
     relevant_discards: set[str] = set()
-    for i in range(11):
+    for i in range(levels_norm):
         for solution in itertools.chain(requirements.get_necessary_items(world.ordered_levels[i], medal_cap_typed), requirements.get_necessary_items(world.ordered_levels[i], Medal.Gift)):
             for card in solution:
                 cardstr = LevelRequirements.solo_to_string(card)
@@ -271,17 +271,23 @@ def set_rules(multiworld: MultiWorld, world: "NeonWhiteWorld", options: NeonWhit
 
     central_heaven = world.get_region("Central Heaven")
     # Connect central heaven to every mission
-    for i in range(1, 12):
-        mission_region = world.get_region(f"Mission {i}")
-        entrance_name = f"Central Heaven to Mission {i}"
+    level_total = 0
+    for i in range(world.mission_count):
+        mission_region = world.get_region(f"Mission {i + 1}")
+        entrance_name = f"Central Heaven to Mission {i + 1}"
         central_heaven.connect(mission_region, entrance_name)
-        if i != 1:
-            neonrank_count = get_required_rank_for_mission(total_rank_count, i)
+        if i != 0:
+            neonrank_count = get_required_rank_for_mission(world.rank_requirement, i + 1, world.mission_count)
             world.set_rule(world.get_entrance(entrance_name), Has("Neon Rank", neonrank_count))
 
         # Connect each mission to the levels they contain
-        for j in range(11):
-            level_name = world.ordered_levels[((i - 1) * 11) + j]
+        level_count = levels_norm
+        if (i >= offset):
+            level_count += 1
+
+        for _ in range(level_count):
+            level_name = world.ordered_levels[level_total]
+            level_total += 1
             mission_region.connect(multiworld.get_region(level_name, world.player),
                 f"{mission_region.name} to {level_name}")
             if level_name in neon_white_levels_normal or level_name in neon_white_levels_giftless:

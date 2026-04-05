@@ -144,133 +144,131 @@ neon_white_levels_medals = [
     "Dev"
 ]
 
-# ruff: disable[E701]
 # fmt: off
-def neon_white_level_name_internal(level: str) -> str:
-    match level:
-        case "Movement": return "TUT_MOVEMENT"
-        case "Pummel": return "TUT_SHOOTINGRANGE"
-        case "Gunner": return "SLUGGER"
-        case "Cascade": return "TUT_FROG"
-        case "Elevate": return "TUT_JUMP"
-        case "Bounce": return "GRID_TUT_BALLOON"
-        case "Purify": return "TUT_BOMB2"
-        case "Climb": return "TUT_BOMBJUMP"
-        case "Fasttrack": return "TUT_FASTTRACK"
-        case "Glass Port": return "GRID_PORT"
-        case "Take Flight": return "GRID_PAGODA"
-        case "Godspeed": return "TUT_RIFLE"
-        case "Dasher": return "TUT_RIFLEJOCK"
-        case "Thrasher": return "TUT_DASHENEMY"
-        case "Outstretched": return "GRID_JUMPDASH"
-        case "Smackdown": return "GRID_SMACKDOWN"
-        case "Catwalk": return "GRID_MEATY_BALLOONS"
-        case "Fastlane": return "GRID_FAST_BALLOON"
-        case "Distinguish": return "GRID_DRAGON2"
-        case "Dancer": return "GRID_DASHDANCE"
-        case "Guardian": return "TUT_GUARDIAN"
-        case "Stomp": return "TUT_UZI"
-        case "Jumper": return "TUT_JUMPER"
-        case "Dash Tower": return "TUT_BOMB"
-        case "Descent": return "GRID_DESCEND"
-        case "Driller": return "GRID_STAMPEROUT"
-        case "Canals": return "GRID_CRUISE"
-        case "Sprint": return "GRID_SPRINT"
-        case "Mountain": return "GRID_MOUNTAIN"
-        case "Superkinetic": return "GRID_SUPERKINETIC"
-        case "Arrival": return "GRID_ARRIVAL"
-        case "Forgotten City": return "FLOATING"
-        case "The Clocktower": return "GRID_BOSS_YELLOW"
-        case "Fireball": return "GRID_HOPHOP"
-        case "Ringer": return "GRID_RINGER_TUTORIAL"
-        case "Cleaner": return "GRID_RINGER_EXPLORATION"
-        case "Warehouse": return "GRID_HOPSCOTCH"
-        case "Boom": return "GRID_BOOM"
-        case "Streets": return "GRID_SNAKE_IN_MY_BOOT"
-        case "Steps": return "GRID_FLOCK"
-        case "Demolition": return "GRID_BOMBS_AHOY"
-        case "Arcs": return "GRID_ARCS"
-        case "Apartment": return "GRID_APARTMENT"
-        case "Hanging Gardens": return "TUT_TRIPWIRE"
-        case "Tangled": return "GRID_TANGLED"
-        case "Waterworks": return "GRID_HUNT"
-        case "Killswitch": return "GRID_CANNONS"
-        case "Falling": return "GRID_FALLING"
-        case "Shocker": return "TUT_SHOCKER2"
-        case "Bouquet": return "TUT_SHOCKER"
-        case "Prepare": return "GRID_PREPARE"
-        case "Triptrack": return "GRID_TRIPMAZE"
-        case "Race": return "GRID_RACE"
-        case "Bubble": return "TUT_FORCEFIELD2"
-        case "Shield": return "GRID_SHIELD"
-        case "Overlook": return "SA L VAGE2"
-        case "Pop": return "GRID_VERTICAL"
-        case "Minefield": return "GRID_MINEFIELD"
-        case "Mimic": return "TUT_MIMIC"
-        case "Trigger": return "GRID_MIMICPOP"
-        case "Greenhouse": return "GRID_SWARM"
-        case "Sweep": return "GRID_SWITCH"
-        case "Fuse": return "GRID_TRAPS2"
-        case "Heaven's Edge": return "TUT_ROCKETJUMP"
-        case "Zipline": return "TUT_ZIPLINE"
-        case "Swing": return "GRID_CLIMBANG"
-        case "Chute": return "GRID_ROCKETUZI"
-        case "Crash": return "GRID_CRASHLAND"
-        case "Ascent": return "GRID_ESCALATE"
-        case "Straightaway": return "GRID_SPIDERCLAUS"
-        case "Firecracker": return "GRID_FIRECRACKER_2"
-        case "Streak": return "GRID_SPIDERMAN"
-        case "Mirror": return "GRID_DESTRUCTION"
-        case "Escalation": return "GRID_HEAT"
-        case "Bolt": return "GRID_BOLT"
-        case "Godstreak": return "GRID_PON"
-        case "Plunge": return "GRID_CHARGE"
-        case "Mayhem": return "GRID_MIMICFINALE"
-        case "Barrage": return "GRID_BARRAGE"
-        case "Estate": return "GRID_1GUN"
-        case "Trapwire": return "GRID_HECK"
-        case "Ricochet": return "GRID_ANTFARM"
-        case "Fortress": return "GRID_FORTRESS"
-        case "Holy Ground": return "GRID_GODTEMPLE_ENTRY"
-        case "The Third Temple": return "GRID_BOSS_GODSDEATHTEMPLE"
-        case "Spree": return "GRID_EXTERMINATOR"
-        case "Breakthrough": return "GRID_FEVER"
-        case "Glide": return "GRID_SKIPSLIDE"
-        case "Closer": return "GRID_CLOSER"
-        case "Hike": return "GRID_HIKE"
-        case "Switch": return "GRID_SKIP"
-        case "Access": return "GRID_CEILING"
-        case "Congregation": return "GRID_BOOP"
-        case "Sequence": return "GRID_TRIPRAP"
-        case "Marathon": return "GRID_ZIPRAP"
-        case "Sacrifice": return "TUT_ORIGIN"
-        case "Absolution": return "GRID_BOSS_RAPTURE"
-        case "Elevate Traversal I": return "SIDEQUEST_OBSTACLE_PISTOL"
-        case "Elevate Traversal II": return "SIDEQUEST_OBSTACLE_PISTOL_SHOOT"
-        case "Purify Traversal": return "SIDEQUEST_OBSTACLE_MACHINEGUN"
-        case "Godspeed Traversal": return "SIDEQUEST_OBSTACLE_RIFLE_2"
-        case "Stomp Traversal": return "SIDEQUEST_OBSTACLE_UZI2"
-        case "Fireball Traversal": return "SIDEQUEST_OBSTACLE_SHOTGUN"
-        case "Dominion Traversal": return "SIDEQUEST_OBSTACLE_ROCKETLAUNCHER"
-        case "Book of Life Traversal": return "SIDEQUEST_RAPTURE_QUEST"
-        case "Doghouse": return "SIDEQUEST_DODGER"
-        case "Choker": return "GRID_GLASSPATH"
-        case "Chain": return "GRID_GLASSPATH2"
-        case "Hellevator": return "GRID_HELLVATOR"
-        case "Razor": return "GRID_GLASSPATH3"
-        case "All Seeing Eye": return "SIDEQUEST_ALL_SEEING_EYE"
-        case "Resident Saw I": return "SIDEQUEST_RESIDENTSAWB"
-        case "Resident Saw II": return "SIDEQUEST_RESIDENTSAW"
-        case "Sunset Flip Powerbomb": return "SIDEQUEST_SUNSET_FLIP_POWERBOMB"
-        case "Balloon Mountain": return "GRID_BALLOONLAIR"
-        case "Climbing Gym": return "SIDEQUEST_BARREL_CLIMB"
-        case "Fisherman Suplex": return "SIDEQUEST_FISHERMAN_SUPLEX"
-        case "STF": return "SIDEQUEST_STF"
-        case "Arena": return "SIDEQUEST_ARENASIXNINE"
-        case "Attitude Adjustment": return "SIDEQUEST_ATTITUDE_ADJUSTMENT"
-        case "Rocket": return "SIDEQUEST_ROCKETGODZ"
-    return f"MISSING_ID {level}"
-# ruff: enable[E701]
+neon_white_level_name_internal = {
+    "Movement": "TUT_MOVEMENT",
+    "Pummel": "TUT_SHOOTINGRANGE",
+    "Gunner": "SLUGGER",
+    "Cascade": "TUT_FROG",
+    "Elevate": "TUT_JUMP",
+    "Bounce": "GRID_TUT_BALLOON",
+    "Purify": "TUT_BOMB2",
+    "Climb": "TUT_BOMBJUMP",
+    "Fasttrack": "TUT_FASTTRACK",
+    "Glass Port": "GRID_PORT",
+    "Take Flight": "GRID_PAGODA",
+    "Godspeed": "TUT_RIFLE",
+    "Dasher": "TUT_RIFLEJOCK",
+    "Thrasher": "TUT_DASHENEMY",
+    "Outstretched": "GRID_JUMPDASH",
+    "Smackdown": "GRID_SMACKDOWN",
+    "Catwalk": "GRID_MEATY_BALLOONS",
+    "Fastlane": "GRID_FAST_BALLOON",
+    "Distinguish": "GRID_DRAGON2",
+    "Dancer": "GRID_DASHDANCE",
+    "Guardian": "TUT_GUARDIAN",
+    "Stomp": "TUT_UZI",
+    "Jumper": "TUT_JUMPER",
+    "Dash Tower": "TUT_BOMB",
+    "Descent": "GRID_DESCEND",
+    "Driller": "GRID_STAMPEROUT",
+    "Canals": "GRID_CRUISE",
+    "Sprint": "GRID_SPRINT",
+    "Mountain": "GRID_MOUNTAIN",
+    "Superkinetic": "GRID_SUPERKINETIC",
+    "Arrival": "GRID_ARRIVAL",
+    "Forgotten City": "FLOATING",
+    "The Clocktower": "GRID_BOSS_YELLOW",
+    "Fireball": "GRID_HOPHOP",
+    "Ringer": "GRID_RINGER_TUTORIAL",
+    "Cleaner": "GRID_RINGER_EXPLORATION",
+    "Warehouse": "GRID_HOPSCOTCH",
+    "Boom": "GRID_BOOM",
+    "Streets": "GRID_SNAKE_IN_MY_BOOT",
+    "Steps": "GRID_FLOCK",
+    "Demolition": "GRID_BOMBS_AHOY",
+    "Arcs": "GRID_ARCS",
+    "Apartment": "GRID_APARTMENT",
+    "Hanging Gardens": "TUT_TRIPWIRE",
+    "Tangled": "GRID_TANGLED",
+    "Waterworks": "GRID_HUNT",
+    "Killswitch": "GRID_CANNONS",
+    "Falling": "GRID_FALLING",
+    "Shocker": "TUT_SHOCKER2",
+    "Bouquet": "TUT_SHOCKER",
+    "Prepare": "GRID_PREPARE",
+    "Triptrack": "GRID_TRIPMAZE",
+    "Race": "GRID_RACE",
+    "Bubble": "TUT_FORCEFIELD2",
+    "Shield": "GRID_SHIELD",
+    "Overlook": "SA L VAGE2",
+    "Pop": "GRID_VERTICAL",
+    "Minefield": "GRID_MINEFIELD",
+    "Mimic": "TUT_MIMIC",
+    "Trigger": "GRID_MIMICPOP",
+    "Greenhouse": "GRID_SWARM",
+    "Sweep": "GRID_SWITCH",
+    "Fuse": "GRID_TRAPS2",
+    "Heaven's Edge": "TUT_ROCKETJUMP",
+    "Zipline": "TUT_ZIPLINE",
+    "Swing": "GRID_CLIMBANG",
+    "Chute": "GRID_ROCKETUZI",
+    "Crash": "GRID_CRASHLAND",
+    "Ascent": "GRID_ESCALATE",
+    "Straightaway": "GRID_SPIDERCLAUS",
+    "Firecracker": "GRID_FIRECRACKER_2",
+    "Streak": "GRID_SPIDERMAN",
+    "Mirror": "GRID_DESTRUCTION",
+    "Escalation": "GRID_HEAT",
+    "Bolt": "GRID_BOLT",
+    "Godstreak": "GRID_PON",
+    "Plunge": "GRID_CHARGE",
+    "Mayhem": "GRID_MIMICFINALE",
+    "Barrage": "GRID_BARRAGE",
+    "Estate": "GRID_1GUN",
+    "Trapwire": "GRID_HECK",
+    "Ricochet": "GRID_ANTFARM",
+    "Fortress": "GRID_FORTRESS",
+    "Holy Ground": "GRID_GODTEMPLE_ENTRY",
+    "The Third Temple": "GRID_BOSS_GODSDEATHTEMPLE",
+    "Spree": "GRID_EXTERMINATOR",
+    "Breakthrough": "GRID_FEVER",
+    "Glide": "GRID_SKIPSLIDE",
+    "Closer": "GRID_CLOSER",
+    "Hike": "GRID_HIKE",
+    "Switch": "GRID_SKIP",
+    "Access": "GRID_CEILING",
+    "Congregation": "GRID_BOOP",
+    "Sequence": "GRID_TRIPRAP",
+    "Marathon": "GRID_ZIPRAP",
+    "Sacrifice": "TUT_ORIGIN",
+    "Absolution": "GRID_BOSS_RAPTURE",
+    "Elevate Traversal I": "SIDEQUEST_OBSTACLE_PISTOL",
+    "Elevate Traversal II": "SIDEQUEST_OBSTACLE_PISTOL_SHOOT",
+    "Purify Traversal": "SIDEQUEST_OBSTACLE_MACHINEGUN",
+    "Godspeed Traversal": "SIDEQUEST_OBSTACLE_RIFLE_2",
+    "Stomp Traversal": "SIDEQUEST_OBSTACLE_UZI2",
+    "Fireball Traversal": "SIDEQUEST_OBSTACLE_SHOTGUN",
+    "Dominion Traversal": "SIDEQUEST_OBSTACLE_ROCKETLAUNCHER",
+    "Book of Life Traversal": "SIDEQUEST_RAPTURE_QUEST",
+    "Doghouse": "SIDEQUEST_DODGER",
+    "Choker": "GRID_GLASSPATH",
+    "Chain": "GRID_GLASSPATH2",
+    "Hellevator": "GRID_HELLVATOR",
+    "Razor": "GRID_GLASSPATH3",
+    "All Seeing Eye": "SIDEQUEST_ALL_SEEING_EYE",
+    "Resident Saw I": "SIDEQUEST_RESIDENTSAWB",
+    "Resident Saw II": "SIDEQUEST_RESIDENTSAW",
+    "Sunset Flip Powerbomb": "SIDEQUEST_SUNSET_FLIP_POWERBOMB",
+    "Balloon Mountain": "GRID_BALLOONLAIR",
+    "Climbing Gym": "SIDEQUEST_BARREL_CLIMB",
+    "Fisherman Suplex": "SIDEQUEST_FISHERMAN_SUPLEX",
+    "STF": "SIDEQUEST_STF",
+    "Arena": "SIDEQUEST_ARENASIXNINE",
+    "Attitude Adjustment": "SIDEQUEST_ATTITUDE_ADJUSTMENT",
+    "Rocket": "SIDEQUEST_ROCKETGODZ",
+}
+
 # fmt: on
 
 def neon_white_get_locations() -> dict[str, int]:

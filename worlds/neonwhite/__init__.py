@@ -1,5 +1,7 @@
+from typing import Any
+
 from BaseClasses import Tutorial
-from rule_builder.rules import Has, CanReachLocation
+from rule_builder.rules import CanReachLocation
 from worlds.AutoWorld import WebWorld, World
 
 from .items import NWItem, get_items_from_category, nw_item_groups, nw_items
@@ -43,7 +45,8 @@ class NeonWhiteWorld(World):
     location_name_groups = checks_in_sets_lvl
 
     ordered_levels: list[str]   # Post-rando level list, to be split into missions every 11 levels
-    neon_rank_increments = 100    # Number of neon rank increments exist in the item pool, determines mission requirement
+    rank_requirement: int
+    mission_count: int
 
     origin_region_name = "Central Heaven"
 
@@ -52,6 +55,9 @@ class NeonWhiteWorld(World):
     def generate_early(self) -> None:
         if not self.player_name.isascii():
             raise Exception("Neon White yaml's slot name has invalid character(s).")
+
+        self.rank_requirement = self.options.rank_requirement.value
+        self.mission_count = self.options.mission_count.value
 
         self.ordered_levels = []
 
@@ -71,12 +77,11 @@ class NeonWhiteWorld(World):
             itempool.append(self.create_item(card))
 
         # Make sure we add the neon ranks that we need
-        ranks_needed = get_required_rank_for_mission(self.neon_rank_increments, 11)
-        itempool.extend([self.create_item("Neon Rank")] * ranks_needed)
+        itempool.extend([self.create_item("Neon Rank")] * self.rank_requirement)
 
         # Fill the rest with filler
         for _ in range(loc_count - len(itempool)):
-            itempool.append(self.create_item(self.get_filler_item_name()))
+            itempool.append(self.create_filler())
 
         self.multiworld.itempool += itempool
 
@@ -87,12 +92,30 @@ class NeonWhiteWorld(World):
         return "Neon Rank"
 
     def set_rules(self):
-        set_rules(self.multiworld, self, self.options, self.neon_rank_increments)
+        ut_regen = getattr(self.multiworld, "re_gen_passthrough", {})
+        if (self.game in ut_regen):
+            ut_regen = ut_regen[self.game]
+            self.ordered_levels = ut_regen["levels"]
+            self.rank_requirement = ut_regen["options"]["rank_requirement"]
+            self.mission_count = ut_regen["options"]["mission_count"]
+
+
+        set_rules(self.multiworld, self, self.options)
         self.set_completion_rule(CanReachLocation("Absolution Ace Completion"))
 
     def fill_slot_data(self):
         return {
-            "level_order": [neon_white_level_name_internal(level) for level in self.ordered_levels],
-            "rank_increments": int(self.neon_rank_increments),
-            "mission_costs": [get_required_rank_for_mission(self.neon_rank_increments, i) for i in range(1, 12)]
+            "level_order": [neon_white_level_name_internal[level] for level in self.ordered_levels],
+            "rank_increments": int(self.rank_requirement),
+            "mission_costs": [
+                get_required_rank_for_mission(self.rank_requirement, i + 1, self.mission_count)
+                    for i in range(self.mission_count)
+            ]
+        }
+
+    def interpret_slot_data(self, slot_data: dict[str, Any]) -> dict[str, Any]:
+        reverse = {v: k for k, v in neon_white_level_name_internal.items()}
+        return {
+            "levels": [reverse[x] for x in slot_data["level_order"]],
+            "options": self.options.as_dict("rank_requirement", "mission_count")
         }
