@@ -1,4 +1,5 @@
 import base64
+import io
 import json
 import zlib
 from typing import Any
@@ -13,7 +14,7 @@ from .locations import checks_in_sets_lvl, neon_white_get_locations, neon_white_
 #from .Locations import PTLocation, pt_locations, pt_location_groups
 from .options import NeonWhiteOptions
 from .regions import create_regions
-from .rules import LevelRequirements, LevelRequirementSet, get_required_rank_for_mission, set_rules
+from .rules import LevelRequirementSet, LevelRequirements, Medal, get_required_rank_for_mission, set_rules
 
 
 class NeonWhiteWeb(WebWorld):
@@ -99,43 +100,47 @@ class NeonWhiteWorld(World):
         if (self.game in ut_regen):
             ut_regen = ut_regen[self.game]
             self.ordered_levels = ut_regen["levels"]
-            self.rank_requirement = ut_regen["options"]["rank_requirement"]
-            self.mission_count = ut_regen["options"]["mission_count"]
+            self.rank_requirement = ut_regen["rank_requirement"]
+            self.mission_count = ut_regen["mission_count"]
 
 
         set_rules(self.multiworld, self, self.options)
         self.set_completion_rule(CanReachLocation("Absolution Ace Completion"))
 
     def fill_slot_data(self):
-        level_dict: dict[str, str] = {}
-
+        logic = io.BytesIO()
         for level in self.ordered_levels:
-            reqs = self.requirements.requirements[level]
-            zipi = zip(reqs, range(len(reqs)), strict=True)
+            for medal in reversed(range(self.options.medal_cap)): # reversed to compress better
+                reqs = self.requirements.get_necessary_items(level, Medal(medal))
+                logic.write(len(reqs).to_bytes(byteorder="little"))
+                if LevelRequirements.FistOnly in reqs:
+                    reqs = set(LevelRequirements.FistOnly)
 
-            medalreqs = []
-            for x, i in zipi:
-                if i != 5 and (5 - int(i) > self.options.medal_cap):
-                    continue
+                for req in reqs:
+                    logic.write(req.value.to_bytes(2, "little"))
 
-                if LevelRequirements.FistOnly in x:
-                    medalreqs.append("0")
-                else:
-                    toadd = "|".join([str(y.value) for y in x])
-                    medalreqs.append(toadd)
+            reqs = self.requirements.get_necessary_items(level, Medal.Gift)
+            logic.write(len(reqs).to_bytes())
 
-            dictstr = ",".join(medalreqs)
-            level_dict[neon_white_level_name_internal[level]] = dictstr
+            for req in reqs:
+                logic.write(req.to_bytes(2, "little"))
 
-        dumps = json.dumps(level_dict, separators=(",", ":"))
+        cpobj = zlib.compressobj(level=9, wbits=-15, memLevel=9)
+        encoded_logic = base64.a85encode(cpobj.compress(logic.getvalue()) + cpobj.flush()).decode()
+        # print(encoded_logic)
+        # print(len(encoded_logic))
+        # print(len(logic.getvalue()))
+
+        dumps = json.dumps([neon_white_level_name_internal[x] for x in self.ordered_levels], separators=(",", ":"))
 
         cpobj = zlib.compressobj(level=9, wbits=-15, memLevel=9, zdict=b"GRID_TUT_SIDEQUEST_")
-        cpobj.compress(dumps.encode())
-
-        encoded = base64.a85encode(cpobj.flush()).decode()
+        encoded_levels = base64.a85encode(cpobj.compress(dumps.encode()) + cpobj.flush()).decode()
+        # print(len(encoded_levels))
+        # print(len(dumps))
 
         return {
-            "level_order": encoded,
+            "level_order": encoded_levels,
+            "level_logic": encoded_logic,
             "mission_costs": [
                 get_required_rank_for_mission(self.rank_requirement, i + 1, self.mission_count)
                     for i in range(self.mission_count)
@@ -146,10 +151,11 @@ class NeonWhiteWorld(World):
     def interpret_slot_data(self, slot_data: dict[str, Any]) -> dict[str, Any]:
         reverse = {v: k for k, v in neon_white_level_name_internal.items()}
 
-        decoded = json.loads(zlib.decompress(base64.a85decode(slot_data["level_order"]), wbits=-15))
+        dcobj = zlib.decompressobj(-15, b"GRID_TUT_SIDEQUEST_")
+        decoded = json.loads(dcobj.decompress(base64.a85decode(slot_data["level_order"])) + dcobj.flush())
 
         return {
-            "levels": [reverse[x] for x in decoded.keys()],
+            "levels": [reverse[x] for x in decoded],
             "mission_count": len(slot_data["mission_costs"]),
             "rank_requirement": slot_data["mission_costs"][-1]
         }

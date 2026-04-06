@@ -137,9 +137,9 @@ class LevelRequirementSet:
         return rule
 
 
-    def get_necessary_items(self, level:str, medal:Medal) -> list[LevelRequirements]:
+    def get_necessary_items(self, level: str, medal: Medal) -> set[LevelRequirements]:
         medal_idx = int(medal) if medal == Medal.Gift else 4 - int(medal)
-        return list(self.requirements[level][medal_idx])
+        return self.requirements[level][medal_idx]
 
 
 
