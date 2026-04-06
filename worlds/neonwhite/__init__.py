@@ -1,3 +1,6 @@
+import base64
+import json
+import zlib
 from typing import Any
 
 from BaseClasses import Tutorial
@@ -10,7 +13,7 @@ from .locations import checks_in_sets_lvl, neon_white_get_locations, neon_white_
 #from .Locations import PTLocation, pt_locations, pt_location_groups
 from .options import NeonWhiteOptions
 from .regions import create_regions
-from .rules import get_required_rank_for_mission, set_rules
+from .rules import LevelRequirements, LevelRequirementSet, get_required_rank_for_mission, set_rules
 
 
 class NeonWhiteWeb(WebWorld):
@@ -37,7 +40,7 @@ class NeonWhiteWorld(World):
     options: NeonWhiteOptions  # pyright: ignore[reportIncompatibleVariableOverride]
     options_dataclass = NeonWhiteOptions
 
-    item_name_to_id = {name: data.id for name, data in nw_items.items()}
+    item_name_to_id = {name: data.id for name, data in nw_items.items()}  # noqa: RUF012
 
     location_name_to_id = neon_white_get_locations()
 
@@ -47,6 +50,8 @@ class NeonWhiteWorld(World):
     ordered_levels: list[str]   # Post-rando level list, to be split into missions every 11 levels
     rank_requirement: int
     mission_count: int
+
+    requirements: LevelRequirementSet
 
     origin_region_name = "Central Heaven"
 
@@ -70,18 +75,16 @@ class NeonWhiteWorld(World):
     def create_items(self):
         itempool = []
 
-        loc_count = len(self.get_locations())
+        loc_count = len(self.get_locations())  # pyright: ignore[reportArgumentType]
 
         # Add soul cards
-        for card in get_items_from_category("Card"):
-            itempool.append(self.create_item(card))
+        itempool += [self.create_item(card) for card in get_items_from_category("Card")]
 
         # Make sure we add the neon ranks that we need
-        itempool.extend([self.create_item("Neon Rank")] * self.rank_requirement)
+        itempool += [self.create_item("Neon Rank")] * self.rank_requirement
 
         # Fill the rest with filler
-        for _ in range(loc_count - len(itempool)):
-            itempool.append(self.create_filler())
+        itempool += [self.create_filler() for _ in range(loc_count - len(itempool))]
 
         self.multiworld.itempool += itempool
 
@@ -104,18 +107,49 @@ class NeonWhiteWorld(World):
         self.set_completion_rule(CanReachLocation("Absolution Ace Completion"))
 
     def fill_slot_data(self):
+        level_dict: dict[str, str] = {}
+
+        for level in self.ordered_levels:
+            reqs = self.requirements.requirements[level]
+            zipi = zip(reqs, range(len(reqs)), strict=True)
+
+            medalreqs = []
+            for x, i in zipi:
+                if i != 5 and (5 - int(i) > self.options.medal_cap):
+                    continue
+
+                if LevelRequirements.FistOnly in x:
+                    medalreqs.append("0")
+                else:
+                    toadd = "|".join([str(y.value) for y in x])
+                    medalreqs.append(toadd)
+
+            dictstr = ",".join(medalreqs)
+            level_dict[neon_white_level_name_internal[level]] = dictstr
+
+        dumps = json.dumps(level_dict, separators=(",", ":"))
+
+        cpobj = zlib.compressobj(level=9, wbits=-15, memLevel=9, zdict=b"GRID_TUT_SIDEQUEST_")
+        cpobj.compress(dumps.encode())
+
+        encoded = base64.a85encode(cpobj.flush()).decode()
+
         return {
-            "level_order": [neon_white_level_name_internal[level] for level in self.ordered_levels],
-            "rank_increments": int(self.rank_requirement),
+            "level_order": encoded,
             "mission_costs": [
                 get_required_rank_for_mission(self.rank_requirement, i + 1, self.mission_count)
                     for i in range(self.mission_count)
-            ]
+            ],
+            "options": self.options.as_dict("medal_cap", "death_link")
         }
 
     def interpret_slot_data(self, slot_data: dict[str, Any]) -> dict[str, Any]:
         reverse = {v: k for k, v in neon_white_level_name_internal.items()}
+
+        decoded = json.loads(zlib.decompress(base64.a85decode(slot_data["level_order"]), wbits=-15))
+
         return {
-            "levels": [reverse[x] for x in slot_data["level_order"]],
-            "options": self.options.as_dict("rank_requirement", "mission_count")
+            "levels": [reverse[x] for x in decoded.keys()],
+            "mission_count": len(slot_data["mission_costs"]),
+            "rank_requirement": slot_data["mission_costs"][-1]
         }

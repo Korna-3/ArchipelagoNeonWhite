@@ -206,7 +206,7 @@ def import_csv_to_data(diff: Difficulty) -> LevelRequirementSet:
                 if cell == "F":
                     new_requirements.requirements[level_name][medal_idx].add(LevelRequirements.FistOnly)
                 else:
-                    for solution in cell.split('|'):
+                    for solution in cell.split("|"):
                         requirements_aggregate = LevelRequirements(LevelRequirements.FistOnly)
                         for requirement in solution.split(","):
                             requirements_aggregate |= string_to_level_req_flag(requirement)
@@ -216,7 +216,7 @@ def import_csv_to_data(diff: Difficulty) -> LevelRequirementSet:
     return new_requirements
 
 # Actual functions related to rules start here
-def level_rando(world: "NeonWhiteWorld", requirements: LevelRequirementSet) -> list[str]:
+def level_rando(world: "NeonWhiteWorld") -> list[str]:
     # TODO: Make this smarter, e.g. fill levels on a gradient from smallest minimum requirement to most
 
     level_queue = neon_white_levels_normal + neon_white_levels_giftless + neon_white_levels_sidequests
@@ -227,7 +227,8 @@ def level_rando(world: "NeonWhiteWorld", requirements: LevelRequirementSet) -> l
     for level in level_queue:
         if level not in neon_white_levels_normal:
             continue
-        if requirements.can_complete_level(level, Medal.Gold, LevelRequirements.FistOnly) and requirements.can_complete_level(level, Medal.Gift, LevelRequirements.FistOnly):
+        if (world.requirements.can_complete_level(level, Medal.Gold, LevelRequirements.FistOnly)
+            and world.requirements.can_complete_level(level, Medal.Gift, LevelRequirements.FistOnly)):
             fist_only_levels.append(level)
     world.random.shuffle(fist_only_levels)
     for i in range(2):
@@ -248,12 +249,12 @@ def get_required_rank_for_mission(total_rank_count: int, mission: int, mission_c
     return floor(total_rank_count * normal_value)
 
 def set_rules(multiworld: MultiWorld, world: "NeonWhiteWorld", options: NeonWhiteOptions):
-    requirements = import_csv_to_data(options.difficulty)
+    world.requirements = import_csv_to_data(options.difficulty)
 
     medal_cap_typed = medal_from_medal_cap(options.medal_cap)
 
     if not world.ordered_levels:
-        world.ordered_levels = level_rando(world, requirements)
+        world.ordered_levels = level_rando(world)
 
     levels_norm = len(world.ordered_levels) // world.mission_count
     offset = world.mission_count - (len(world.ordered_levels) % world.mission_count)
@@ -261,7 +262,7 @@ def set_rules(multiworld: MultiWorld, world: "NeonWhiteWorld", options: NeonWhit
     # Place one relevant discard ability into the early items pool to give the player something to work with
     relevant_discards: set[str] = set()
     for i in range(levels_norm):
-        for solution in itertools.chain(requirements.get_necessary_items(world.ordered_levels[i], medal_cap_typed), requirements.get_necessary_items(world.ordered_levels[i], Medal.Gift)):
+        for solution in itertools.chain(world.requirements.get_necessary_items(world.ordered_levels[i], medal_cap_typed), world.requirements.get_necessary_items(world.ordered_levels[i], Medal.Gift)):
             for card in solution:
                 cardstr = LevelRequirements.solo_to_string(card)
                 if cardstr and ("Discard" in cardstr or "Book of Life" in cardstr):
@@ -293,15 +294,15 @@ def set_rules(multiworld: MultiWorld, world: "NeonWhiteWorld", options: NeonWhit
             if level_name in neon_white_levels_normal or level_name in neon_white_levels_giftless:
                 for medal in range(options.medal_cap):
                     world.set_rule(world.get_location(f"{level_name} {neon_white_levels_medals[medal]} Completion"),
-                        requirements.make_rule(level_name, Medal(medal)))
+                        world.requirements.make_rule(level_name, Medal(medal)))
 
                 if level_name not in neon_white_levels_giftless:
                     world.set_rule(world.get_location(level_name + " Gift"),
-                        requirements.make_rule(level_name, Medal.Gift))
+                        world.requirements.make_rule(level_name, Medal.Gift))
 
             else:
                 world.set_rule(world.get_location(level_name + " Completion"),
-                    requirements.make_rule(level_name, Medal.Dev))
+                    world.requirements.make_rule(level_name, Medal.Dev))
 
     from Utils import visualize_regions
     visualize_regions(central_heaven, "neon_white_regions.puml")
