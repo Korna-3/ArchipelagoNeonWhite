@@ -133,7 +133,7 @@ class NeonWhiteWorld(World):
 
         dumps = json.dumps([neon_white_level_name_internal[x] for x in self.ordered_levels], separators=(",", ":"))
 
-        cpobj = zlib.compressobj(level=9, wbits=-15, memLevel=9, zdict=b"GRID_TUT_SIDEQUEST_")
+        cpobj = zlib.compressobj(level=9, wbits=-15, memLevel=9)
         encoded_levels = base64.a85encode(cpobj.compress(dumps.encode()) + cpobj.flush()).decode()
         # print(len(encoded_levels))
         # print(len(dumps))
@@ -151,7 +151,7 @@ class NeonWhiteWorld(World):
     def interpret_slot_data(self, slot_data: dict[str, Any]) -> dict[str, Any]:
         reverse = {v: k for k, v in neon_white_level_name_internal.items()}
 
-        dcobj = zlib.decompressobj(-15, b"GRID_TUT_SIDEQUEST_")
+        dcobj = zlib.decompressobj(-15)
         decoded = json.loads(dcobj.decompress(base64.a85decode(slot_data["level_order"])) + dcobj.flush())
 
         return {
