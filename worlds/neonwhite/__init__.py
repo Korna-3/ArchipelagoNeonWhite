@@ -112,18 +112,25 @@ class NeonWhiteWorld(World):
         for level in self.ordered_levels:
             for medal in reversed(range(self.options.medal_cap)): # reversed to compress better
                 reqs = self.requirements.get_necessary_items(level, Medal(medal))
-                logic.write(len(reqs).to_bytes(byteorder="little"))
                 if LevelRequirements.FistOnly in reqs:
-                    reqs = set(LevelRequirements.FistOnly)
+                    reqs = {LevelRequirements.FistOnly}
+
+                logic.write(len(reqs).to_bytes(1))
 
                 for req in reqs:
                     logic.write(req.value.to_bytes(2, "little"))
 
             reqs = self.requirements.get_necessary_items(level, Medal.Gift)
-            logic.write(len(reqs).to_bytes())
+            if LevelRequirements.FistOnly in reqs:
+                reqs = {LevelRequirements.FistOnly}
+
+            logic.write(len(reqs).to_bytes(1))
 
             for req in reqs:
                 logic.write(req.to_bytes(2, "little"))
+
+        # with open("logicdebug.bin", "wb") as f:
+        #     f.write(logic.getbuffer())
 
         cpobj = zlib.compressobj(level=9, wbits=-15, memLevel=9)
         encoded_logic = base64.a85encode(cpobj.compress(logic.getvalue()) + cpobj.flush()).decode()
