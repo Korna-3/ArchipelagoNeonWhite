@@ -240,13 +240,13 @@ def level_rando(world: "NeonWhiteWorld") -> list[str]:
     return fist_only_levels + level_queue + ["Absolution"]
 
 # Mission is 1-indexed
-def get_required_rank_for_mission(total_rank_count: int, mission: int, mission_count: int) -> int:
+def get_mission_rank_required(world: "NeonWhiteWorld", mission: int) -> int:
     # Neon rank requirement is exponential, requiring a tiny number of neon ranks for the first missions but quickly increasing
     # total_rank_count /= 10
-    mission_fraction = mission / mission_count
+    mission_fraction = mission / world.options.mission_count
     lenience_value = 10
     normal_value = (pow(lenience_value, mission_fraction) - 1) / (lenience_value - 1)
-    return floor(total_rank_count * normal_value)
+    return floor(world.ranks_required * normal_value)
 
 def set_rules(multiworld: MultiWorld, world: "NeonWhiteWorld", options: NeonWhiteOptions):
     world.requirements = import_csv_to_data(options.difficulty)
@@ -256,13 +256,16 @@ def set_rules(multiworld: MultiWorld, world: "NeonWhiteWorld", options: NeonWhit
     if not world.ordered_levels:
         world.ordered_levels = level_rando(world)
 
-    levels_norm = len(world.ordered_levels) // world.mission_count
-    offset = world.mission_count - (len(world.ordered_levels) % world.mission_count)
+    levels_norm = len(world.ordered_levels) // options.mission_count
+    offset = options.mission_count - (len(world.ordered_levels) % options.mission_count)
 
     # Place one relevant discard ability into the early items pool to give the player something to work with
     relevant_discards: set[str] = set()
-    for i in range(levels_norm):
-        for solution in itertools.chain(world.requirements.get_necessary_items(world.ordered_levels[i], medal_cap_typed), world.requirements.get_necessary_items(world.ordered_levels[i], Medal.Gift)):
+    for level in world.ordered_levels:
+        itercombo = itertools.chain(
+            world.requirements.get_necessary_items(level, medal_cap_typed),
+            world.requirements.get_necessary_items(level, Medal.Gift))
+        for solution in itercombo:
             for card in solution:
                 cardstr = LevelRequirements.solo_to_string(card)
                 if cardstr and ("Discard" in cardstr or "Book of Life" in cardstr):
@@ -273,12 +276,12 @@ def set_rules(multiworld: MultiWorld, world: "NeonWhiteWorld", options: NeonWhit
     central_heaven = world.get_region("Central Heaven")
     # Connect central heaven to every mission
     level_total = 0
-    for i in range(world.mission_count):
+    for i in range(options.mission_count):
         mission_region = world.get_region(f"Mission {i + 1}")
         entrance_name = f"Central Heaven to Mission {i + 1}"
         central_heaven.connect(mission_region, entrance_name)
         if i != 0:
-            neonrank_count = get_required_rank_for_mission(world.rank_requirement, i + 1, world.mission_count)
+            neonrank_count = get_mission_rank_required(world, i + 1)
             world.set_rule(world.get_entrance(entrance_name), Has("Neon Rank", neonrank_count))
 
         # Connect each mission to the levels they contain

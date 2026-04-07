@@ -14,7 +14,7 @@ from .locations import checks_in_sets_lvl, neon_white_get_locations, neon_white_
 #from .Locations import PTLocation, pt_locations, pt_location_groups
 from .options import NeonWhiteOptions
 from .regions import create_regions
-from .rules import LevelRequirementSet, LevelRequirements, Medal, get_required_rank_for_mission, set_rules
+from .rules import LevelRequirements, LevelRequirementSet, Medal, get_mission_rank_required, set_rules
 
 
 class NeonWhiteWeb(WebWorld):
@@ -49,8 +49,7 @@ class NeonWhiteWorld(World):
     location_name_groups = checks_in_sets_lvl
 
     ordered_levels: list[str]   # Post-rando level list, to be split into missions every 11 levels
-    rank_requirement: int
-    mission_count: int
+    ranks_required: int
 
     requirements: LevelRequirementSet
 
@@ -62,8 +61,14 @@ class NeonWhiteWorld(World):
         if not self.player_name.isascii():
             raise Exception("Neon White yaml's slot name has invalid character(s).")
 
-        self.rank_requirement = self.options.rank_requirement.value
-        self.mission_count = self.options.mission_count.value
+        ut_regen = getattr(self.multiworld, "re_gen_passthrough", {})
+        if (self.game in ut_regen):
+            ut_regen = ut_regen[self.game]
+            self.ordered_levels = ut_regen["levels"]
+            self.options.rank_requirement.value = ut_regen["rank_requirement"]
+            self.options.mission_count.value = ut_regen["mission_count"]
+            self.options.medal_cap.value = ut_regen["medal_cap"]
+            self.options.difficulty.value = ut_regen["difficulty"]
 
         self.ordered_levels = []
 
@@ -82,7 +87,8 @@ class NeonWhiteWorld(World):
         itempool += [self.create_item(card) for card in get_items_from_category("Card")]
 
         # Make sure we add the neon ranks that we need
-        itempool += [self.create_item("Neon Rank")] * self.rank_requirement
+        self.ranks_required = ((loc_count - len(itempool)) * (self.options.rank_requirement / 100))
+        itempool += [self.create_item("Neon Rank")] * get_mission_rank_required(self, self.options.mission_count.value)
 
         # Fill the rest with filler
         itempool += [self.create_filler() for _ in range(loc_count - len(itempool))]
@@ -96,14 +102,6 @@ class NeonWhiteWorld(World):
         return "Neon Rank"
 
     def set_rules(self):
-        ut_regen = getattr(self.multiworld, "re_gen_passthrough", {})
-        if (self.game in ut_regen):
-            ut_regen = ut_regen[self.game]
-            self.ordered_levels = ut_regen["levels"]
-            self.rank_requirement = ut_regen["rank_requirement"]
-            self.mission_count = ut_regen["mission_count"]
-
-
         set_rules(self.multiworld, self, self.options)
         self.set_completion_rule(CanReachLocation("Absolution Ace Completion"))
 
@@ -142,10 +140,10 @@ class NeonWhiteWorld(World):
             "level_order": encoded_levels,
             "level_logic": encoded_logic,
             "mission_costs": [
-                get_required_rank_for_mission(self.rank_requirement, i + 1, self.mission_count)
-                    for i in range(self.mission_count)
+                get_mission_rank_required(self, i + 1)
+                    for i in range(self.options.mission_count)
             ],
-            "options": self.options.as_dict("medal_cap", "death_link")
+            "options": self.options.as_dict("difficulty", "medal_cap", "death_link")
         }
 
     def interpret_slot_data(self, slot_data: dict[str, Any]) -> dict[str, Any]:
@@ -156,6 +154,8 @@ class NeonWhiteWorld(World):
 
         return {
             "levels": [reverse[x] for x in decoded],
+            "rank_requirement": slot_data["mission_costs"][-1],
             "mission_count": len(slot_data["mission_costs"]),
-            "rank_requirement": slot_data["mission_costs"][-1]
+            "medal_cap": slot_data["options"]["medal_cap"],
+            "difficulty": slot_data["options"]["difficulty"]
         }

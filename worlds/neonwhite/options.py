@@ -33,13 +33,13 @@ class MedalCap(Choice):
 
 class RankRequirement(Range):
     """
-    The amount of Neon Ranks required to get to the last mission when mission randomization is enabled.
+    The percentage of ranks required for the final mission out of the total amount of remaining checks in the pool.
     The rest of the mission requirements will scale accordingly.
     """
     display_name = "Rank Requirement"
-    range_start = 50
-    default = 100
-    range_end = 500
+    range_start = 1
+    default = 30
+    range_end = 100
 
 
 class MissionCount(Range):
