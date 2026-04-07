@@ -67,7 +67,7 @@ class NeonWhiteWorld(World):
         if (self.game in ut_regen):
             ut_regen = ut_regen[self.game]
             self.ordered_levels = ut_regen["levels"]
-            self.options.rank_requirement.value = ut_regen["rank_requirement"]
+            self.ranks_required = ut_regen["rank_requirement"]
             self.options.mission_count.value = ut_regen["mission_count"]
             self.options.medal_cap.value = ut_regen["medal_cap"]
             self.options.difficulty.value = ut_regen["difficulty"]
@@ -87,7 +87,9 @@ class NeonWhiteWorld(World):
         itempool += [self.create_item(card) for card in get_items_from_category("Card")]
 
         # Make sure we add the neon ranks that we need
-        self.ranks_required = ((loc_count - len(itempool)) * (self.options.rank_requirement / 100))
+
+        if (not getattr(self.multiworld, "re_gen_passthrough", {})):
+            self.ranks_required = ((loc_count - len(itempool)) * (self.options.rank_requirement / 100))
         itempool += [self.create_item("Neon Rank")] * get_mission_rank_required(self, self.options.mission_count.value)
 
         # Fill the rest with filler
