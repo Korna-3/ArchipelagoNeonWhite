@@ -61,6 +61,8 @@ class NeonWhiteWorld(World):
         if not self.player_name.isascii():
             raise Exception("Neon White yaml's slot name has invalid character(s).")
 
+        self.ordered_levels = []
+
         ut_regen = getattr(self.multiworld, "re_gen_passthrough", {})
         if (self.game in ut_regen):
             ut_regen = ut_regen[self.game]
@@ -69,8 +71,6 @@ class NeonWhiteWorld(World):
             self.options.mission_count.value = ut_regen["mission_count"]
             self.options.medal_cap.value = ut_regen["medal_cap"]
             self.options.difficulty.value = ut_regen["difficulty"]
-
-        self.ordered_levels = []
 
     def create_item(self, name: str) -> NWItem:
         return NWItem(name, nw_items[name].classification, nw_items[name].id, self.player)
