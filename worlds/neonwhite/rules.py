@@ -13,7 +13,7 @@ from worlds.neonwhite.locations import (
     neon_white_levels_normal,
     neon_white_levels_sidequests,
 )
-from worlds.neonwhite.options import Difficulty, MedalCap
+from worlds.neonwhite.options import Difficulty, MedalCap, MissionUnlockMethod
 
 from . import data
 
@@ -249,7 +249,7 @@ def get_mission_rank_required(world: "NeonWhiteWorld", mission: int) -> int:
     return floor(world.ranks_required * normal_value)
 
 def set_rules(multiworld: MultiWorld, world: "NeonWhiteWorld", options: NeonWhiteOptions):
-    world.requirements = import_csv_to_data(options.difficulty)
+    world.requirements = import_csv_to_data(options.difficulty) # TODO fix difficulty for new 2-lever system
 
     medal_cap_typed = medal_from_medal_cap(options.medal_cap)
 
@@ -281,12 +281,15 @@ def set_rules(multiworld: MultiWorld, world: "NeonWhiteWorld", options: NeonWhit
         entrance_name = f"Central Heaven to Mission {i + 1}"
         central_heaven.connect(mission_region, entrance_name)
         if i != 0:
-            neonrank_count = get_mission_rank_required(world, i + 1)
-            world.set_rule(world.get_entrance(entrance_name), Has("Neon Rank", neonrank_count))
+            if options.unlock_method == MissionUnlockMethod.option_missions:
+                world.set_rule(world.get_entrance(entrance_name), Has("Mission Unlock", i))
+            else:
+                neonrank_count = get_mission_rank_required(world, i + 1)
+                world.set_rule(world.get_entrance(entrance_name), Has("Neon Rank", neonrank_count))
 
         # Connect each mission to the levels they contain
         level_count = levels_norm
-        if (i >= offset):
+        if i >= offset:
             level_count += 1
 
         for _ in range(level_count):

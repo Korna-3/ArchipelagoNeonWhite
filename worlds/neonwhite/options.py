@@ -2,20 +2,45 @@ from dataclasses import dataclass
 
 from Options import Choice, DeathLink, DefaultOnToggle, PerGameCommonOptions, Range, StartInventoryPool
 
+class KnowledgeDifficulty(Choice):
+    """
+    How much understanding of the games mechanics is expected to figure out the solution to a given medal/gift/etc.
+    Casual: Expects the bare minimum, only tricks that are taught with in-game tutorials to beat the vanilla game.
+    Standard: Incorporates hidden but usually intended or otherwise easy to intuit tech/ideas.
+    Expert: Further includes some more advanced tech that is often only relevant to speedrunners.
+    Master: Encompasses everything else from level-specific tech to extremely niche game quirks or nuances.
+    """
+    display_name = "Knowledge Difficulty"
+    option_casual = 1
+    option_standard = 2
+    option_expert = 3
+    option_master = 4
+    default = 2
 
-class Difficulty(Choice):
+class ExecutionDifficulty(Choice):
     """
-    How extreme the tricks required to complete the intended path are.
-    Easy covers any intended vanilla path or relatively simple tricks to figure out for a casual player.
-    Normal encompasses tricks that might need thinking out of the box or above average technical skill.
-    Hard includes difficult tricks that are hard to perform or require deep technical knowledge of the game.
-    Brutal adds absurd tricks that are borderline nonsense to understand and/or extremely demanding to perform.
+    How hard it is to actually execute a given solution to a given medal/gift/etc, assuming all knowledge.
+    Casual: Can be done by a brand-new player with minimal hassle.
+    Standard: Consistently doable by a player who has all aces, especially players with dev medals.
+    Expert: Doable by a player who has all dev medals and is competent with advanced tech.
+    Master: Unreasonably difficult solutions that are inconsistent/overly precise to the vast majority of players.
     """
-    display_name = "Difficulty"
-    option_easy = 1
-    option_normal = 2
-    option_hard = 3
-    option_brutal = 4
+    display_name = "Knowledge Difficulty"
+    option_casual = 1
+    option_standard = 2
+    option_expert = 3
+    option_master = 4
+    default = 2
+
+class MissionUnlockMethod(Choice):
+    """
+    How missions are unlocked to progress through the game.
+    Ranks: Fills the pool with Neon Ranks, each mission requiring a number of ranks to unlock. See Rank Requirement.
+    Missions: 1 Mission Unlock item is added to the pool per mission, each obtained unlocking the next locked mission.
+    """
+    display_name = "Mission Unlock Method"
+    option_ranks = 1
+    option_missions = 2
     default = 1
 
 class MedalCap(Choice):
@@ -35,6 +60,7 @@ class RankRequirement(Range):
     """
     The percentage of ranks required for the final mission out of the total amount of remaining checks in the pool.
     The rest of the mission requirements will scale accordingly.
+    Only applies when MissionUnlockMethod is set to Ranks.
     """
     display_name = "Rank Requirement"
     range_start = 1
@@ -79,4 +105,6 @@ class NeonWhiteOptions(PerGameCommonOptions):
     medal_cap: MedalCap
     rank_requirement: RankRequirement
     mission_count: MissionCount
-    difficulty: Difficulty
+    difficulty_knowledge: KnowledgeDifficulty
+    difficulty_execution: ExecutionDifficulty
+    unlock_method: MissionUnlockMethod
