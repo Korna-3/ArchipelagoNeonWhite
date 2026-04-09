@@ -1,5 +1,6 @@
 import csv
 import itertools
+import json
 from enum import IntEnum, IntFlag, auto
 from math import floor
 from typing import TYPE_CHECKING
@@ -13,7 +14,7 @@ from worlds.neonwhite.locations import (
     neon_white_levels_normal,
     neon_white_levels_sidequests,
 )
-from worlds.neonwhite.options import Difficulty, MedalCap, MissionUnlockMethod
+from worlds.neonwhite.options import KnowledgeDifficulty, ExecutionDifficulty, MedalCap, MissionUnlockMethod
 
 from . import data
 
@@ -101,17 +102,8 @@ class LevelRequirements(IntFlag):
 
 # This only represents a single difficulty
 class LevelRequirementSet:
-    def __init__(self, levels: list[str]):
-        # String is the level name, list is 0..5, in order: dev,ace,gold,bronze,silver,gift
-        self.requirements = dict[str, list[set[LevelRequirements]]]()
-        for level in levels:
-            self.requirements[level] = [
-                set[LevelRequirements](),
-                set[LevelRequirements](),
-                set[LevelRequirements](),
-                set[LevelRequirements](),
-                set[LevelRequirements](),
-                set[LevelRequirements]()]
+    # String is the level name, list is 0..5, in order: dev,ace,gold,silver,bronze,gift
+    requirements = dict[str, list[set[LevelRequirements]]]()
 
     # Note - Medal 0-4 is dev-bronze, 5 is gift
     # Cards are what is available at that point
@@ -177,42 +169,22 @@ def string_to_level_req_flag(level: str) -> LevelRequirements:
             # Unexpected symbol/fist only
             return LevelRequirements.FistOnly
 
-def import_csv_to_data(diff: Difficulty) -> LevelRequirementSet:
+def import_json_to_data(know_diff:KnowledgeDifficulty, exec_diff:ExecutionDifficulty) -> LevelRequirementSet:
     # See archipelago requirements sheet for formatting
     from importlib.resources import files
-    file = files(data).joinpath("nw_cr.csv").open()
-    csv_reader = csv.reader(file)
-    csv_iter = iter(csv_reader)
-    # Grab names, cells are merged and encompass the 4 difficulties so only take every multiple of 4
-    level_names: list[str] = next(csv_iter)[0::4]
-    new_requirements = LevelRequirementSet(level_names)  # Return value that will be filled
-    medal_idx = 0  # 0 == Dev, 1 == Ace, ... 5 == Gift
-    for row in csv_iter:
-        for i in range(0, len(level_names)):
-            level_name = level_names[i]
-            # First copy any requirements from the medal above (unless it's the gift row)
-            # Doesn't matter if there's mixed combos, that's dealt with (e.g. Ef and Ef+Ed can exist together)
-            if medal_idx != 5:
-                for j in range(0, medal_idx):
-                    new_requirements.requirements[level_name][medal_idx] |= new_requirements.requirements[level_name][j]
-            # Copy requirements from all easier difficulties
-            # Requirements are checked as a "can beat x with these weapons?" so this works
-            for j in range(0, diff):
-                # The csv can be cut off prematurely as export to csv wraps when reaching final cell of a row
-                # Causes OOB error for any non-easy difficulty if final entry has empty cols, so clamp index for same result
-                cell_idx = min((i * 4) + j, len(row) - 1)
-                cell = row[cell_idx]
-                # F means fist completable, no requirements
-                if cell == "F":
-                    new_requirements.requirements[level_name][medal_idx].add(LevelRequirements.FistOnly)
+    file = files(data).joinpath("nw_cr.json").open()
+    json_data = json.loads(file.read())
+    new_requirements = LevelRequirementSet()
+    for entry in json_data:
+        solutions:list[set[LevelRequirements]] = [set[LevelRequirements]() for _ in range(6)]
+        for solution in json_data[entry]:
+            if solution["know"] <= know_diff and solution["exec"] <= exec_diff:
+                if solution["medal"] == 6:
+                    solutions[5].add(solution["reqs"])
                 else:
-                    for solution in cell.split("|"):
-                        requirements_aggregate = LevelRequirements(LevelRequirements.FistOnly)
-                        for requirement in solution.split(","):
-                            requirements_aggregate |= string_to_level_req_flag(requirement)
-                        if requirements_aggregate != LevelRequirements.FistOnly:
-                            new_requirements.requirements[level_name][medal_idx].add(requirements_aggregate)
-        medal_idx = medal_idx + 1
+                    for i in range(solution["medal"], 6):
+                        solutions[i - 1].add(solution["reqs"])
+        new_requirements.requirements[entry] = solutions
     return new_requirements
 
 # Actual functions related to rules start here
@@ -249,7 +221,7 @@ def get_mission_rank_required(world: "NeonWhiteWorld", mission: int) -> int:
     return floor(world.ranks_required * normal_value)
 
 def set_rules(multiworld: MultiWorld, world: "NeonWhiteWorld", options: NeonWhiteOptions):
-    world.requirements = import_csv_to_data(options.difficulty) # TODO fix difficulty for new 2-lever system
+    world.requirements = import_json_to_data(options.difficulty_knowledge, options.difficulty_execution)
 
     medal_cap_typed = medal_from_medal_cap(options.medal_cap)
 
