@@ -161,6 +161,9 @@ def import_json_to_data(know_diff: KnowledgeDifficulty, exec_diff: ExecutionDiff
     for entry in json_data:
         solutions = [set[LevelRequirements]() for _ in range(6)]
         for solution in json_data[entry]:
+            if LevelRequirements.FistOnly in solutions[solution["medal"]]:
+                continue # don't even bother
+
             if solution["know"] <= know_diff and solution["exec"] <= exec_diff:
                 reqs = LevelRequirements(solution["reqs"])
 
