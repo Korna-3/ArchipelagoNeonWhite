@@ -70,7 +70,8 @@ class NeonWhiteWorld(World):
             self.ranks_required = ut_regen["rank_requirement"]
             self.options.mission_count.value = ut_regen["mission_count"]
             self.options.medal_cap.value = ut_regen["medal_cap"]
-            self.options.difficulty.value = ut_regen["difficulty"]
+            self.options.difficulty_knowledge.value = ut_regen["difficulty_knowledge"]
+            self.options.difficulty_knowledge.value = ut_regen["difficulty_execution"]
 
     def create_item(self, name: str) -> NWItem:
         return NWItem(name, nw_items[name].classification, nw_items[name].id, self.player)
@@ -108,36 +109,6 @@ class NeonWhiteWorld(World):
         self.set_completion_rule(CanReachLocation("Absolution Ace Completion"))
 
     def fill_slot_data(self):
-        logic = io.BytesIO()
-        for level in self.ordered_levels:
-            for medal in reversed(range(self.options.medal_cap)): # reversed to compress better
-                reqs = self.requirements.get_necessary_items(level, Medal(medal))
-                if LevelRequirements.FistOnly in reqs:
-                    reqs = {LevelRequirements.FistOnly}
-
-                logic.write(len(reqs).to_bytes(1))
-
-                for req in reqs:
-                    logic.write(req.value.to_bytes(2, "little"))
-
-            reqs = self.requirements.get_necessary_items(level, Medal.Gift)
-            if LevelRequirements.FistOnly in reqs:
-                reqs = {LevelRequirements.FistOnly}
-
-            logic.write(len(reqs).to_bytes(1))
-
-            for req in reqs:
-                logic.write(req.to_bytes(2, "little"))
-
-        # with open("logicdebug.bin", "wb") as f:
-        #     f.write(logic.getbuffer())
-
-        cpobj = zlib.compressobj(level=9, wbits=-15, memLevel=9)
-        encoded_logic = base64.a85encode(cpobj.compress(logic.getvalue()) + cpobj.flush()).decode()
-        # print(encoded_logic)
-        # print(len(encoded_logic))
-        # print(len(logic.getvalue()))
-
         dumps = json.dumps([neon_white_level_name_internal[x] for x in self.ordered_levels], separators=(",", ":"))
 
         cpobj = zlib.compressobj(level=9, wbits=-15, memLevel=9)
@@ -147,12 +118,11 @@ class NeonWhiteWorld(World):
 
         return {
             "level_order": encoded_levels,
-            "level_logic": encoded_logic,
             "mission_costs": [
                 get_mission_rank_required(self, i + 1)
                     for i in range(self.options.mission_count)
             ],
-            "options": self.options.as_dict("difficulty", "medal_cap", "death_link")
+            "options": self.options.as_dict("difficulty_knowledge", "difficulty_execution", "medal_cap", "death_link")
         }
 
     def interpret_slot_data(self, slot_data: dict[str, Any]) -> dict[str, Any]:
@@ -166,5 +136,6 @@ class NeonWhiteWorld(World):
             "rank_requirement": slot_data["mission_costs"][-1],
             "mission_count": len(slot_data["mission_costs"]),
             "medal_cap": slot_data["options"]["medal_cap"],
-            "difficulty": slot_data["options"]["difficulty"]
+            "difficulty_knowledge": slot_data["options"]["difficulty_knowledge"],
+            "difficulty_execution": slot_data["options"]["difficulty_execution"]
         }

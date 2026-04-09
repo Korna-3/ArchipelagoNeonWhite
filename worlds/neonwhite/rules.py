@@ -1,4 +1,3 @@
-import csv
 import itertools
 import json
 from enum import IntEnum, IntFlag, auto
@@ -14,7 +13,7 @@ from worlds.neonwhite.locations import (
     neon_white_levels_normal,
     neon_white_levels_sidequests,
 )
-from worlds.neonwhite.options import KnowledgeDifficulty, ExecutionDifficulty, MedalCap, MissionUnlockMethod
+from worlds.neonwhite.options import ExecutionDifficulty, KnowledgeDifficulty, MedalCap, MissionUnlockMethod
 
 from . import data
 
@@ -99,11 +98,27 @@ class LevelRequirements(IntFlag):
             ret |= LevelRequirements.string_to_solo(x)
         return ret
 
+    @property
+    def count(self) -> int:
+        count = 0
+        flags = int(self)
+        while (flags != 0):
+            flags &= flags - 1
+            count += 1
+        return count
+
+    # a copy of c#'s
+    def has_flags(self, other: "LevelRequirements") -> bool:
+        if self & other == self:
+            return True
+        return False
+
+
 
 # This only represents a single difficulty
 class LevelRequirementSet:
     # String is the level name, list is 0..5, in order: dev,ace,gold,silver,bronze,gift
-    requirements = dict[str, list[set[LevelRequirements]]]()
+    requirements = dict[str, list[set[LevelRequirements]]]()  # noqa: RUF012
 
     # Note - Medal 0-4 is dev-bronze, 5 is gift
     # Cards are what is available at that point
@@ -134,56 +149,33 @@ class LevelRequirementSet:
         return self.requirements[level][medal_idx]
 
 
+def import_json_to_data(know_diff: KnowledgeDifficulty, exec_diff: ExecutionDifficulty,
+        medal_cap: Medal) -> LevelRequirementSet:
 
-def string_to_level_req_flag(level: str) -> LevelRequirements:
-    match level:
-        case "Kf":
-            return LevelRequirements.Katana
-        case "Pf":
-            return LevelRequirements.PurifyFire
-        case "Pd":
-            return LevelRequirements.PurifyDiscard
-        case "Ef":
-            return LevelRequirements.ElevateFire
-        case "Ed":
-            return LevelRequirements.ElevateDiscard
-        case "Gf":
-            return LevelRequirements.GodspeedFire
-        case "Gd":
-            return LevelRequirements.GodspeedDiscard
-        case "Sf":
-            return LevelRequirements.StompFire
-        case "Sd":
-            return LevelRequirements.StompDiscard
-        case "Ff":
-            return LevelRequirements.FireballFire
-        case "Fd":
-            return LevelRequirements.FireballDiscard
-        case "Df":
-            return LevelRequirements.DominionFire
-        case "Dd":
-            return LevelRequirements.DominionDiscard
-        case "Bd":
-            return LevelRequirements.BookOfLife
-        case _:
-            # Unexpected symbol/fist only
-            return LevelRequirements.FistOnly
-
-def import_json_to_data(know_diff:KnowledgeDifficulty, exec_diff:ExecutionDifficulty) -> LevelRequirementSet:
+    capint = int(medal_cap) if medal_cap == Medal.Gift else 4 - int(medal_cap)
     # See archipelago requirements sheet for formatting
     from importlib.resources import files
     file = files(data).joinpath("nw_cr.json").open()
     json_data = json.loads(file.read())
     new_requirements = LevelRequirementSet()
     for entry in json_data:
-        solutions:list[set[LevelRequirements]] = [set[LevelRequirements]() for _ in range(6)]
+        solutions = [set[LevelRequirements]() for _ in range(6)]
         for solution in json_data[entry]:
             if solution["know"] <= know_diff and solution["exec"] <= exec_diff:
-                if solution["medal"] == 6:
-                    solutions[5].add(solution["reqs"])
+                reqs = LevelRequirements(solution["reqs"])
+
+                if solution["medal"] == 5:
+                    if any(reqs.has_flags(x) for x in solutions[5]):
+                        continue
+
+                    solutions[5].add(reqs)
                 else:
-                    for i in range(solution["medal"], 6):
-                        solutions[i - 1].add(solution["reqs"])
+                    for i in range(max(solution["medal"], capint), 5):
+                        if any(reqs.has_flags(x) for x in solutions[i]):
+                            continue
+
+                        solutions[i].add(reqs)
+
         new_requirements.requirements[entry] = solutions
     return new_requirements
 
@@ -221,9 +213,9 @@ def get_mission_rank_required(world: "NeonWhiteWorld", mission: int) -> int:
     return floor(world.ranks_required * normal_value)
 
 def set_rules(multiworld: MultiWorld, world: "NeonWhiteWorld", options: NeonWhiteOptions):
-    world.requirements = import_json_to_data(options.difficulty_knowledge, options.difficulty_execution)
-
     medal_cap_typed = medal_from_medal_cap(options.medal_cap)
+    world.requirements = import_json_to_data(options.difficulty_knowledge, options.difficulty_execution, medal_cap_typed)
+
 
     if not world.ordered_levels:
         world.ordered_levels = level_rando(world)
