@@ -12,7 +12,7 @@ from .items import NWItem, get_items_from_category, nw_item_groups, nw_items
 from .locations import checks_in_sets_lvl, neon_white_get_locations, neon_white_level_name_internal
 
 #from .Locations import PTLocation, pt_locations, pt_location_groups
-from .options import NeonWhiteOptions
+from .options import NeonWhiteOptions, MissionUnlockMethod
 from .regions import create_regions
 from .rules import LevelRequirements, LevelRequirementSet, Medal, get_mission_rank_required, set_rules
 
@@ -87,11 +87,17 @@ class NeonWhiteWorld(World):
         # Add soul cards
         itempool += [self.create_item(card) for card in get_items_from_category("Card")]
 
-        # Make sure we add the neon ranks that we need
-
         if (not getattr(self.multiworld, "re_gen_passthrough", {})):
             self.ranks_required = ((loc_count - len(itempool)) * (self.options.rank_requirement / 100))
-        itempool += [self.create_item("Neon Rank")] * get_mission_rank_required(self, self.options.mission_count.value)
+
+        if self.options.unlock_method == MissionUnlockMethod.option_missions:
+            # Add a number of mission unlock items equal to the mission count - 1
+            itempool += [self.create_item("Mission Unlock")] * (self.options.mission_count.value - 1)
+        else:
+            # Make sure we add the neon ranks that we need
+            itempool += [self.create_item("Neon Rank")] * get_mission_rank_required(self,
+                                                                                    self.options.mission_count.value)
+
 
         # Fill the rest with filler
         itempool += [self.create_filler() for _ in range(loc_count - len(itempool))]
@@ -99,10 +105,8 @@ class NeonWhiteWorld(World):
         self.multiworld.itempool += itempool
 
     def get_filler_item_name(self) -> str:
-        # 1/100 items added for filler will be a miracle katana, the rest will be neon rank increments
-        if self.multiworld.random.randint(1, 100) == 100:
-            return "Miracle Katana"
-        return "Neon Rank"
+        # Until we make more filler, just stuff the pool with heavenly delight tickets
+        return "Heavenly Delight Ticket"
 
     def set_rules(self):
         set_rules(self.multiworld, self, self.options)
@@ -116,13 +120,18 @@ class NeonWhiteWorld(World):
         # print(len(encoded_levels))
         # print(len(dumps))
 
-        return {
-            "level_order": encoded_levels,
-            "mission_costs": [
+        if self.options.unlock_method == MissionUnlockMethod.option_missions:
+            mission_costs = 0
+        else:
+            mission_costs = [
                 get_mission_rank_required(self, i + 1)
                     for i in range(self.options.mission_count)
-            ],
-            "options": self.options.as_dict("difficulty_knowledge", "difficulty_execution", "medal_cap", "death_link")
+            ]
+
+        return {
+            "level_order": encoded_levels,
+            "mission_costs": mission_costs,
+            "options": self.options.as_dict("difficulty_knowledge", "difficulty_execution", "medal_cap", "death_link", "unlock_method")
         }
 
     def interpret_slot_data(self, slot_data: dict[str, Any]) -> dict[str, Any]:

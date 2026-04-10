@@ -60,7 +60,7 @@ class RankRequirement(Range):
     """
     The percentage of ranks required for the final mission out of the total amount of remaining checks in the pool.
     The rest of the mission requirements will scale accordingly.
-    Only applies when MissionUnlockMethod is set to Ranks.
+    Only applies when Mission Unlock Method is set to Ranks.
     """
     display_name = "Rank Requirement"
     range_start = 1
