@@ -54,7 +54,7 @@ class MedalCap(Choice):
     option_gold = 3
     option_ace = 4
     option_dev = 5
-    default = 3
+    default = 4
 
 class RankRequirement(Range):
     """

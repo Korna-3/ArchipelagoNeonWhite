@@ -1,4 +1,4 @@
-from BaseClasses import MultiWorld, Region
+from BaseClasses import MultiWorld, Region, LocationProgressType
 
 from .locations import (
     NWLocation,
@@ -26,9 +26,12 @@ def create_regions(player: int, multiworld: MultiWorld, options: NeonWhiteOption
         for medal in range(options.medal_cap):
             check_name = level + " " + neon_white_levels_medals[medal] + " Completion"
             new_location = NWLocation(player, check_name, neon_white_locations[check_name], check_region)
+            # Make the highest medal a priority location
+            #if medal == options.medal_cap - 1: new_location.progress_type = LocationProgressType.PRIORITY
             check_region.locations.append(new_location)
         check_name = level + " Gift"
         new_location = NWLocation(player, check_name, neon_white_locations[check_name], check_region)
+        #new_location.progress_type = LocationProgressType.PRIORITY
         check_region.locations.append(new_location)
         heaven_regions.append(check_region)
 
@@ -37,6 +40,8 @@ def create_regions(player: int, multiworld: MultiWorld, options: NeonWhiteOption
         for medal in range(options.medal_cap):
             check_name = level + " " + neon_white_levels_medals[medal] + " Completion"
             new_location = NWLocation(player, check_name, neon_white_locations[check_name], check_region)
+            # Make the highest medal a priority location
+            #if medal == options.medal_cap - 1: new_location.progress_type = LocationProgressType.PRIORITY
             check_region.locations.append(new_location)
         heaven_regions.append(check_region)
 
@@ -44,6 +49,7 @@ def create_regions(player: int, multiworld: MultiWorld, options: NeonWhiteOption
         check_region = Region(level, player, multiworld)
         check_name = level + " Completion"
         new_location = NWLocation(player, check_name, neon_white_locations[check_name], check_region)
+        #new_location.progress_type = LocationProgressType.PRIORITY
         check_region.locations.append(new_location)
         heaven_regions.append(check_region)
 

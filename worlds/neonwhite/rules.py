@@ -190,12 +190,12 @@ def level_rando(world: "NeonWhiteWorld") -> list[str]:
     level_queue = neon_white_levels_normal + neon_white_levels_giftless + neon_white_levels_sidequests
     level_queue.remove("Absolution") # This will always be placed at the end
 
-    # Place 2 levels where the gift and gold medal can be obtained Fist-Only at the very start
+    # Place 2 levels where the gift and cap medal can be obtained Fist-Only at the very start
     fist_only_levels = []
     for level in level_queue:
         if level not in neon_white_levels_normal:
             continue
-        if (world.requirements.can_complete_level(level, Medal.Gold, LevelRequirements.FistOnly)
+        if (world.requirements.can_complete_level(level, medal_from_medal_cap(world.options.medal_cap), LevelRequirements.FistOnly)
             and world.requirements.can_complete_level(level, Medal.Gift, LevelRequirements.FistOnly)):
             fist_only_levels.append(level)
     world.random.shuffle(fist_only_levels)
@@ -209,10 +209,16 @@ def level_rando(world: "NeonWhiteWorld") -> list[str]:
 
 # Mission is 1-indexed
 def get_mission_rank_required(world: "NeonWhiteWorld", mission: int) -> int:
-    # Neon rank requirement is exponential, requiring a tiny number of neon ranks for the first missions but quickly increasing
-    # total_rank_count /= 10
+    # Neon rank requirement is exponential
+    #    Requiring a tiny number of neon ranks for the first missions but quickly increasing for the last few missions
+    # To visualize it in Desmos, do: y = (v^x - 1) / (v - 1), where v == lenience_value here
+    #    X represents mission while Y represents ranks
+    #    To get exact values, replace x with x - 1, then
+    #       divide it by mission count and multiply the equation by rank total (floor fractions)
+    #    E.g. 11 missions, 343 total ranks:
+    #    y = ((v^((x-1) / 11) - 1) / (v - 1)) * 343
     mission_fraction = mission / world.options.mission_count
-    lenience_value = 10
+    lenience_value = 10 # How sharp the curve is, higher = slower rank req but sharper spike near the end
     normal_value = (pow(lenience_value, mission_fraction) - 1) / (lenience_value - 1)
     return floor(world.ranks_required * normal_value)
 
