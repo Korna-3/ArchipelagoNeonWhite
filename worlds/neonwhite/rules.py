@@ -161,14 +161,14 @@ def import_json_to_data(know_diff: KnowledgeDifficulty, exec_diff: ExecutionDiff
     for entry in json_data:
         solutions = [set[LevelRequirements]() for _ in range(6)]
         for solution in json_data[entry]:
-            capped = max(solution["medal"], capint)
+            capped = max(solution["m"], capint)
             if LevelRequirements.FistOnly in solutions[capped]:
                 continue # don't even bother
 
-            if solution["know"] <= know_diff and solution["exec"] <= exec_diff:
-                reqs = LevelRequirements(solution["reqs"])
+            if solution["k"] <= know_diff and solution["e"] <= exec_diff:
+                reqs = LevelRequirements(solution["r"])
 
-                if solution["medal"] == 5:
+                if solution["m"] == 5:
                     if any(reqs.has_flags(x) for x in solutions[5]):
                         continue
 
