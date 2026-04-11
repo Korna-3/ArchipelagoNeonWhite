@@ -276,7 +276,7 @@ def set_rules(multiworld: MultiWorld, world: "NeonWhiteWorld", options: NeonWhit
 
             else:
                 world.set_rule(world.get_location(level_name + " Completion"),
-                    world.requirements.make_rule(level_name, Medal.Dev))
+                    world.requirements.make_rule(level_name, medal_cap_typed))
 
     from Utils import visualize_regions
     visualize_regions(central_heaven, "neon_white_regions.puml")
