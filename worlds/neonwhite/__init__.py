@@ -72,6 +72,7 @@ class NeonWhiteWorld(World):
             self.options.medal_cap.value = ut_regen["medal_cap"]
             self.options.difficulty_knowledge.value = ut_regen["difficulty_knowledge"]
             self.options.difficulty_knowledge.value = ut_regen["difficulty_execution"]
+            self.options.unlock_method = ut_regen["unlock_method"]
 
     def create_item(self, name: str) -> NWItem:
         return NWItem(name, nw_items[name].classification, nw_items[name].id, self.player)
@@ -95,8 +96,8 @@ class NeonWhiteWorld(World):
             itempool += [self.create_item("Mission Unlock")] * (self.options.mission_count.value - 1)
         else:
             # Make sure we add the neon ranks that we need
-            itempool += [self.create_item("Neon Rank")] * get_mission_rank_required(self,
-                                                                                    self.options.mission_count.value)
+            itempool += ([self.create_item("Neon Rank")]
+                * get_mission_rank_required(self, self.options.mission_count.value))
 
 
         # Fill the rest with filler
@@ -121,7 +122,7 @@ class NeonWhiteWorld(World):
         # print(len(dumps))
 
         if self.options.unlock_method == MissionUnlockMethod.option_missions:
-            mission_costs = 0
+            mission_costs = list(range(self.options.mission_count))
         else:
             mission_costs = [
                 get_mission_rank_required(self, i + 1)
@@ -131,7 +132,9 @@ class NeonWhiteWorld(World):
         return {
             "level_order": encoded_levels,
             "mission_costs": mission_costs,
-            "options": self.options.as_dict("difficulty_knowledge", "difficulty_execution", "medal_cap", "death_link", "unlock_method")
+            "options": self.options.as_dict(
+                "difficulty_knowledge", "difficulty_execution",
+                "medal_cap", "death_link", "unlock_method")
         }
 
     def interpret_slot_data(self, slot_data: dict[str, Any]) -> dict[str, Any]:
@@ -146,5 +149,6 @@ class NeonWhiteWorld(World):
             "mission_count": len(slot_data["mission_costs"]),
             "medal_cap": slot_data["options"]["medal_cap"],
             "difficulty_knowledge": slot_data["options"]["difficulty_knowledge"],
-            "difficulty_execution": slot_data["options"]["difficulty_execution"]
+            "difficulty_execution": slot_data["options"]["difficulty_execution"],
+            "unlock_method": slot_data["options"]["unlock_method"]
         }
