@@ -1,1044 +1,7078 @@
 {
   "Movement": [
-    { "medal": 0, "know": 1, "exec": 1, "reqs": 0 },
-    { "medal": 5, "know": 1, "exec": 1, "reqs": 0 }
+    {
+      "medal": 0,
+      "know": 1,
+      "exec": 1,
+      "reqs": 0
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 0
+    }
   ],
   "Pummel": [
-    { "medal": 3, "know": 1, "exec": 1, "reqs": 0 },
-    { "medal": 2, "know": 1, "exec": 2, "reqs": 0 },
-    { "medal": 5, "know": 1, "exec": 1, "reqs": 0 },
-    { "medal": 1, "know": 2, "exec": 3, "reqs": 16 },
-    { "medal": 1, "know": 1, "exec": 1, "reqs": 4 },
-    { "medal": 0, "know": 2, "exec": 2, "reqs": 4 }
+    {
+      "medal": 3,
+      "know": 1,
+      "exec": 1,
+      "reqs": 0
+    },
+    {
+      "medal": 2,
+      "know": 1,
+      "exec": 2,
+      "reqs": 0
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 0
+    },
+    {
+      "medal": 1,
+      "know": 2,
+      "exec": 3,
+      "reqs": 16
+    },
+    {
+      "medal": 1,
+      "know": 1,
+      "exec": 1,
+      "reqs": 4
+    },
+    {
+      "medal": 0,
+      "know": 2,
+      "exec": 2,
+      "reqs": 4
+    }
   ],
   "Gunner": [
-    { "medal": 2, "know": 2, "exec": 1, "reqs": 0 },
-    { "medal": 1, "know": 2, "exec": 3, "reqs": 0 },
-    { "medal": 2, "know": 1, "exec": 1, "reqs": 1 },
-    { "medal": 1, "know": 1, "exec": 1, "reqs": 2 },
-    { "medal": 1, "know": 1, "exec": 1, "reqs": 4 },
-    { "medal": 0, "know": 3, "exec": 3, "reqs": 2 },
-    { "medal": 0, "know": 3, "exec": 3, "reqs": 4 },
-    { "medal": 5, "know": 1, "exec": 1, "reqs": 4 },
-    { "medal": 0, "know": 1, "exec": 2, "reqs": 6 }
+    {
+      "medal": 2,
+      "know": 2,
+      "exec": 1,
+      "reqs": 0
+    },
+    {
+      "medal": 1,
+      "know": 2,
+      "exec": 3,
+      "reqs": 0
+    },
+    {
+      "medal": 2,
+      "know": 1,
+      "exec": 1,
+      "reqs": 1
+    },
+    {
+      "medal": 1,
+      "know": 1,
+      "exec": 1,
+      "reqs": 2
+    },
+    {
+      "medal": 1,
+      "know": 1,
+      "exec": 1,
+      "reqs": 4
+    },
+    {
+      "medal": 0,
+      "know": 3,
+      "exec": 3,
+      "reqs": 2
+    },
+    {
+      "medal": 0,
+      "know": 3,
+      "exec": 3,
+      "reqs": 4
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 4
+    },
+    {
+      "medal": 0,
+      "know": 1,
+      "exec": 2,
+      "reqs": 6
+    }
   ],
   "Cascade": [
-    { "medal": 2, "know": 1, "exec": 1, "reqs": 16 },
-    { "medal": 1, "know": 2, "exec": 2, "reqs": 16 },
-    { "medal": 5, "know": 1, "exec": 1, "reqs": 16 },
-    { "medal": 1, "know": 1, "exec": 1, "reqs": 24 },
-    { "medal": 0, "know": 2, "exec": 2, "reqs": 24 }
+    {
+      "medal": 2,
+      "know": 1,
+      "exec": 1,
+      "reqs": 16
+    },
+    {
+      "medal": 1,
+      "know": 2,
+      "exec": 2,
+      "reqs": 16
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 16
+    },
+    {
+      "medal": 1,
+      "know": 1,
+      "exec": 1,
+      "reqs": 24
+    },
+    {
+      "medal": 0,
+      "know": 2,
+      "exec": 2,
+      "reqs": 24
+    }
   ],
   "Elevate": [
-    { "medal": 5, "know": 2, "exec": 2, "reqs": 0 },
-    { "medal": 0, "know": 3, "exec": 3, "reqs": 16 },
-    { "medal": 5, "know": 1, "exec": 1, "reqs": 16 },
-    { "medal": 2, "know": 1, "exec": 1, "reqs": 18 },
-    { "medal": 2, "know": 1, "exec": 1, "reqs": 20 },
-    { "medal": 1, "know": 2, "exec": 2, "reqs": 18 },
-    { "medal": 1, "know": 2, "exec": 2, "reqs": 20 },
-    { "medal": 1, "know": 1, "exec": 1, "reqs": 17 },
-    { "medal": 1, "know": 1, "exec": 1, "reqs": 24 },
-    { "medal": 0, "know": 2, "exec": 2, "reqs": 27 },
-    { "medal": 0, "know": 2, "exec": 2, "reqs": 29 }
+    {
+      "medal": 5,
+      "know": 2,
+      "exec": 2,
+      "reqs": 0
+    },
+    {
+      "medal": 0,
+      "know": 3,
+      "exec": 3,
+      "reqs": 16
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 16
+    },
+    {
+      "medal": 2,
+      "know": 1,
+      "exec": 1,
+      "reqs": 18
+    },
+    {
+      "medal": 2,
+      "know": 1,
+      "exec": 1,
+      "reqs": 20
+    },
+    {
+      "medal": 1,
+      "know": 2,
+      "exec": 2,
+      "reqs": 18
+    },
+    {
+      "medal": 1,
+      "know": 2,
+      "exec": 2,
+      "reqs": 20
+    },
+    {
+      "medal": 1,
+      "know": 1,
+      "exec": 1,
+      "reqs": 17
+    },
+    {
+      "medal": 1,
+      "know": 1,
+      "exec": 1,
+      "reqs": 24
+    },
+    {
+      "medal": 0,
+      "know": 2,
+      "exec": 2,
+      "reqs": 27
+    },
+    {
+      "medal": 0,
+      "know": 2,
+      "exec": 2,
+      "reqs": 29
+    }
   ],
   "Bounce": [
-    { "medal": 5, "know": 3, "exec": 4, "reqs": 0 },
-    { "medal": 2, "know": 1, "exec": 1, "reqs": 16 },
-    { "medal": 1, "know": 2, "exec": 2, "reqs": 16 },
-    { "medal": 0, "know": 3, "exec": 3, "reqs": 16 },
-    { "medal": 5, "know": 1, "exec": 1, "reqs": 16 },
-    { "medal": 1, "know": 2, "exec": 1, "reqs": 17 },
-    { "medal": 0, "know": 1, "exec": 1, "reqs": 24 },
-    { "medal": 0, "know": 2, "exec": 3, "reqs": 17 },
-    { "medal": 0, "know": 3, "exec": 2, "reqs": 17 }
+    {
+      "medal": 5,
+      "know": 3,
+      "exec": 4,
+      "reqs": 0
+    },
+    {
+      "medal": 2,
+      "know": 1,
+      "exec": 1,
+      "reqs": 16
+    },
+    {
+      "medal": 1,
+      "know": 2,
+      "exec": 2,
+      "reqs": 16
+    },
+    {
+      "medal": 0,
+      "know": 3,
+      "exec": 3,
+      "reqs": 16
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 16
+    },
+    {
+      "medal": 1,
+      "know": 2,
+      "exec": 1,
+      "reqs": 17
+    },
+    {
+      "medal": 0,
+      "know": 1,
+      "exec": 1,
+      "reqs": 24
+    },
+    {
+      "medal": 0,
+      "know": 2,
+      "exec": 3,
+      "reqs": 17
+    },
+    {
+      "medal": 0,
+      "know": 3,
+      "exec": 2,
+      "reqs": 17
+    }
   ],
   "Purify": [
-    { "medal": 3, "know": 2, "exec": 1, "reqs": 2 },
-    { "medal": 2, "know": 1, "exec": 1, "reqs": 4 },
-    { "medal": 1, "know": 2, "exec": 2, "reqs": 4 },
-    { "medal": 1, "know": 3, "exec": 3, "reqs": 2 },
-    { "medal": 0, "know": 3, "exec": 4, "reqs": 4 },
-    { "medal": 5, "know": 1, "exec": 1, "reqs": 4 },
-    { "medal": 2, "know": 2, "exec": 2, "reqs": 3 },
-    { "medal": 1, "know": 1, "exec": 1, "reqs": 6 },
-    { "medal": 1, "know": 1, "exec": 3, "reqs": 5 },
-    { "medal": 0, "know": 1, "exec": 2, "reqs": 6 }
+    {
+      "medal": 3,
+      "know": 2,
+      "exec": 1,
+      "reqs": 2
+    },
+    {
+      "medal": 2,
+      "know": 1,
+      "exec": 1,
+      "reqs": 4
+    },
+    {
+      "medal": 1,
+      "know": 2,
+      "exec": 2,
+      "reqs": 4
+    },
+    {
+      "medal": 1,
+      "know": 3,
+      "exec": 3,
+      "reqs": 2
+    },
+    {
+      "medal": 0,
+      "know": 3,
+      "exec": 4,
+      "reqs": 4
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 4
+    },
+    {
+      "medal": 2,
+      "know": 2,
+      "exec": 2,
+      "reqs": 3
+    },
+    {
+      "medal": 1,
+      "know": 1,
+      "exec": 1,
+      "reqs": 6
+    },
+    {
+      "medal": 1,
+      "know": 1,
+      "exec": 3,
+      "reqs": 5
+    },
+    {
+      "medal": 0,
+      "know": 1,
+      "exec": 2,
+      "reqs": 6
+    }
   ],
   "Climb": [
-    { "medal": 1, "know": 1, "exec": 1, "reqs": 4 },
-    { "medal": 0, "know": 2, "exec": 1, "reqs": 4 },
-    { "medal": 0, "know": 1, "exec": 3, "reqs": 4 },
-    { "medal": 5, "know": 1, "exec": 1, "reqs": 4 }
+    {
+      "medal": 1,
+      "know": 1,
+      "exec": 1,
+      "reqs": 4
+    },
+    {
+      "medal": 0,
+      "know": 2,
+      "exec": 1,
+      "reqs": 4
+    },
+    {
+      "medal": 0,
+      "know": 1,
+      "exec": 3,
+      "reqs": 4
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 4
+    }
   ],
   "Fasttrack": [
-    { "medal": 3, "know": 3, "exec": 3, "reqs": 0 },
-    { "medal": 2, "know": 3, "exec": 4, "reqs": 0 },
-    { "medal": 3, "know": 1, "exec": 1, "reqs": 1 },
-    { "medal": 3, "know": 2, "exec": 2, "reqs": 8 },
-    { "medal": 2, "know": 1, "exec": 1, "reqs": 4 },
-    { "medal": 2, "know": 1, "exec": 1, "reqs": 2 },
-    { "medal": 2, "know": 1, "exec": 2, "reqs": 1 },
-    { "medal": 1, "know": 1, "exec": 2, "reqs": 2 },
-    { "medal": 1, "know": 2, "exec": 3, "reqs": 1 },
-    { "medal": 1, "know": 3, "exec": 4, "reqs": 8 },
-    { "medal": 1, "know": 2, "exec": 3, "reqs": 4 },
-    { "medal": 0, "know": 3, "exec": 4, "reqs": 2 },
-    { "medal": 5, "know": 2, "exec": 1, "reqs": 4 },
-    { "medal": 1, "know": 1, "exec": 1, "reqs": 18 },
-    { "medal": 1, "know": 1, "exec": 1, "reqs": 6 },
-    { "medal": 1, "know": 1, "exec": 2, "reqs": 5 },
-    { "medal": 1, "know": 2, "exec": 2, "reqs": 20 },
-    { "medal": 1, "know": 2, "exec": 2, "reqs": 12 },
-    { "medal": 1, "know": 1, "exec": 3, "reqs": 20 },
-    { "medal": 0, "know": 1, "exec": 2, "reqs": 18 },
-    { "medal": 0, "know": 1, "exec": 2, "reqs": 6 },
-    { "medal": 0, "know": 3, "exec": 4, "reqs": 5 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 12 },
-    { "medal": 5, "know": 1, "exec": 1, "reqs": 20 },
-    { "medal": 0, "know": 2, "exec": 3, "reqs": 29 }
+    {
+      "medal": 3,
+      "know": 3,
+      "exec": 3,
+      "reqs": 0
+    },
+    {
+      "medal": 2,
+      "know": 3,
+      "exec": 4,
+      "reqs": 0
+    },
+    {
+      "medal": 3,
+      "know": 1,
+      "exec": 1,
+      "reqs": 1
+    },
+    {
+      "medal": 3,
+      "know": 2,
+      "exec": 2,
+      "reqs": 8
+    },
+    {
+      "medal": 2,
+      "know": 1,
+      "exec": 1,
+      "reqs": 4
+    },
+    {
+      "medal": 2,
+      "know": 1,
+      "exec": 1,
+      "reqs": 2
+    },
+    {
+      "medal": 2,
+      "know": 1,
+      "exec": 2,
+      "reqs": 1
+    },
+    {
+      "medal": 1,
+      "know": 1,
+      "exec": 2,
+      "reqs": 2
+    },
+    {
+      "medal": 1,
+      "know": 2,
+      "exec": 3,
+      "reqs": 1
+    },
+    {
+      "medal": 1,
+      "know": 3,
+      "exec": 4,
+      "reqs": 8
+    },
+    {
+      "medal": 1,
+      "know": 2,
+      "exec": 3,
+      "reqs": 4
+    },
+    {
+      "medal": 0,
+      "know": 3,
+      "exec": 4,
+      "reqs": 2
+    },
+    {
+      "medal": 5,
+      "know": 2,
+      "exec": 1,
+      "reqs": 4
+    },
+    {
+      "medal": 1,
+      "know": 1,
+      "exec": 1,
+      "reqs": 18
+    },
+    {
+      "medal": 1,
+      "know": 1,
+      "exec": 1,
+      "reqs": 6
+    },
+    {
+      "medal": 1,
+      "know": 1,
+      "exec": 2,
+      "reqs": 5
+    },
+    {
+      "medal": 1,
+      "know": 2,
+      "exec": 2,
+      "reqs": 20
+    },
+    {
+      "medal": 1,
+      "know": 2,
+      "exec": 2,
+      "reqs": 12
+    },
+    {
+      "medal": 1,
+      "know": 1,
+      "exec": 3,
+      "reqs": 20
+    },
+    {
+      "medal": 0,
+      "know": 1,
+      "exec": 2,
+      "reqs": 18
+    },
+    {
+      "medal": 0,
+      "know": 1,
+      "exec": 2,
+      "reqs": 6
+    },
+    {
+      "medal": 0,
+      "know": 3,
+      "exec": 4,
+      "reqs": 5
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 12
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 20
+    },
+    {
+      "medal": 0,
+      "know": 2,
+      "exec": 3,
+      "reqs": 29
+    }
   ],
   "Glass Port": [
-    { "medal": 2, "know": 4, "exec": 4, "reqs": 2 },
-    { "medal": 2, "know": 4, "exec": 4, "reqs": 1 },
-    { "medal": 2, "know": 4, "exec": 4, "reqs": 8 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 4 },
-    { "medal": 0, "know": 3, "exec": 4, "reqs": 4 },
-    { "medal": 5, "know": 1, "exec": 1, "reqs": 4 },
-    { "medal": 5, "know": 2, "exec": 1, "reqs": 16 },
-    { "medal": 2, "know": 1, "exec": 1, "reqs": 17 },
-    { "medal": 2, "know": 1, "exec": 1, "reqs": 18 },
-    { "medal": 2, "know": 1, "exec": 1, "reqs": 12 },
-    { "medal": 1, "know": 1, "exec": 1, "reqs": 5 },
-    { "medal": 1, "know": 1, "exec": 1, "reqs": 6 },
-    { "medal": 1, "know": 1, "exec": 2, "reqs": 12 },
-    { "medal": 1, "know": 2, "exec": 3, "reqs": 17 },
-    { "medal": 1, "know": 1, "exec": 2, "reqs": 18 },
-    { "medal": 1, "know": 3, "exec": 2, "reqs": 24 },
-    { "medal": 0, "know": 2, "exec": 2, "reqs": 31 }
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 2
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 8
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 4
+    },
+    {
+      "medal": 0,
+      "know": 3,
+      "exec": 4,
+      "reqs": 4
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 4
+    },
+    {
+      "medal": 5,
+      "know": 2,
+      "exec": 1,
+      "reqs": 16
+    },
+    {
+      "medal": 2,
+      "know": 1,
+      "exec": 1,
+      "reqs": 17
+    },
+    {
+      "medal": 2,
+      "know": 1,
+      "exec": 1,
+      "reqs": 18
+    },
+    {
+      "medal": 2,
+      "know": 1,
+      "exec": 1,
+      "reqs": 12
+    },
+    {
+      "medal": 1,
+      "know": 1,
+      "exec": 1,
+      "reqs": 5
+    },
+    {
+      "medal": 1,
+      "know": 1,
+      "exec": 1,
+      "reqs": 6
+    },
+    {
+      "medal": 1,
+      "know": 1,
+      "exec": 2,
+      "reqs": 12
+    },
+    {
+      "medal": 1,
+      "know": 2,
+      "exec": 3,
+      "reqs": 17
+    },
+    {
+      "medal": 1,
+      "know": 1,
+      "exec": 2,
+      "reqs": 18
+    },
+    {
+      "medal": 1,
+      "know": 3,
+      "exec": 2,
+      "reqs": 24
+    },
+    {
+      "medal": 0,
+      "know": 2,
+      "exec": 2,
+      "reqs": 31
+    }
   ],
   "Take Flight": [
-    { "medal": 0, "know": 3, "exec": 3, "reqs": 20 },
-    { "medal": 5, "know": 1, "exec": 1, "reqs": 20 },
-    { "medal": 5, "know": 3, "exec": 4, "reqs": 17 },
-    { "medal": 1, "know": 3, "exec": 4, "reqs": 25 },
-    { "medal": 1, "know": 3, "exec": 4, "reqs": 19 }
+    {
+      "medal": 0,
+      "know": 3,
+      "exec": 3,
+      "reqs": 20
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 20
+    },
+    {
+      "medal": 5,
+      "know": 3,
+      "exec": 4,
+      "reqs": 17
+    },
+    {
+      "medal": 1,
+      "know": 3,
+      "exec": 4,
+      "reqs": 25
+    },
+    {
+      "medal": 1,
+      "know": 3,
+      "exec": 4,
+      "reqs": 19
+    }
   ],
   "Godspeed": [
-    { "medal": 0, "know": 1, "exec": 1, "reqs": 64 },
-    { "medal": 5, "know": 1, "exec": 1, "reqs": 64 },
-    { "medal": 4, "know": 3, "exec": 2, "reqs": 33 }
+    {
+      "medal": 0,
+      "know": 1,
+      "exec": 1,
+      "reqs": 64
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 64
+    },
+    {
+      "medal": 4,
+      "know": 3,
+      "exec": 2,
+      "reqs": 33
+    }
   ],
   "Dasher": [
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 0 },
-    { "medal": 5, "know": 2, "exec": 1, "reqs": 0 },
-    { "medal": 3, "know": 3, "exec": 2, "reqs": 1 },
-    { "medal": 3, "know": 4, "exec": 4, "reqs": 8 },
-    { "medal": 3, "know": 2, "exec": 2, "reqs": 32 },
-    { "medal": 1, "know": 3, "exec": 3, "reqs": 64 },
-    { "medal": 5, "know": 1, "exec": 1, "reqs": 64 },
-    { "medal": 5, "know": 1, "exec": 1, "reqs": 16 },
-    { "medal": 0, "know": 3, "exec": 4, "reqs": 104 },
-    { "medal": 0, "know": 1, "exec": 2, "reqs": 120 }
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 0
+    },
+    {
+      "medal": 5,
+      "know": 2,
+      "exec": 1,
+      "reqs": 0
+    },
+    {
+      "medal": 3,
+      "know": 3,
+      "exec": 2,
+      "reqs": 1
+    },
+    {
+      "medal": 3,
+      "know": 4,
+      "exec": 4,
+      "reqs": 8
+    },
+    {
+      "medal": 3,
+      "know": 2,
+      "exec": 2,
+      "reqs": 32
+    },
+    {
+      "medal": 1,
+      "know": 3,
+      "exec": 3,
+      "reqs": 64
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 64
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 16
+    },
+    {
+      "medal": 0,
+      "know": 3,
+      "exec": 4,
+      "reqs": 104
+    },
+    {
+      "medal": 0,
+      "know": 1,
+      "exec": 2,
+      "reqs": 120
+    }
   ],
   "Thrasher": [
-    { "medal": 1, "know": 2, "exec": 2, "reqs": 64 },
-    { "medal": 5, "know": 1, "exec": 3, "reqs": 64 },
-    { "medal": 0, "know": 3, "exec": 2, "reqs": 96 },
-    { "medal": 5, "know": 1, "exec": 1, "reqs": 80 },
-    { "medal": 0, "know": 3, "exec": 4, "reqs": 81 }
+    {
+      "medal": 1,
+      "know": 2,
+      "exec": 2,
+      "reqs": 64
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 3,
+      "reqs": 64
+    },
+    {
+      "medal": 0,
+      "know": 3,
+      "exec": 2,
+      "reqs": 96
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 80
+    },
+    {
+      "medal": 0,
+      "know": 3,
+      "exec": 4,
+      "reqs": 81
+    }
   ],
   "Outstretched": [
-    { "medal": 4, "know": 3, "exec": 2, "reqs": 16 },
-    { "medal": 5, "know": 3, "exec": 3, "reqs": 64 },
-    { "medal": 5, "know": 1, "exec": 1, "reqs": 16 },
-    { "medal": 4, "know": 3, "exec": 3, "reqs": 96 },
-    { "medal": 4, "know": 3, "exec": 3, "reqs": 65 },
-    { "medal": 4, "know": 3, "exec": 3, "reqs": 72 },
-    { "medal": 3, "know": 2, "exec": 3, "reqs": 48 },
-    { "medal": 2, "know": 3, "exec": 2, "reqs": 80 },
-    { "medal": 0, "know": 1, "exec": 2, "reqs": 112 }
+    {
+      "medal": 4,
+      "know": 3,
+      "exec": 2,
+      "reqs": 16
+    },
+    {
+      "medal": 5,
+      "know": 3,
+      "exec": 3,
+      "reqs": 64
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 16
+    },
+    {
+      "medal": 4,
+      "know": 3,
+      "exec": 3,
+      "reqs": 96
+    },
+    {
+      "medal": 4,
+      "know": 3,
+      "exec": 3,
+      "reqs": 65
+    },
+    {
+      "medal": 4,
+      "know": 3,
+      "exec": 3,
+      "reqs": 72
+    },
+    {
+      "medal": 3,
+      "know": 2,
+      "exec": 3,
+      "reqs": 48
+    },
+    {
+      "medal": 2,
+      "know": 3,
+      "exec": 2,
+      "reqs": 80
+    },
+    {
+      "medal": 0,
+      "know": 1,
+      "exec": 2,
+      "reqs": 112
+    }
   ],
   "Smackdown": [
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 0 },
-    { "medal": 3, "know": 3, "exec": 4, "reqs": 64 },
-    { "medal": 5, "know": 1, "exec": 1, "reqs": 16 },
-    { "medal": 2, "know": 2, "exec": 2, "reqs": 24 },
-    { "medal": 2, "know": 2, "exec": 2, "reqs": 17 },
-    { "medal": 2, "know": 1, "exec": 1, "reqs": 48 },
-    { "medal": 2, "know": 3, "exec": 3, "reqs": 72 },
-    { "medal": 2, "know": 3, "exec": 3, "reqs": 96 },
-    { "medal": 2, "know": 3, "exec": 4, "reqs": 65 },
-    { "medal": 0, "know": 2, "exec": 3, "reqs": 80 }
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 0
+    },
+    {
+      "medal": 3,
+      "know": 3,
+      "exec": 4,
+      "reqs": 64
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 16
+    },
+    {
+      "medal": 2,
+      "know": 2,
+      "exec": 2,
+      "reqs": 24
+    },
+    {
+      "medal": 2,
+      "know": 2,
+      "exec": 2,
+      "reqs": 17
+    },
+    {
+      "medal": 2,
+      "know": 1,
+      "exec": 1,
+      "reqs": 48
+    },
+    {
+      "medal": 2,
+      "know": 3,
+      "exec": 3,
+      "reqs": 72
+    },
+    {
+      "medal": 2,
+      "know": 3,
+      "exec": 3,
+      "reqs": 96
+    },
+    {
+      "medal": 2,
+      "know": 3,
+      "exec": 4,
+      "reqs": 65
+    },
+    {
+      "medal": 0,
+      "know": 2,
+      "exec": 3,
+      "reqs": 80
+    }
   ],
   "Catwalk": [
-    { "medal": 5, "know": 2, "exec": 2, "reqs": 0 },
-    { "medal": 1, "know": 1, "exec": 2, "reqs": 64 },
-    { "medal": 5, "know": 1, "exec": 1, "reqs": 64 },
-    { "medal": 0, "know": 3, "exec": 4, "reqs": 65 },
-    { "medal": 0, "know": 1, "exec": 1, "reqs": 96 }
+    {
+      "medal": 5,
+      "know": 2,
+      "exec": 2,
+      "reqs": 0
+    },
+    {
+      "medal": 1,
+      "know": 1,
+      "exec": 2,
+      "reqs": 64
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 64
+    },
+    {
+      "medal": 0,
+      "know": 3,
+      "exec": 4,
+      "reqs": 65
+    },
+    {
+      "medal": 0,
+      "know": 1,
+      "exec": 1,
+      "reqs": 96
+    }
   ],
   "Fastlane": [
-    { "medal": 1, "know": 1, "exec": 2, "reqs": 0 },
-    { "medal": 5, "know": 1, "exec": 2, "reqs": 0 },
-    { "medal": 0, "know": 1, "exec": 3, "reqs": 64 },
-    { "medal": 5, "know": 1, "exec": 1, "reqs": 64 }
+    {
+      "medal": 1,
+      "know": 1,
+      "exec": 2,
+      "reqs": 0
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 2,
+      "reqs": 0
+    },
+    {
+      "medal": 0,
+      "know": 1,
+      "exec": 3,
+      "reqs": 64
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 64
+    }
   ],
   "Distinguish": [
-    { "medal": 2, "know": 3, "exec": 2, "reqs": 64 },
-    { "medal": 5, "know": 3, "exec": 2, "reqs": 64 },
-    { "medal": 5, "know": 1, "exec": 1, "reqs": 80 },
-    { "medal": 0, "know": 1, "exec": 2, "reqs": 112 },
-    { "medal": 0, "know": 3, "exec": 4, "reqs": 88 }
+    {
+      "medal": 2,
+      "know": 3,
+      "exec": 2,
+      "reqs": 64
+    },
+    {
+      "medal": 5,
+      "know": 3,
+      "exec": 2,
+      "reqs": 64
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 80
+    },
+    {
+      "medal": 0,
+      "know": 1,
+      "exec": 2,
+      "reqs": 112
+    },
+    {
+      "medal": 0,
+      "know": 3,
+      "exec": 4,
+      "reqs": 88
+    }
   ],
   "Dancer": [
-    { "medal": 2, "know": 3, "exec": 3, "reqs": 64 },
-    { "medal": 5, "know": 1, "exec": 2, "reqs": 64 },
-    { "medal": 4, "know": 2, "exec": 1, "reqs": 48 },
-    { "medal": 1, "know": 3, "exec": 2, "reqs": 96 },
-    { "medal": 0, "know": 3, "exec": 3, "reqs": 80 },
-    { "medal": 5, "know": 1, "exec": 1, "reqs": 96 },
-    { "medal": 5, "know": 1, "exec": 1, "reqs": 65 },
-    { "medal": 4, "know": 3, "exec": 3, "reqs": 25 }
+    {
+      "medal": 2,
+      "know": 3,
+      "exec": 3,
+      "reqs": 64
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 2,
+      "reqs": 64
+    },
+    {
+      "medal": 4,
+      "know": 2,
+      "exec": 1,
+      "reqs": 48
+    },
+    {
+      "medal": 1,
+      "know": 3,
+      "exec": 2,
+      "reqs": 96
+    },
+    {
+      "medal": 0,
+      "know": 3,
+      "exec": 3,
+      "reqs": 80
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 96
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 65
+    },
+    {
+      "medal": 4,
+      "know": 3,
+      "exec": 3,
+      "reqs": 25
+    }
   ],
   "Guardian": [
-    { "medal": 5, "know": 3, "exec": 2, "reqs": 64 },
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 65 },
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 72 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 66 },
-    { "medal": 5, "know": 1, "exec": 1, "reqs": 68 },
-    { "medal": 5, "know": 1, "exec": 1, "reqs": 80 },
-    { "medal": 3, "know": 4, "exec": 4, "reqs": 97 },
-    { "medal": 3, "know": 4, "exec": 4, "reqs": 104 },
-    { "medal": 3, "know": 4, "exec": 4, "reqs": 81 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 84 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 70 },
-    { "medal": 2, "know": 4, "exec": 4, "reqs": 120 },
-    { "medal": 2, "know": 4, "exec": 4, "reqs": 113 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 113 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 120 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 92 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 116 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 121 }
+    {
+      "medal": 5,
+      "know": 3,
+      "exec": 2,
+      "reqs": 64
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 65
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 72
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 66
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 68
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 80
+    },
+    {
+      "medal": 3,
+      "know": 4,
+      "exec": 4,
+      "reqs": 97
+    },
+    {
+      "medal": 3,
+      "know": 4,
+      "exec": 4,
+      "reqs": 104
+    },
+    {
+      "medal": 3,
+      "know": 4,
+      "exec": 4,
+      "reqs": 81
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 84
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 70
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 120
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 113
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 113
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 120
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 92
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 116
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 121
+    }
   ],
   "Stomp": [
-    { "medal": 5, "know": 2, "exec": 1, "reqs": 0 },
-    { "medal": 2, "know": 3, "exec": 2, "reqs": 128 },
-    { "medal": 1, "know": 1, "exec": 1, "reqs": 256 },
-    { "medal": 5, "know": 1, "exec": 1, "reqs": 256 },
-    { "medal": 4, "know": 4, "exec": 3, "reqs": 9 },
-    { "medal": 0, "know": 2, "exec": 3, "reqs": 384 },
-    { "medal": 0, "know": 1, "exec": 1, "reqs": 272 }
+    {
+      "medal": 5,
+      "know": 2,
+      "exec": 1,
+      "reqs": 0
+    },
+    {
+      "medal": 2,
+      "know": 3,
+      "exec": 2,
+      "reqs": 128
+    },
+    {
+      "medal": 1,
+      "know": 1,
+      "exec": 1,
+      "reqs": 256
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 256
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 3,
+      "reqs": 9
+    },
+    {
+      "medal": 0,
+      "know": 2,
+      "exec": 3,
+      "reqs": 384
+    },
+    {
+      "medal": 0,
+      "know": 1,
+      "exec": 1,
+      "reqs": 272
+    }
   ],
   "Jumper": [
-    { "medal": 2, "know": 4, "exec": 4, "reqs": 1 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 256 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 8 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 128 },
-    { "medal": 5, "know": 1, "exec": 1, "reqs": 16 },
-    { "medal": 5, "know": 3, "exec": 4, "reqs": 8 },
-    { "medal": 5, "know": 4, "exec": 4, "reqs": 128 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 17 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 264 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 273 }
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 256
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 8
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 128
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 16
+    },
+    {
+      "medal": 5,
+      "know": 3,
+      "exec": 4,
+      "reqs": 8
+    },
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 128
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 17
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 264
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 273
+    }
   ],
   "Dash Tower": [
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 64 },
-    { "medal": 5, "know": 3, "exec": 2, "reqs": 16 },
-    { "medal": 5, "know": 4, "exec": 2, "reqs": 64 },
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 144 },
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 272 },
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 24 },
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 17 },
-    { "medal": 3, "know": 4, "exec": 4, "reqs": 48 },
-    { "medal": 3, "know": 4, "exec": 4, "reqs": 96 },
-    { "medal": 3, "know": 4, "exec": 4, "reqs": 65 },
-    { "medal": 2, "know": 4, "exec": 4, "reqs": 48 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 288 },
-    { "medal": 5, "know": 1, "exec": 1, "reqs": 80 },
-    { "medal": 2, "know": 4, "exec": 4, "reqs": 88 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 81 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 208 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 336 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 112 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 88 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 336 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 113 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 216 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 113 }
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 64
+    },
+    {
+      "medal": 5,
+      "know": 3,
+      "exec": 2,
+      "reqs": 16
+    },
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 2,
+      "reqs": 64
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 144
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 272
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 24
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 17
+    },
+    {
+      "medal": 3,
+      "know": 4,
+      "exec": 4,
+      "reqs": 48
+    },
+    {
+      "medal": 3,
+      "know": 4,
+      "exec": 4,
+      "reqs": 96
+    },
+    {
+      "medal": 3,
+      "know": 4,
+      "exec": 4,
+      "reqs": 65
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 48
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 288
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 80
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 88
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 81
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 208
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 336
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 112
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 88
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 336
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 113
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 216
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 113
+    }
   ],
   "Descent": [
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 1 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 256 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 128 },
-    { "medal": 5, "know": 3, "exec": 1, "reqs": 256 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 320 },
-    { "medal": 5, "know": 1, "exec": 1, "reqs": 320 },
-    { "medal": 5, "know": 2, "exec": 2, "reqs": 192 },
-    { "medal": 5, "know": 2, "exec": 2, "reqs": 161 }
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 256
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 128
+    },
+    {
+      "medal": 5,
+      "know": 3,
+      "exec": 1,
+      "reqs": 256
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 320
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 320
+    },
+    {
+      "medal": 5,
+      "know": 2,
+      "exec": 2,
+      "reqs": 192
+    },
+    {
+      "medal": 5,
+      "know": 2,
+      "exec": 2,
+      "reqs": 161
+    }
   ],
   "Driller": [
-    { "medal": 5, "know": 1, "exec": 1, "reqs": 0 },
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 1 },
-    { "medal": 2, "know": 4, "exec": 4, "reqs": 128 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 256 },
-    { "medal": 2, "know": 4, "exec": 4, "reqs": 65 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 192 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 96 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 320 }
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 0
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 128
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 256
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 65
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 192
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 96
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 320
+    }
   ],
   "Canals": [
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 0 },
-    { "medal": 2, "know": 4, "exec": 4, "reqs": 4 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 1 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 2 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 256 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 8 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 128 },
-    { "medal": 5, "know": 1, "exec": 1, "reqs": 16 },
-    { "medal": 5, "know": 2, "exec": 1, "reqs": 4 }
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 0
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 4
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 2
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 256
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 8
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 128
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 16
+    },
+    {
+      "medal": 5,
+      "know": 2,
+      "exec": 1,
+      "reqs": 4
+    }
   ],
   "Sprint": [
-    { "medal": 3, "know": 4, "exec": 4, "reqs": 32 },
-    { "medal": 2, "know": 4, "exec": 4, "reqs": 128 },
-    { "medal": 5, "know": 2, "exec": 2, "reqs": 64 },
-    { "medal": 5, "know": 4, "exec": 4, "reqs": 16 },
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 257 },
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 9 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 72 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 65 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 80 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 192 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 96 },
-    { "medal": 5, "know": 1, "exec": 1, "reqs": 192 },
-    { "medal": 5, "know": 1, "exec": 1, "reqs": 65 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 73 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 328 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 336 },
-    { "medal": 5, "know": 1, "exec": 1, "reqs": 336 },
-    { "medal": 5, "know": 1, "exec": 1, "reqs": 328 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 432 }
+    {
+      "medal": 3,
+      "know": 4,
+      "exec": 4,
+      "reqs": 32
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 128
+    },
+    {
+      "medal": 5,
+      "know": 2,
+      "exec": 2,
+      "reqs": 64
+    },
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 16
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 257
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 9
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 72
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 65
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 80
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 192
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 96
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 192
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 65
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 73
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 328
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 336
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 336
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 328
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 432
+    }
   ],
   "Mountain": [
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 2 },
-    { "medal": 3, "know": 4, "exec": 4, "reqs": 128 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 256 },
-    { "medal": 5, "know": 1, "exec": 1, "reqs": 256 },
-    { "medal": 5, "know": 1, "exec": 1, "reqs": 4 },
-    { "medal": 5, "know": 2, "exec": 1, "reqs": 128 },
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 5 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 384 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 258 },
-    { "medal": 5, "know": 2, "exec": 1, "reqs": 3 },
-    { "medal": 3, "know": 4, "exec": 4, "reqs": 7 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 388 }
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 2
+    },
+    {
+      "medal": 3,
+      "know": 4,
+      "exec": 4,
+      "reqs": 128
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 256
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 256
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 4
+    },
+    {
+      "medal": 5,
+      "know": 2,
+      "exec": 1,
+      "reqs": 128
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 5
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 384
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 258
+    },
+    {
+      "medal": 5,
+      "know": 2,
+      "exec": 1,
+      "reqs": 3
+    },
+    {
+      "medal": 3,
+      "know": 4,
+      "exec": 4,
+      "reqs": 7
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 388
+    }
   ],
   "Superkinetic": [
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 128 },
-    { "medal": 2, "know": 4, "exec": 4, "reqs": 32 },
-    { "medal": 5, "know": 2, "exec": 3, "reqs": 64 },
-    { "medal": 2, "know": 4, "exec": 4, "reqs": 72 },
-    { "medal": 2, "know": 4, "exec": 4, "reqs": 320 },
-    { "medal": 2, "know": 4, "exec": 4, "reqs": 144 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 96 },
-    { "medal": 5, "know": 1, "exec": 1, "reqs": 80 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 416 }
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 128
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 32
+    },
+    {
+      "medal": 5,
+      "know": 2,
+      "exec": 3,
+      "reqs": 64
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 72
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 320
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 144
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 96
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 80
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 416
+    }
   ],
   "Arrival": [
-    { "medal": 5, "know": 1, "exec": 1, "reqs": 64 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 80 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 112 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 208 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 81 }
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 64
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 80
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 112
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 208
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 81
+    }
   ],
   "Forgotten City": [
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 64 },
-    { "medal": 5, "know": 1, "exec": 1, "reqs": 64 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 96 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 320 }
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 64
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 64
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 96
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 320
+    }
   ],
   "The Clocktower": [
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 24 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 18 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 72 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 66 },
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 49 },
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 97 },
-    { "medal": 2, "know": 4, "exec": 4, "reqs": 69 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 22 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 26 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 78 }
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 24
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 18
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 72
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 66
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 49
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 97
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 69
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 22
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 26
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 78
+    }
   ],
   "Fireball": [
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 1024 },
-    { "medal": 5, "know": 1, "exec": 1, "reqs": 1024 }
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1024
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 1024
+    }
   ],
   "Ringer": [
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 16 },
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 1024 },
-    { "medal": 5, "know": 2, "exec": 2, "reqs": 1024 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 1025 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 17 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 1536 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 1032 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 528 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 24 },
-    { "medal": 5, "know": 1, "exec": 1, "reqs": 1040 }
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 16
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1024
+    },
+    {
+      "medal": 5,
+      "know": 2,
+      "exec": 2,
+      "reqs": 1024
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1025
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 17
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1536
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1032
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 528
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 24
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 1040
+    }
   ],
   "Cleaner": [
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 1024 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 1025 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 1056 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 1025 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 1536 },
-    { "medal": 5, "know": 1, "exec": 2, "reqs": 1088 },
-    { "medal": 5, "know": 2, "exec": 1, "reqs": 1536 },
-    { "medal": 5, "know": 1, "exec": 1, "reqs": 1600 },
-    { "medal": 5, "know": 1, "exec": 1, "reqs": 1089 }
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1024
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1025
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1056
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1025
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1536
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 2,
+      "reqs": 1088
+    },
+    {
+      "medal": 5,
+      "know": 2,
+      "exec": 1,
+      "reqs": 1536
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 1600
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 1089
+    }
   ],
   "Warehouse": [
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 8 },
-    { "medal": 2, "know": 4, "exec": 4, "reqs": 512 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 1024 },
-    { "medal": 5, "know": 1, "exec": 1, "reqs": 1024 }
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 8
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 512
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1024
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 1024
+    }
   ],
   "Boom": [
-    { "medal": 2, "know": 4, "exec": 4, "reqs": 128 },
-    { "medal": 5, "know": 1, "exec": 1, "reqs": 1024 },
-    { "medal": 5, "know": 3, "exec": 3, "reqs": 128 },
-    { "medal": 5, "know": 3, "exec": 3, "reqs": 8 },
-    { "medal": 5, "know": 3, "exec": 3, "reqs": 512 },
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 17 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 1025 },
-    { "medal": 5, "know": 3, "exec": 3, "reqs": 17 },
-    { "medal": 5, "know": 3, "exec": 3, "reqs": 48 },
-    { "medal": 2, "know": 4, "exec": 4, "reqs": 273 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 304 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 304 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 1664 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 312 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 305 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 281 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 346 }
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 128
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 1024
+    },
+    {
+      "medal": 5,
+      "know": 3,
+      "exec": 3,
+      "reqs": 128
+    },
+    {
+      "medal": 5,
+      "know": 3,
+      "exec": 3,
+      "reqs": 8
+    },
+    {
+      "medal": 5,
+      "know": 3,
+      "exec": 3,
+      "reqs": 512
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 17
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1025
+    },
+    {
+      "medal": 5,
+      "know": 3,
+      "exec": 3,
+      "reqs": 17
+    },
+    {
+      "medal": 5,
+      "know": 3,
+      "exec": 3,
+      "reqs": 48
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 273
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 304
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 304
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1664
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 312
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 305
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 281
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 346
+    }
   ],
   "Streets": [
-    { "medal": 5, "know": 3, "exec": 3, "reqs": 0 },
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 512 },
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 32 },
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 1 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 1024 },
-    { "medal": 5, "know": 1, "exec": 1, "reqs": 1024 },
-    { "medal": 5, "know": 1, "exec": 2, "reqs": 64 },
-    { "medal": 2, "know": 4, "exec": 4, "reqs": 544 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 576 },
-    { "medal": 5, "know": 1, "exec": 1, "reqs": 576 },
-    { "medal": 5, "know": 1, "exec": 1, "reqs": 65 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 1568 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 1120 }
+    {
+      "medal": 5,
+      "know": 3,
+      "exec": 3,
+      "reqs": 0
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 512
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 32
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1024
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 1024
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 2,
+      "reqs": 64
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 544
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 576
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 576
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 65
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1568
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1120
+    }
   ],
   "Steps": [
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 1024 },
-    { "medal": 5, "know": 2, "exec": 1, "reqs": 1024 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 1536 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 1056 },
-    { "medal": 5, "know": 1, "exec": 1, "reqs": 1088 }
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1024
+    },
+    {
+      "medal": 5,
+      "know": 2,
+      "exec": 1,
+      "reqs": 1024
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1536
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1056
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 1088
+    }
   ],
   "Demolition": [
-    { "medal": 3, "know": 4, "exec": 4, "reqs": 1024 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 512 },
-    { "medal": 5, "know": 1, "exec": 1, "reqs": 1024 },
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 40 },
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 33 },
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 9 },
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 272 },
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 80 },
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 144 },
-    { "medal": 3, "know": 4, "exec": 4, "reqs": 136 },
-    { "medal": 3, "know": 4, "exec": 4, "reqs": 129 },
-    { "medal": 3, "know": 4, "exec": 4, "reqs": 65 },
-    { "medal": 2, "know": 4, "exec": 4, "reqs": 72 },
-    { "medal": 2, "know": 4, "exec": 4, "reqs": 264 },
-    { "medal": 2, "know": 4, "exec": 4, "reqs": 1056 },
-    { "medal": 2, "know": 4, "exec": 4, "reqs": 1088 },
-    { "medal": 2, "know": 4, "exec": 4, "reqs": 1152 },
-    { "medal": 2, "know": 4, "exec": 4, "reqs": 1280 },
-    { "medal": 2, "know": 4, "exec": 4, "reqs": 257 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 1032 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 1025 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 1536 },
-    { "medal": 5, "know": 4, "exec": 4, "reqs": 24 },
-    { "medal": 5, "know": 4, "exec": 4, "reqs": 17 },
-    { "medal": 5, "know": 4, "exec": 4, "reqs": 528 },
-    { "medal": 2, "know": 4, "exec": 4, "reqs": 97 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 409 }
+    {
+      "medal": 3,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1024
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 512
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 1024
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 40
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 33
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 9
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 272
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 80
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 144
+    },
+    {
+      "medal": 3,
+      "know": 4,
+      "exec": 4,
+      "reqs": 136
+    },
+    {
+      "medal": 3,
+      "know": 4,
+      "exec": 4,
+      "reqs": 129
+    },
+    {
+      "medal": 3,
+      "know": 4,
+      "exec": 4,
+      "reqs": 65
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 72
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 264
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1056
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1088
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1152
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1280
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 257
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1032
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1025
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1536
+    },
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 24
+    },
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 17
+    },
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 528
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 97
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 409
+    }
   ],
   "Arcs": [
-    { "medal": 2, "know": 4, "exec": 4, "reqs": 0 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 1 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 256 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 128 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 8 },
-    { "medal": 5, "know": 2, "exec": 1, "reqs": 128 },
-    { "medal": 5, "know": 2, "exec": 1, "reqs": 256 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 144 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 384 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 264 },
-    { "medal": 5, "know": 1, "exec": 1, "reqs": 257 },
-    { "medal": 5, "know": 1, "exec": 1, "reqs": 272 },
-    { "medal": 5, "know": 1, "exec": 1, "reqs": 384 },
-    { "medal": 5, "know": 1, "exec": 1, "reqs": 264 }
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 0
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 256
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 128
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 8
+    },
+    {
+      "medal": 5,
+      "know": 2,
+      "exec": 1,
+      "reqs": 128
+    },
+    {
+      "medal": 5,
+      "know": 2,
+      "exec": 1,
+      "reqs": 256
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 144
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 384
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 264
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 257
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 272
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 384
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 264
+    }
   ],
   "Apartment": [
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 80 },
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 48 },
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 144 },
-    { "medal": 5, "know": 2, "exec": 2, "reqs": 80 },
-    { "medal": 5, "know": 2, "exec": 2, "reqs": 272 },
-    { "medal": 5, "know": 3, "exec": 3, "reqs": 144 },
-    { "medal": 5, "know": 3, "exec": 3, "reqs": 17 },
-    { "medal": 5, "know": 4, "exec": 4, "reqs": 48 },
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 1296 },
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 25 },
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 529 },
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 19 },
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 273 },
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 276 },
-    { "medal": 3, "know": 4, "exec": 4, "reqs": 81 },
-    { "medal": 2, "know": 4, "exec": 4, "reqs": 152 },
-    { "medal": 2, "know": 4, "exec": 4, "reqs": 84 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 88 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 1104 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 304 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 280 },
-    { "medal": 5, "know": 1, "exec": 1, "reqs": 1104 },
-    { "medal": 5, "know": 1, "exec": 1, "reqs": 1296 },
-    { "medal": 5, "know": 1, "exec": 1, "reqs": 84 },
-    { "medal": 5, "know": 1, "exec": 1, "reqs": 276 },
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 1045 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 1200 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 1136 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 340 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 1204 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 1236 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 1144 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 1336 }
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 80
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 48
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 144
+    },
+    {
+      "medal": 5,
+      "know": 2,
+      "exec": 2,
+      "reqs": 80
+    },
+    {
+      "medal": 5,
+      "know": 2,
+      "exec": 2,
+      "reqs": 272
+    },
+    {
+      "medal": 5,
+      "know": 3,
+      "exec": 3,
+      "reqs": 144
+    },
+    {
+      "medal": 5,
+      "know": 3,
+      "exec": 3,
+      "reqs": 17
+    },
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 48
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1296
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 25
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 529
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 19
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 273
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 276
+    },
+    {
+      "medal": 3,
+      "know": 4,
+      "exec": 4,
+      "reqs": 81
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 152
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 84
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 88
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1104
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 304
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 280
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 1104
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 1296
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 84
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 276
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1045
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1200
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1136
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 340
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1204
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1236
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1144
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1336
+    }
   ],
   "Hanging Gardens": [
-    { "medal": 5, "know": 3, "exec": 2, "reqs": 0 },
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 1 },
-    { "medal": 2, "know": 4, "exec": 4, "reqs": 256 },
-    { "medal": 2, "know": 4, "exec": 4, "reqs": 2 },
-    { "medal": 2, "know": 4, "exec": 4, "reqs": 128 },
-    { "medal": 5, "know": 2, "exec": 1, "reqs": 64 },
-    { "medal": 5, "know": 2, "exec": 1, "reqs": 16 },
-    { "medal": 3, "know": 4, "exec": 4, "reqs": 96 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 36 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 260 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 132 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 5 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 6 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 34 },
-    { "medal": 5, "know": 1, "exec": 1, "reqs": 68 },
-    { "medal": 5, "know": 1, "exec": 1, "reqs": 80 },
-    { "medal": 2, "know": 4, "exec": 4, "reqs": 97 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 352 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 224 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 354 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 356 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 228 }
+    {
+      "medal": 5,
+      "know": 3,
+      "exec": 2,
+      "reqs": 0
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 256
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 2
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 128
+    },
+    {
+      "medal": 5,
+      "know": 2,
+      "exec": 1,
+      "reqs": 64
+    },
+    {
+      "medal": 5,
+      "know": 2,
+      "exec": 1,
+      "reqs": 16
+    },
+    {
+      "medal": 3,
+      "know": 4,
+      "exec": 4,
+      "reqs": 96
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 36
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 260
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 132
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 5
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 6
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 34
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 68
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 80
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 97
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 352
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 224
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 354
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 356
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 228
+    }
   ],
   "Tangled": [
-    { "medal": 2, "know": 4, "exec": 4, "reqs": 1024 },
-    { "medal": 5, "know": 1, "exec": 2, "reqs": 1024 },
-    { "medal": 5, "know": 3, "exec": 1, "reqs": 1024 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 1026 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 1536 },
-    { "medal": 5, "know": 1, "exec": 1, "reqs": 1028 },
-    { "medal": 5, "know": 1, "exec": 1, "reqs": 1040 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 1408 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 1281 }
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1024
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 2,
+      "reqs": 1024
+    },
+    {
+      "medal": 5,
+      "know": 3,
+      "exec": 1,
+      "reqs": 1024
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1026
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1536
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 1028
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 1040
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1408
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1281
+    }
   ],
   "Waterworks": [
-    { "medal": 5, "know": 3, "exec": 1, "reqs": 0 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 8 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 64 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 32 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 1 },
-    { "medal": 5, "know": 2, "exec": 2, "reqs": 16 },
-    { "medal": 5, "know": 2, "exec": 2, "reqs": 64 },
-    { "medal": 5, "know": 1, "exec": 1, "reqs": 80 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 112 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 104 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 81 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 73 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 97 }
+    {
+      "medal": 5,
+      "know": 3,
+      "exec": 1,
+      "reqs": 0
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 8
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 64
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 32
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1
+    },
+    {
+      "medal": 5,
+      "know": 2,
+      "exec": 2,
+      "reqs": 16
+    },
+    {
+      "medal": 5,
+      "know": 2,
+      "exec": 2,
+      "reqs": 64
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 80
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 112
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 104
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 81
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 73
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 97
+    }
   ],
   "Killswitch": [
-    { "medal": 5, "know": 3, "exec": 1, "reqs": 0 },
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 1 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 8 },
-    { "medal": 5, "know": 1, "exec": 1, "reqs": 16 },
-    { "medal": 3, "know": 4, "exec": 4, "reqs": 33 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 17 },
-    { "medal": 2, "know": 4, "exec": 4, "reqs": 97 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 88 }
+    {
+      "medal": 5,
+      "know": 3,
+      "exec": 1,
+      "reqs": 0
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 8
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 16
+    },
+    {
+      "medal": 3,
+      "know": 4,
+      "exec": 4,
+      "reqs": 33
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 17
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 97
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 88
+    }
   ],
   "Falling": [
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 1 },
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 128 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 512 },
-    { "medal": 5, "know": 1, "exec": 1, "reqs": 1024 },
-    { "medal": 5, "know": 2, "exec": 1, "reqs": 512 },
-    { "medal": 2, "know": 4, "exec": 4, "reqs": 129 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 1025 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 257 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 768 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 1281 }
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 128
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 512
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 1024
+    },
+    {
+      "medal": 5,
+      "know": 2,
+      "exec": 1,
+      "reqs": 512
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 129
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1025
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 257
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 768
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1281
+    }
   ],
   "Shocker": [
-    { "medal": 2, "know": 4, "exec": 4, "reqs": 32 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 16 },
-    { "medal": 5, "know": 3, "exec": 2, "reqs": 64 },
-    { "medal": 5, "know": 3, "exec": 2, "reqs": 1024 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 1104 }
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 32
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 16
+    },
+    {
+      "medal": 5,
+      "know": 3,
+      "exec": 2,
+      "reqs": 64
+    },
+    {
+      "medal": 5,
+      "know": 3,
+      "exec": 2,
+      "reqs": 1024
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 80
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 1040
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1104
+    }
   ],
   "Bouquet": [
-    { "medal": 5, "know": 4, "exec": 4, "reqs": 0 },
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 4 },
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 2 },
-    { "medal": 2, "know": 4, "exec": 4, "reqs": 20 },
-    { "medal": 2, "know": 4, "exec": 4, "reqs": 1028 },
-    { "medal": 2, "know": 4, "exec": 4, "reqs": 80 },
-    { "medal": 2, "know": 4, "exec": 4, "reqs": 1040 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 1026 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 6 },
-    { "medal": 2, "know": 4, "exec": 4, "reqs": 324 },
-    { "medal": 2, "know": 4, "exec": 4, "reqs": 100 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 1156 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 1348 }
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 0
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 4
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 2
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 20
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1028
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 80
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1040
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1026
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 6
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 324
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 100
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1156
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1348
+    }
   ],
   "Prepare": [
-    { "medal": 5, "know": 4, "exec": 4, "reqs": 64 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 192 },
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 193 },
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 81 },
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 1089 },
-    { "medal": 2, "know": 4, "exec": 4, "reqs": 336 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 1344 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 208 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 1344 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 1392 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 1368 }
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 2,
+      "reqs": 64
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 192
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 65
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 320
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 192
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 193
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 81
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1089
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 336
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1344
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 208
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1344
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1392
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1368
+    }
   ],
   "Triptrack": [
-    { "medal": 2, "know": 4, "exec": 4, "reqs": 528 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 1041 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 560 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 49 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 536 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 25 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 1552 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 1168 },
-    { "medal": 5, "know": 4, "exec": 4, "reqs": 81 },
-    { "medal": 5, "know": 4, "exec": 4, "reqs": 592 },
-    { "medal": 5, "know": 4, "exec": 4, "reqs": 1552 },
-    { "medal": 5, "know": 4, "exec": 4, "reqs": 1168 },
-    { "medal": 5, "know": 4, "exec": 4, "reqs": 1041 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 1073 }
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 528
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1041
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 560
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 49
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 536
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 25
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1552
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1168
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 1104
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 1168
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 1552
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 1041
+    },
+    {
+      "medal": 5,
+      "know": 3,
+      "exec": 1,
+      "reqs": 81
+    },
+    {
+      "medal": 5,
+      "know": 3,
+      "exec": 1,
+      "reqs": 592
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1073
+    }
   ],
   "Race": [
-    { "medal": 5, "know": 4, "exec": 4, "reqs": 0 },
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 32 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 64 }
+    {
+      "medal": 5,
+      "know": 2,
+      "exec": 1,
+      "reqs": 0
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 32
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 64
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 64
+    }
   ],
   "Bubble": [
-    { "medal": 3, "know": 4, "exec": 4, "reqs": 16 },
-    { "medal": 3, "know": 4, "exec": 4, "reqs": 4 },
-    { "medal": 5, "know": 4, "exec": 4, "reqs": 4 },
-    { "medal": 5, "know": 4, "exec": 4, "reqs": 16 },
-    { "medal": 2, "know": 4, "exec": 4, "reqs": 24 },
-    { "medal": 2, "know": 4, "exec": 4, "reqs": 17 },
-    { "medal": 2, "know": 4, "exec": 4, "reqs": 5 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 6 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 144 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 12 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 132 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 148 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 22 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 29 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 284 }
+    {
+      "medal": 3,
+      "know": 4,
+      "exec": 4,
+      "reqs": 16
+    },
+    {
+      "medal": 3,
+      "know": 4,
+      "exec": 4,
+      "reqs": 4
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 4
+    },
+    {
+      "medal": 5,
+      "know": 2,
+      "exec": 1,
+      "reqs": 16
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 24
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 17
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 5
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 6
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 144
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 12
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 132
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 148
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 22
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 29
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 284
+    }
   ],
   "Shield": [
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 1 },
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 64 },
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 1024 },
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 32 },
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 2 },
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 256 },
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 128 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 4 },
-    { "medal": 5, "know": 4, "exec": 4, "reqs": 4 },
-    { "medal": 5, "know": 4, "exec": 4, "reqs": 1024 },
-    { "medal": 2, "know": 4, "exec": 4, "reqs": 1026 },
-    { "medal": 2, "know": 4, "exec": 4, "reqs": 66 },
-    { "medal": 2, "know": 4, "exec": 4, "reqs": 1600 },
-    { "medal": 2, "know": 4, "exec": 4, "reqs": 1216 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 1090 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 1092 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 1232 }
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 64
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1024
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 32
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 2
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 256
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 128
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 4
+    },
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 4
+    },
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1024
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1026
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 66
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1600
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1216
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1090
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1092
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1232
+    }
   ],
   "Overlook": [
-    { "medal": 5, "know": 4, "exec": 4, "reqs": 0 },
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 8 },
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 1 },
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 32 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 256 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 128 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 272 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 257 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 384 }
+    {
+      "medal": 5,
+      "know": 3,
+      "exec": 1,
+      "reqs": 0
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 8
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 32
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 256
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 128
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 16
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 272
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 257
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 384
+    }
   ],
   "Pop": [
-    { "medal": 5, "know": 4, "exec": 4, "reqs": 16 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 80 },
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 1042 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 1044 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 1116 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 1620 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 1140 }
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 3,
+      "reqs": 16
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 80
+    },
+    {
+      "medal": 5,
+      "know": 3,
+      "exec": 2,
+      "reqs": 80
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1042
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1044
+    },
+    {
+      "medal": 5,
+      "know": 3,
+      "exec": 2,
+      "reqs": 1044
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 1108
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1116
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1620
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1140
+    }
   ],
   "Minefield": [
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 0 },
-    { "medal": 5, "know": 4, "exec": 4, "reqs": 0 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 8 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 96 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 49 }
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 0
+    },
+    {
+      "medal": 5,
+      "know": 2,
+      "exec": 1,
+      "reqs": 0
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 3,
+      "reqs": 0
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 8
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 16
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 64
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 96
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 49
+    }
   ],
   "Mimic": [
-    { "medal": 2, "know": 4, "exec": 4, "reqs": 16 },
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 68 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 96 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 72 },
-    { "medal": 5, "know": 4, "exec": 4, "reqs": 80 },
-    { "medal": 5, "know": 4, "exec": 4, "reqs": 20 },
-    { "medal": 5, "know": 4, "exec": 4, "reqs": 68 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 49 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 1100 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 1126 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 1606 }
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 16
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 68
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 96
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 72
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 80
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 2,
+      "reqs": 20
+    },
+    {
+      "medal": 5,
+      "know": 3,
+      "exec": 3,
+      "reqs": 68
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 49
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1100
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1126
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1606
+    }
   ],
   "Trigger": [
-    { "medal": 2, "know": 4, "exec": 4, "reqs": 1024 },
-    { "medal": 5, "know": 4, "exec": 4, "reqs": 1024 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 1025 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 1028 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 1536 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 1026 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 1032 }
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1024
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 1024
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1025
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1028
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1536
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1026
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1032
+    }
   ],
   "Greenhouse": [
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 0 },
-    { "medal": 2, "know": 4, "exec": 4, "reqs": 1 },
-    { "medal": 2, "know": 4, "exec": 4, "reqs": 256 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 8 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 512 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 128 },
-    { "medal": 5, "know": 4, "exec": 4, "reqs": 1024 },
-    { "medal": 5, "know": 4, "exec": 4, "reqs": 272 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 1288 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 1792 },
-    { "medal": 5, "know": 4, "exec": 4, "reqs": 145 }
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 0
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 256
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 8
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 512
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 128
+    },
+    {
+      "medal": 5,
+      "know": 2,
+      "exec": 2,
+      "reqs": 1024
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 272
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1288
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1792
+    },
+    {
+      "medal": 5,
+      "know": 2,
+      "exec": 1,
+      "reqs": 145
+    }
   ],
   "Sweep": [
-    { "medal": 2, "know": 4, "exec": 4, "reqs": 8 },
-    { "medal": 2, "know": 4, "exec": 4, "reqs": 1 },
-    { "medal": 2, "know": 4, "exec": 4, "reqs": 4 },
-    { "medal": 2, "know": 4, "exec": 4, "reqs": 256 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 2 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 128 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 9 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 12 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 288 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 264 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 72 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 257 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 320 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 272 },
-    { "medal": 5, "know": 4, "exec": 4, "reqs": 20 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 37 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 97 }
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 8
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 4
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 256
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 2
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 128
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 9
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 12
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 288
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 264
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 72
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 257
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 320
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 272
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 20
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 37
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 97
+    }
   ],
   "Fuse": [
-    { "medal": 5, "know": 4, "exec": 4, "reqs": 1024 },
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 80 },
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 17 },
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 24 },
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 528 },
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 48 },
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 1088 },
-    { "medal": 3, "know": 4, "exec": 4, "reqs": 144 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 1088 },
-    { "medal": 5, "know": 4, "exec": 4, "reqs": 80 },
-    { "medal": 5, "know": 4, "exec": 4, "reqs": 24 },
-    { "medal": 5, "know": 4, "exec": 4, "reqs": 528 },
-    { "medal": 5, "know": 4, "exec": 4, "reqs": 48 },
-    { "medal": 5, "know": 4, "exec": 4, "reqs": 144 },
-    { "medal": 5, "know": 4, "exec": 4, "reqs": 17 },
-    { "medal": 3, "know": 4, "exec": 4, "reqs": 1296 },
-    { "medal": 3, "know": 4, "exec": 4, "reqs": 560 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 1552 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 1072 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 1168 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 1041 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 1048 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 1600 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 1216 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 1136 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 1112 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 1121 }
+    {
+      "medal": 5,
+      "know": 3,
+      "exec": 2,
+      "reqs": 1024
+    },
+    {
+      "medal": 5,
+      "know": 3,
+      "exec": 3,
+      "reqs": 16
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 80
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 17
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 24
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 528
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 48
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1088
+    },
+    {
+      "medal": 3,
+      "know": 4,
+      "exec": 4,
+      "reqs": 144
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1088
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 1088
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 2,
+      "reqs": 1040
+    },
+    {
+      "medal": 5,
+      "know": 3,
+      "exec": 2,
+      "reqs": 80
+    },
+    {
+      "medal": 5,
+      "know": 3,
+      "exec": 2,
+      "reqs": 24
+    },
+    {
+      "medal": 5,
+      "know": 3,
+      "exec": 2,
+      "reqs": 528
+    },
+    {
+      "medal": 5,
+      "know": 3,
+      "exec": 2,
+      "reqs": 48
+    },
+    {
+      "medal": 5,
+      "know": 3,
+      "exec": 2,
+      "reqs": 144
+    },
+    {
+      "medal": 5,
+      "know": 3,
+      "exec": 2,
+      "reqs": 17
+    },
+    {
+      "medal": 3,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1296
+    },
+    {
+      "medal": 3,
+      "know": 4,
+      "exec": 4,
+      "reqs": 560
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1552
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1072
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1168
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1041
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1048
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1600
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1216
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1136
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1112
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1121
+    }
   ],
   "Heaven's Edge": [
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 2048 },
-    { "medal": 5, "know": 4, "exec": 4, "reqs": 2048 }
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 2048
+    },
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 2048
+    }
   ],
   "Zipline": [
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 2048 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 4096 },
-    { "medal": 5, "know": 4, "exec": 4, "reqs": 2048 }
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 2048
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 4096
+    },
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 2048
+    }
   ],
   "Swing": [
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 2048 },
-    { "medal": 5, "know": 4, "exec": 4, "reqs": 2048 },
-    { "medal": 5, "know": 4, "exec": 4, "reqs": 4096 }
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 2048
+    },
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 2048
+    },
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 4096
+    }
   ],
-  "Chute": [{ "medal": 4, "know": 4, "exec": 4, "reqs": 0 }],
-  "Crash": [{ "medal": 4, "know": 4, "exec": 4, "reqs": 0 }],
+  "Chute": [
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 2048
+    },
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 2048
+    },
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 4096
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 6144
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 4120
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 4177
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 6224
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 4433
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 4440
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 4465
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 4561
+    }
+  ],
+  "Crash": [
+    {
+      "medal": 3,
+      "know": 4,
+      "exec": 4,
+      "reqs": 2048
+    },
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 2048
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 2560
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 2176
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 6144
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 5632
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 2561
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 2816
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 3584
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 7168
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 6400
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 5760
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 5888
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 6016
+    }
+  ],
   "Ascent": [
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 2048 },
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 4096 },
-    { "medal": 5, "know": 4, "exec": 4, "reqs": 2048 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 6144 }
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 2048
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 4096
+    },
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 2048
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 6144
+    }
   ],
-  "Straightaway": [{ "medal": 4, "know": 4, "exec": 4, "reqs": 0 }],
-  "Firecracker": [{ "medal": 4, "know": 4, "exec": 4, "reqs": 0 }],
-  "Streak": [{ "medal": 4, "know": 4, "exec": 4, "reqs": 0 }],
-  "Mirror": [{ "medal": 4, "know": 4, "exec": 4, "reqs": 0 }],
-  "Escalation": [{ "medal": 4, "know": 4, "exec": 4, "reqs": 0 }],
-  "Bolt": [{ "medal": 4, "know": 4, "exec": 4, "reqs": 0 }],
-  "Godstreak": [{ "medal": 4, "know": 4, "exec": 4, "reqs": 0 }],
-  "Plunge": [{ "medal": 4, "know": 4, "exec": 4, "reqs": 0 }],
-  "Mayhem": [{ "medal": 4, "know": 4, "exec": 4, "reqs": 0 }],
-  "Barrage": [{ "medal": 4, "know": 4, "exec": 4, "reqs": 0 }],
-  "Estate": [{ "medal": 4, "know": 4, "exec": 4, "reqs": 0 }],
-  "Trapwire": [{ "medal": 4, "know": 4, "exec": 4, "reqs": 0 }],
-  "Ricochet": [{ "medal": 4, "know": 4, "exec": 4, "reqs": 0 }],
-  "Fortress": [{ "medal": 4, "know": 4, "exec": 4, "reqs": 0 }],
+  "Straightaway": [
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 4096
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 2048
+    },
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 2048
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 4097
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 6208
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 6145
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 6400
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 4417
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 4576
+    }
+  ],
+  "Firecracker": [
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 2048
+    },
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 2048
+    },
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 4096
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 4097
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 6144
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 2112
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 4129
+    }
+  ],
+  "Streak": [
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 2048
+    },
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 2048
+    },
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 4096
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 4097
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 4160
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 6144
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 2112
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 4192
+    }
+  ],
+  "Mirror": [
+    {
+      "medal": 3,
+      "know": 4,
+      "exec": 4,
+      "reqs": 2048
+    },
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 2048
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 2112
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 6144
+    },
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 5120
+    },
+    {
+      "medal": 3,
+      "know": 4,
+      "exec": 4,
+      "reqs": 5184
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 5144
+    },
+    {
+      "medal": 3,
+      "know": 4,
+      "exec": 4,
+      "reqs": 5137
+    },
+    {
+      "medal": 3,
+      "know": 4,
+      "exec": 4,
+      "reqs": 5392
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 5168
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 5440
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 5264
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 5696
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 5216
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 5904
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 5649
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 5424
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 5456
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 5968
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 5840
+    }
+  ],
+  "Escalation": [
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 24
+    },
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1040
+    },
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 80
+    },
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 24
+    },
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 528
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1104
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1048
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1073
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1105
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1360
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1112
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1777
+    }
+  ],
+  "Bolt": [
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 128
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 2048
+    },
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 2048
+    },
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 256
+    },
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 128
+    },
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1024
+    },
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 512
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 2304
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 3072
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 2176
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 6144
+    }
+  ],
+  "Godstreak": [
+    {
+      "medal": 3,
+      "know": 4,
+      "exec": 4,
+      "reqs": 2112
+    },
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 2112
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 4176
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 4120
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 4120
+    },
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 4176
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 2136
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 4208
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 4304
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 2160
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 2256
+    }
+  ],
+  "Plunge": [
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 4
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1094
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1105
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1093
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1045
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1076
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1172
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1232
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1220
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1106
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1132
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1620
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1636
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1301
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1428
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1812
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1362
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 2000
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1988
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1358
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1484
+    }
+  ],
+  "Mayhem": [
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1024
+    },
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 4
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 6
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 36
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1056
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 516
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 132
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 513
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1536
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1026
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1152
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 69
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1121
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1124
+    }
+  ],
+  "Barrage": [
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 4
+    },
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 4
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 136
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 18
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 66
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 6
+    },
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 80
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 193
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 200
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 140
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 276
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 261
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 133
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 57
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 89
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 113
+    }
+  ],
+  "Estate": [
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 0
+    },
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 16
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1056
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1025
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1032
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 24
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 144
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 68
+    },
+    {
+      "medal": 3,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1152
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 528
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1536
+    },
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 48
+    },
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 80
+    },
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 17
+    },
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 272
+    },
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 144
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1282
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 304
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 56
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 25
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 580
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1096
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1216
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 177
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1202
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1330
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1362
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1378
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1252
+    }
+  ],
+  "Trapwire": [
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1032
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 528
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 17
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 144
+    },
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1040
+    },
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1025
+    },
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1032
+    },
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1536
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1552
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 536
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 529
+    }
+  ],
+  "Ricochet": [
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 64
+    },
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1024
+    },
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 4
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1025
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1026
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1032
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1056
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1152
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 10
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 528
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 24
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 6
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 96
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 72
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 66
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 36
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 48
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 5
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 130
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 17
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 18
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 144
+    },
+    {
+      "medal": 3,
+      "know": 4,
+      "exec": 4,
+      "reqs": 516
+    },
+    {
+      "medal": 3,
+      "know": 4,
+      "exec": 4,
+      "reqs": 65
+    },
+    {
+      "medal": 3,
+      "know": 4,
+      "exec": 4,
+      "reqs": 192
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1536
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 576
+    },
+    {
+      "medal": 3,
+      "know": 4,
+      "exec": 4,
+      "reqs": 70
+    },
+    {
+      "medal": 3,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1344
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 69
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1540
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 580
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 67
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 578
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 196
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 324
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1538
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1216
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1664
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1856
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1094
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1218
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1220
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1348
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1346
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1570
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1572
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1604
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1602
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 836
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 960
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 461
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 455
+    }
+  ],
+  "Fortress": [
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 0
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 2048
+    },
+    {
+      "medal": 2,
+      "know": 4,
+      "exec": 4,
+      "reqs": 8
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 32
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 128
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 2
+    },
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1024
+    },
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 4
+    },
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 2048
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 17
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 65
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 5
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 513
+    },
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 80
+    },
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 48
+    },
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 18
+    },
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 144
+    },
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 272
+    },
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 528
+    },
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 24
+    },
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 4224
+    },
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 4352
+    },
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 4098
+    },
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 4608
+    },
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 4128
+    },
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 4160
+    },
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 4113
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 332
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 2386
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 342
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 5460
+    }
+  ],
   "Holy Ground": [
-    { "medal": 5, "know": 4, "exec": 4, "reqs": 4096 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 6144 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 4120 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 4240 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 4144 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 4368 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 4176 }
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 4096
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 6144
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 4120
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 4240
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 4144
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 4368
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 4176
+    }
   ],
   "The Third Temple": [
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 4608 },
-    { "medal": 4, "know": 4, "exec": 4, "reqs": 6145 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 6152 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 7168 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 3584 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 4233 }
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 4608
+    },
+    {
+      "medal": 4,
+      "know": 4,
+      "exec": 4,
+      "reqs": 6145
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 6152
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 7168
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 3584
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 4233
+    }
   ],
   "Spree": [
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 8256 },
-    { "medal": 5, "know": 4, "exec": 4, "reqs": 8256 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 8225 },
-    { "medal": 5, "know": 4, "exec": 4, "reqs": 8225 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 8241 }
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 8256
+    },
+    {
+      "medal": 5,
+      "know": 2,
+      "exec": 2,
+      "reqs": 8256
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 8225
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 8272
+    },
+    {
+      "medal": 5,
+      "know": 2,
+      "exec": 2,
+      "reqs": 8225
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 8241
+    }
   ],
   "Breakthrough": [
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 8192 },
-    { "medal": 5, "know": 4, "exec": 4, "reqs": 1024 },
-    { "medal": 5, "know": 4, "exec": 4, "reqs": 8208 },
-    { "medal": 5, "know": 4, "exec": 4, "reqs": 8196 },
-    { "medal": 5, "know": 4, "exec": 4, "reqs": 8256 }
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 8192
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 1024
+    },
+    {
+      "medal": 5,
+      "know": 3,
+      "exec": 2,
+      "reqs": 8196
+    },
+    {
+      "medal": 5,
+      "know": 3,
+      "exec": 2,
+      "reqs": 8256
+    },
+    {
+      "medal": 5,
+      "know": 3,
+      "exec": 3,
+      "reqs": 8208
+    }
   ],
   "Glide": [
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 9216 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 12288 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 10240 },
-    { "medal": 5, "know": 4, "exec": 4, "reqs": 8208 },
-    { "medal": 5, "know": 4, "exec": 4, "reqs": 9216 },
-    { "medal": 5, "know": 4, "exec": 4, "reqs": 10240 },
-    { "medal": 5, "know": 4, "exec": 4, "reqs": 12288 }
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 9216
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 12288
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 10240
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 8208
+    },
+    {
+      "medal": 5,
+      "know": 3,
+      "exec": 2,
+      "reqs": 9216
+    },
+    {
+      "medal": 5,
+      "know": 3,
+      "exec": 2,
+      "reqs": 10240
+    },
+    {
+      "medal": 5,
+      "know": 3,
+      "exec": 2,
+      "reqs": 12288
+    }
   ],
   "Closer": [
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 12288 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 10240 },
-    { "medal": 5, "know": 4, "exec": 4, "reqs": 10240 }
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 12288
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 10240
+    },
+    {
+      "medal": 5,
+      "know": 3,
+      "exec": 2,
+      "reqs": 10240
+    },
+    {
+      "medal": 5,
+      "know": 3,
+      "exec": 1,
+      "reqs": 14336
+    },
+    {
+      "medal": 5,
+      "know": 2,
+      "exec": 1,
+      "reqs": 10432
+    },
+    {
+      "medal": 5,
+      "know": 2,
+      "exec": 2,
+      "reqs": 10560
+    },
+    {
+      "medal": 5,
+      "know": 2,
+      "exec": 1,
+      "reqs": 14656
+    },
+    {
+      "medal": 5,
+      "know": 2,
+      "exec": 2,
+      "reqs": 10433
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 14672
+    }
   ],
   "Hike": [
-    { "medal": 5, "know": 4, "exec": 4, "reqs": 2048 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 10240 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 12288 }
+    {
+      "medal": 5,
+      "know": 3,
+      "exec": 2,
+      "reqs": 2048
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 10240
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 12288
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 6144
+    },
+    {
+      "medal": 5,
+      "know": 2,
+      "exec": 2,
+      "reqs": 12304
+    },
+    {
+      "medal": 5,
+      "know": 2,
+      "exec": 2,
+      "reqs": 10256
+    }
   ],
   "Switch": [
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 8192 },
-    { "medal": 5, "know": 4, "exec": 4, "reqs": 8192 }
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 8192
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 8192
+    }
   ],
   "Access": [
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 11280 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 13328 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 11328 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 13376 },
-    { "medal": 5, "know": 4, "exec": 4, "reqs": 11280 },
-    { "medal": 5, "know": 4, "exec": 4, "reqs": 13328 },
-    { "medal": 5, "know": 4, "exec": 4, "reqs": 11328 },
-    { "medal": 5, "know": 4, "exec": 4, "reqs": 13376 }
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 11280
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 13328
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 11328
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 13376
+    },
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 11280
+    },
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 13328
+    },
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 11328
+    },
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 13376
+    }
   ],
   "Congregation": [
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 9232 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 8720 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 8240 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 8216 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 8464 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 8272 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 8336 },
-    { "medal": 5, "know": 4, "exec": 4, "reqs": 8272 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 9240 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 8728 }
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 9232
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 8720
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 8240
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 8216
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 8464
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 8272
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 8336
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 2,
+      "reqs": 8272
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 9240
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 8728
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 9296
+    }
   ],
   "Sequence": [
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 8192 },
-    { "medal": 5, "know": 4, "exec": 4, "reqs": 8192 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 8193 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 8200 }
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 8192
+    },
+    {
+      "medal": 5,
+      "know": 2,
+      "exec": 1,
+      "reqs": 8192
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 8193
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 8200
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 8208
+    }
   ],
   "Marathon": [
-    { "medal": 0, "know": 3, "exec": 2, "reqs": 8192 },
-    { "medal": 5, "know": 4, "exec": 4, "reqs": 10240 },
-    { "medal": 5, "know": 4, "exec": 4, "reqs": 12288 }
+    {
+      "medal": 0,
+      "know": 3,
+      "exec": 2,
+      "reqs": 8192
+    },
+    {
+      "medal": 5,
+      "know": 3,
+      "exec": 2,
+      "reqs": 10240
+    },
+    {
+      "medal": 5,
+      "know": 4,
+      "exec": 4,
+      "reqs": 12288
+    },
+    {
+      "medal": 5,
+      "know": 1,
+      "exec": 1,
+      "reqs": 15828
+    }
   ],
   "Sacrifice": [
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 16 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 80 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 1028 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 1040 }
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 16
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 80
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1028
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 1040
+    }
   ],
   "Absolution": [
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 12289 },
-    { "medal": 1, "know": 4, "exec": 4, "reqs": 12296 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 14336 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 12800 },
-    { "medal": 0, "know": 4, "exec": 4, "reqs": 13312 }
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 12289
+    },
+    {
+      "medal": 1,
+      "know": 4,
+      "exec": 4,
+      "reqs": 12296
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 14336
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 12800
+    },
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 4,
+      "reqs": 13312
+    }
   ],
-  "Elevate Traversal I": [{ "medal": 0, "know": 1, "exec": 1, "reqs": 16 }],
-  "Elevate Traversal II": [{ "medal": 0, "know": 1, "exec": 1, "reqs": 16 }],
-  "Purify Traversal": [{ "medal": 0, "know": 1, "exec": 1, "reqs": 4 }],
-  "Godspeed Traversal": [{ "medal": 0, "know": 1, "exec": 1, "reqs": 64 }],
+  "Elevate Traversal I": [
+    {
+      "medal": 0,
+      "know": 1,
+      "exec": 1,
+      "reqs": 16
+    }
+  ],
+  "Elevate Traversal II": [
+    {
+      "medal": 0,
+      "know": 1,
+      "exec": 1,
+      "reqs": 16
+    }
+  ],
+  "Purify Traversal": [
+    {
+      "medal": 0,
+      "know": 1,
+      "exec": 1,
+      "reqs": 4
+    }
+  ],
+  "Godspeed Traversal": [
+    {
+      "medal": 0,
+      "know": 1,
+      "exec": 1,
+      "reqs": 64
+    }
+  ],
   "Stomp Traversal": [
-    { "medal": 0, "know": 1, "exec": 1, "reqs": 256 },
-    { "medal": 0, "know": 2, "exec": 3, "reqs": 129 }
+    {
+      "medal": 0,
+      "know": 1,
+      "exec": 1,
+      "reqs": 256
+    },
+    {
+      "medal": 0,
+      "know": 2,
+      "exec": 3,
+      "reqs": 129
+    }
   ],
-  "Fireball Traversal": [{ "medal": 0, "know": 1, "exec": 1, "reqs": 1024 }],
+  "Fireball Traversal": [
+    {
+      "medal": 0,
+      "know": 1,
+      "exec": 1,
+      "reqs": 1024
+    }
+  ],
   "Dominion Traversal": [
-    { "medal": 0, "know": 1, "exec": 2, "reqs": 2048 },
-    { "medal": 0, "know": 2, "exec": 2, "reqs": 4096 },
-    { "medal": 0, "know": 1, "exec": 1, "reqs": 6144 }
+    {
+      "medal": 0,
+      "know": 1,
+      "exec": 2,
+      "reqs": 2048
+    },
+    {
+      "medal": 0,
+      "know": 2,
+      "exec": 2,
+      "reqs": 4096
+    },
+    {
+      "medal": 0,
+      "know": 1,
+      "exec": 1,
+      "reqs": 6144
+    }
   ],
   "Book of Life Traversal": [
-    { "medal": 0, "know": 1, "exec": 1, "reqs": 8192 }
+    {
+      "medal": 0,
+      "know": 1,
+      "exec": 1,
+      "reqs": 8192
+    }
   ],
   "Doghouse": [
-    { "medal": 0, "know": 4, "exec": 3, "reqs": 4 },
-    { "medal": 0, "know": 2, "exec": 1, "reqs": 16 },
-    { "medal": 0, "know": 1, "exec": 1, "reqs": 20 }
+    {
+      "medal": 0,
+      "know": 4,
+      "exec": 3,
+      "reqs": 4
+    },
+    {
+      "medal": 0,
+      "know": 2,
+      "exec": 1,
+      "reqs": 16
+    },
+    {
+      "medal": 0,
+      "know": 1,
+      "exec": 1,
+      "reqs": 20
+    }
   ],
   "Choker": [
-    { "medal": 0, "know": 2, "exec": 1, "reqs": 80 },
-    { "medal": 0, "know": 1, "exec": 1, "reqs": 368 }
+    {
+      "medal": 0,
+      "know": 2,
+      "exec": 1,
+      "reqs": 80
+    },
+    {
+      "medal": 0,
+      "know": 1,
+      "exec": 1,
+      "reqs": 368
+    }
   ],
   "Chain": [
-    { "medal": 0, "know": 3, "exec": 3, "reqs": 16 },
-    { "medal": 0, "know": 2, "exec": 1, "reqs": 80 },
-    { "medal": 0, "know": 1, "exec": 1, "reqs": 336 }
+    {
+      "medal": 0,
+      "know": 3,
+      "exec": 3,
+      "reqs": 16
+    },
+    {
+      "medal": 0,
+      "know": 2,
+      "exec": 1,
+      "reqs": 80
+    },
+    {
+      "medal": 0,
+      "know": 1,
+      "exec": 1,
+      "reqs": 336
+    }
   ],
   "Hellevator": [
-    { "medal": 0, "know": 1, "exec": 1, "reqs": 320 },
-    { "medal": 0, "know": 1, "exec": 1, "reqs": 289 }
+    {
+      "medal": 0,
+      "know": 1,
+      "exec": 1,
+      "reqs": 320
+    },
+    {
+      "medal": 0,
+      "know": 1,
+      "exec": 1,
+      "reqs": 289
+    }
   ],
   "Razor": [
-    { "medal": 0, "know": 3, "exec": 4, "reqs": 0 },
-    { "medal": 0, "know": 3, "exec": 3, "reqs": 64 },
-    { "medal": 0, "know": 1, "exec": 1, "reqs": 1104 }
+    {
+      "medal": 0,
+      "know": 3,
+      "exec": 4,
+      "reqs": 0
+    },
+    {
+      "medal": 0,
+      "know": 3,
+      "exec": 3,
+      "reqs": 64
+    },
+    {
+      "medal": 0,
+      "know": 1,
+      "exec": 1,
+      "reqs": 1104
+    }
   ],
   "All Seeing Eye": [
-    { "medal": 0, "know": 3, "exec": 3, "reqs": 84 },
-    { "medal": 0, "know": 2, "exec": 2, "reqs": 1108 },
-    { "medal": 0, "know": 1, "exec": 1, "reqs": 1620 }
+    {
+      "medal": 0,
+      "know": 3,
+      "exec": 3,
+      "reqs": 84
+    },
+    {
+      "medal": 0,
+      "know": 2,
+      "exec": 2,
+      "reqs": 1108
+    },
+    {
+      "medal": 0,
+      "know": 1,
+      "exec": 1,
+      "reqs": 1620
+    }
   ],
   "Resident Saw I": [
-    { "medal": 0, "know": 3, "exec": 3, "reqs": 33 },
-    { "medal": 0, "know": 3, "exec": 3, "reqs": 129 },
-    { "medal": 0, "know": 3, "exec": 3, "reqs": 513 },
-    { "medal": 0, "know": 3, "exec": 3, "reqs": 72 },
-    { "medal": 0, "know": 3, "exec": 3, "reqs": 520 },
-    { "medal": 0, "know": 3, "exec": 3, "reqs": 264 },
-    { "medal": 0, "know": 3, "exec": 3, "reqs": 1032 },
-    { "medal": 0, "know": 3, "exec": 3, "reqs": 80 },
-    { "medal": 0, "know": 3, "exec": 3, "reqs": 320 },
-    { "medal": 0, "know": 3, "exec": 3, "reqs": 1088 },
-    { "medal": 0, "know": 3, "exec": 3, "reqs": 160 },
-    { "medal": 0, "know": 3, "exec": 3, "reqs": 544 },
-    { "medal": 0, "know": 3, "exec": 3, "reqs": 288 },
-    { "medal": 0, "know": 3, "exec": 3, "reqs": 1056 },
-    { "medal": 0, "know": 3, "exec": 3, "reqs": 640 },
-    { "medal": 0, "know": 3, "exec": 3, "reqs": 1152 },
-    { "medal": 0, "know": 3, "exec": 3, "reqs": 1280 },
-    { "medal": 0, "know": 3, "exec": 3, "reqs": 192 },
-    { "medal": 0, "know": 3, "exec": 3, "reqs": 576 },
-    { "medal": 0, "know": 1, "exec": 1, "reqs": 1368 }
+    {
+      "medal": 0,
+      "know": 3,
+      "exec": 3,
+      "reqs": 33
+    },
+    {
+      "medal": 0,
+      "know": 3,
+      "exec": 3,
+      "reqs": 129
+    },
+    {
+      "medal": 0,
+      "know": 3,
+      "exec": 3,
+      "reqs": 513
+    },
+    {
+      "medal": 0,
+      "know": 3,
+      "exec": 3,
+      "reqs": 72
+    },
+    {
+      "medal": 0,
+      "know": 3,
+      "exec": 3,
+      "reqs": 520
+    },
+    {
+      "medal": 0,
+      "know": 3,
+      "exec": 3,
+      "reqs": 264
+    },
+    {
+      "medal": 0,
+      "know": 3,
+      "exec": 3,
+      "reqs": 1032
+    },
+    {
+      "medal": 0,
+      "know": 3,
+      "exec": 3,
+      "reqs": 80
+    },
+    {
+      "medal": 0,
+      "know": 3,
+      "exec": 3,
+      "reqs": 320
+    },
+    {
+      "medal": 0,
+      "know": 3,
+      "exec": 3,
+      "reqs": 1088
+    },
+    {
+      "medal": 0,
+      "know": 3,
+      "exec": 3,
+      "reqs": 160
+    },
+    {
+      "medal": 0,
+      "know": 3,
+      "exec": 3,
+      "reqs": 544
+    },
+    {
+      "medal": 0,
+      "know": 3,
+      "exec": 3,
+      "reqs": 288
+    },
+    {
+      "medal": 0,
+      "know": 3,
+      "exec": 3,
+      "reqs": 1056
+    },
+    {
+      "medal": 0,
+      "know": 3,
+      "exec": 3,
+      "reqs": 640
+    },
+    {
+      "medal": 0,
+      "know": 3,
+      "exec": 3,
+      "reqs": 1152
+    },
+    {
+      "medal": 0,
+      "know": 3,
+      "exec": 3,
+      "reqs": 1280
+    },
+    {
+      "medal": 0,
+      "know": 3,
+      "exec": 3,
+      "reqs": 192
+    },
+    {
+      "medal": 0,
+      "know": 3,
+      "exec": 3,
+      "reqs": 576
+    },
+    {
+      "medal": 0,
+      "know": 1,
+      "exec": 1,
+      "reqs": 1368
+    }
   ],
   "Resident Saw II": [
-    { "medal": 0, "know": 3, "exec": 2, "reqs": 64 },
-    { "medal": 0, "know": 3, "exec": 1, "reqs": 80 },
-    { "medal": 0, "know": 1, "exec": 1, "reqs": 344 },
-    { "medal": 0, "know": 1, "exec": 1, "reqs": 464 }
+    {
+      "medal": 0,
+      "know": 3,
+      "exec": 2,
+      "reqs": 64
+    },
+    {
+      "medal": 0,
+      "know": 3,
+      "exec": 1,
+      "reqs": 80
+    },
+    {
+      "medal": 0,
+      "know": 1,
+      "exec": 1,
+      "reqs": 344
+    },
+    {
+      "medal": 0,
+      "know": 1,
+      "exec": 1,
+      "reqs": 464
+    }
   ],
   "Sunset Flip Powerbomb": [
-    { "medal": 0, "know": 1, "exec": 2, "reqs": 0 },
-    { "medal": 0, "know": 2, "exec": 1, "reqs": 0 },
-    { "medal": 0, "know": 1, "exec": 1, "reqs": 1 },
-    { "medal": 0, "know": 1, "exec": 1, "reqs": 2 }
+    {
+      "medal": 0,
+      "know": 1,
+      "exec": 2,
+      "reqs": 0
+    },
+    {
+      "medal": 0,
+      "know": 2,
+      "exec": 1,
+      "reqs": 0
+    },
+    {
+      "medal": 0,
+      "know": 1,
+      "exec": 1,
+      "reqs": 1
+    },
+    {
+      "medal": 0,
+      "know": 1,
+      "exec": 1,
+      "reqs": 2
+    }
   ],
-  "Balloon Mountain": [{ "medal": 0, "know": 1, "exec": 1, "reqs": 0 }],
+  "Balloon Mountain": [
+    {
+      "medal": 0,
+      "know": 1,
+      "exec": 1,
+      "reqs": 0
+    }
+  ],
   "Climbing Gym": [
-    { "medal": 0, "know": 3, "exec": 2, "reqs": 0 },
-    { "medal": 0, "know": 1, "exec": 1, "reqs": 1 },
-    { "medal": 0, "know": 1, "exec": 1, "reqs": 2 },
-    { "medal": 0, "know": 1, "exec": 1, "reqs": 8 },
-    { "medal": 0, "know": 1, "exec": 1, "reqs": 32 },
-    { "medal": 0, "know": 1, "exec": 1, "reqs": 128 }
+    {
+      "medal": 0,
+      "know": 3,
+      "exec": 2,
+      "reqs": 0
+    },
+    {
+      "medal": 0,
+      "know": 1,
+      "exec": 1,
+      "reqs": 1
+    },
+    {
+      "medal": 0,
+      "know": 1,
+      "exec": 1,
+      "reqs": 2
+    },
+    {
+      "medal": 0,
+      "know": 1,
+      "exec": 1,
+      "reqs": 8
+    },
+    {
+      "medal": 0,
+      "know": 1,
+      "exec": 1,
+      "reqs": 32
+    },
+    {
+      "medal": 0,
+      "know": 1,
+      "exec": 1,
+      "reqs": 128
+    }
   ],
   "Fisherman Suplex": [
-    { "medal": 0, "know": 3, "exec": 3, "reqs": 0 },
-    { "medal": 0, "know": 1, "exec": 1, "reqs": 32 }
+    {
+      "medal": 0,
+      "know": 3,
+      "exec": 3,
+      "reqs": 0
+    },
+    {
+      "medal": 0,
+      "know": 1,
+      "exec": 1,
+      "reqs": 32
+    }
   ],
   "STF": [
-    { "medal": 0, "know": 2, "exec": 2, "reqs": 0 },
-    { "medal": 0, "know": 1, "exec": 1, "reqs": 2 }
+    {
+      "medal": 0,
+      "know": 2,
+      "exec": 2,
+      "reqs": 0
+    },
+    {
+      "medal": 0,
+      "know": 1,
+      "exec": 1,
+      "reqs": 2
+    }
   ],
   "Arena": [
-    { "medal": 0, "know": 3, "exec": 4, "reqs": 0 },
-    { "medal": 0, "know": 1, "exec": 1, "reqs": 32 },
-    { "medal": 0, "know": 1, "exec": 1, "reqs": 128 },
-    { "medal": 0, "know": 1, "exec": 1, "reqs": 1 },
-    { "medal": 0, "know": 1, "exec": 1, "reqs": 8 }
+    {
+      "medal": 0,
+      "know": 3,
+      "exec": 4,
+      "reqs": 0
+    },
+    {
+      "medal": 0,
+      "know": 1,
+      "exec": 1,
+      "reqs": 32
+    },
+    {
+      "medal": 0,
+      "know": 1,
+      "exec": 1,
+      "reqs": 128
+    },
+    {
+      "medal": 0,
+      "know": 1,
+      "exec": 1,
+      "reqs": 1
+    },
+    {
+      "medal": 0,
+      "know": 1,
+      "exec": 1,
+      "reqs": 8
+    }
   ],
   "Attitude Adjustment": [
-    { "medal": 0, "know": 1, "exec": 2, "reqs": 1 },
-    { "medal": 0, "know": 1, "exec": 1, "reqs": 512 }
+    {
+      "medal": 0,
+      "know": 1,
+      "exec": 2,
+      "reqs": 1
+    },
+    {
+      "medal": 0,
+      "know": 1,
+      "exec": 1,
+      "reqs": 512
+    }
   ],
-  "Rocket": [{ "medal": 0, "know": 1, "exec": 1, "reqs": 2048 }]
+  "Rocket": [
+    {
+      "medal": 0,
+      "know": 1,
+      "exec": 1,
+      "reqs": 2048
+    }
+  ]
 }
