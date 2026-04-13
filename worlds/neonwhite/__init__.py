@@ -129,12 +129,14 @@ class NeonWhiteWorld(World):
                     for i in range(self.options.mission_count)
             ]
 
+        options_to_show = [
+            "difficulty_knowledge", "difficulty_execution",
+            "medal_cap", "death_link", "unlock_method"]
+
         return {
             "level_order": encoded_levels,
             "mission_costs": mission_costs,
-            "options": self.options.as_dict(
-                "difficulty_knowledge", "difficulty_execution",
-                "medal_cap", "death_link", "unlock_method")
+            "options": self.options.as_dict(*options_to_show)
         }
 
     def interpret_slot_data(self, slot_data: dict[str, Any]) -> dict[str, Any]:
@@ -143,7 +145,7 @@ class NeonWhiteWorld(World):
         dcobj = zlib.decompressobj(-15)
         decoded = json.loads(dcobj.decompress(base64.a85decode(slot_data["level_order"])) + dcobj.flush())
 
-        return {
+        ret = {
             "levels": [reverse[x] for x in decoded],
             "rank_requirement": slot_data["mission_costs"][-1],
             "mission_count": len(slot_data["mission_costs"]),
@@ -152,3 +154,5 @@ class NeonWhiteWorld(World):
             "difficulty_execution": slot_data["options"]["difficulty_execution"],
             "unlock_method": slot_data["options"]["unlock_method"]
         }
+
+        return ret  # noqa: RET504
