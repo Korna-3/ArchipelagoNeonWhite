@@ -1,4 +1,4 @@
-from BaseClasses import MultiWorld, Region, LocationProgressType
+from BaseClasses import MultiWorld, Region
 
 from .locations import (
     NWLocation,

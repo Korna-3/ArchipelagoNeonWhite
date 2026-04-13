@@ -91,6 +91,23 @@ class Traps(DefaultOnToggle):
     """
     display_name = "Traps"
 
+class Goal(Choice):
+    """
+    What the goal to complete should be.
+    3bosses - Beat The Clocktower, The Third Temple, and Absolution with the goal medal cap.
+    TrueEnding - Gather all memories and write Green into the Book of Life.
+    """
+    display_name = "Goal"
+    option_3bosses = 1
+    option_trueending = 2
+    default = 1
+
+class BossesCap(MedalCap):
+    """
+    The medal cap to use for the bosses if running the 3 bosses goal.
+    """
+    display_name = "3 Bosses Medal Cap"
+
 class NeonWhiteDeathLink(DeathLink):
     __doc__ = (DeathLink.__doc__ + "\n\n    You can disable this or set it to give yourself a trap effect when " +  # pyright: ignore[reportOptionalOperand]
                "another player dies in the in-game mod options.")
@@ -107,4 +124,6 @@ class NeonWhiteOptions(PerGameCommonOptions):
     mission_count: MissionCount
     difficulty_knowledge: KnowledgeDifficulty
     difficulty_execution: ExecutionDifficulty
+    goal: Goal
+    bosses_goal_cap: BossesCap
     unlock_method: MissionUnlockMethod

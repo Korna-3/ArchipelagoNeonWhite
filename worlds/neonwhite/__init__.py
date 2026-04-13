@@ -12,7 +12,7 @@ from .items import NWItem, get_items_from_category, nw_item_groups, nw_items
 from .locations import checks_in_sets_lvl, neon_white_get_locations, neon_white_level_name_internal
 
 #from .Locations import PTLocation, pt_locations, pt_location_groups
-from .options import NeonWhiteOptions, MissionUnlockMethod
+from .options import Goal, NeonWhiteOptions, MissionUnlockMethod
 from .regions import create_regions
 from .rules import LevelRequirements, LevelRequirementSet, Medal, get_mission_rank_required, set_rules
 
@@ -131,7 +131,10 @@ class NeonWhiteWorld(World):
 
         options_to_show = [
             "difficulty_knowledge", "difficulty_execution",
-            "medal_cap", "death_link", "unlock_method"]
+            "medal_cap", "death_link", "unlock_method", "goal"]
+
+        if self.options.goal == Goal.option_3bosses:
+            options_to_show.append("bosses_goal_cap")
 
         return {
             "level_order": encoded_levels,
