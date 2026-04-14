@@ -37,10 +37,12 @@ class MissionUnlockMethod(Choice):
     How missions are unlocked to progress through the game.
     Ranks: Fills the pool with Neon Ranks, each mission requiring a number of ranks to unlock. See Rank Requirement.
     Missions: 1 Mission Unlock item is added to the pool per mission, each obtained unlocking the next locked mission.
+    Levels: Each level is an item that must be collected
     """
     display_name = "Mission Unlock Method"
     option_ranks = 1
     option_missions = 2
+    option_levels = 3
     default = 1
 
 class MedalCap(Choice):

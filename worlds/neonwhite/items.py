@@ -2,6 +2,7 @@ from collections.abc import Iterable
 from typing import NamedTuple
 
 from BaseClasses import Item, ItemClassification
+from locations import neon_white_level_name_internal
 
 
 class NWItem(Item):
@@ -34,16 +35,17 @@ nw_items: dict[str, NWItemData] = {
     "Dominion - Fire":      NWItemData("Card", 513, ItemClassification.progression | ItemClassification.useful),
     "Dominion - Discard":   NWItemData("Card", 514, ItemClassification.progression | ItemClassification.useful),
 
-    "Neon Rank":            NWItemData("Progression", 515, ItemClassification.progression_skip_balancing),
+    "Neon Rank":            NWItemData("Progression", 515, ItemClassification.progression_deprioritized_skip_balancing),
     "Mission Unlock":       NWItemData("Progression", 516, ItemClassification.progression),
 
     "Heavenly Delight Ticket": NWItemData("Filler", 517, ItemClassification.filler | ItemClassification.useful)
-}
+} | { f"{level}": NWItemData("Level", 518 + i, ItemClassification.progression) for i, level in enumerate(neon_white_level_name_internal.levels) }
 
 item_categories = [
     "Progression",
     "Card",
-    "Filler"
+    "Filler",
+    "Level"
 ]
 
 nw_item_groups = { cat: set(get_items_from_category(cat)) for cat in item_categories }
