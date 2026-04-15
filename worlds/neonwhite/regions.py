@@ -8,12 +8,35 @@ from .locations import (
     neon_white_levels_normal,
     neon_white_levels_sidequests,
 )
-from .options import NeonWhiteOptions
+from .options import MissionUnlockMethod, NeonWhiteOptions
 
+# Mission names and their counts
+neon_white_missions: list[tuple[str, int]] = [
+    ("Rebirth", 10),
+    ("Killer Inside", 10),
+    ("Only Shallow", 10),
+    ("The Old City", 3),
+    ("The Burn That Cures", 10),
+    ("Covenant", 10),
+    ("Reckoning", 10),
+    ("Benediction", 10),
+    ("Apocrypha", 10),
+    ("The Third Temple", 2),
+    ("Thousand Pound Butterfly", 10),
+    ("Hand of God", 2),
+    ("Red Sidequests", 8),
+    ("Violet Sidequests", 8),
+    ("Yellow Sidequests", 8),
+]
 
 def create_regions(player: int, multiworld: MultiWorld, options: NeonWhiteOptions):
-    # 121 levels split into 11 missions of 11 levels, differing from the base game
-    mission_list = [f"Mission {x + 1}" for x in range(options.mission_count)]
+    if options.unlock_method == MissionUnlockMethod.option_levels:
+        # Basegame missions
+        mission_list = [x[0] for x in neon_white_missions]
+    else:
+        # 121 levels split amongst X missions, differing from the base game
+        mission_list = [f"Mission {x + 1}" for x in range(options.mission_count)]
+
     heaven_regions: list[Region] = [Region("Central Heaven", player, multiworld, None)]
 
     neon_white_locations = neon_white_get_locations()

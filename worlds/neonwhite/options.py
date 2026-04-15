@@ -2,6 +2,7 @@ from dataclasses import dataclass
 
 from Options import Choice, DeathLink, DefaultOnToggle, PerGameCommonOptions, Range, StartInventoryPool
 
+
 class KnowledgeDifficulty(Choice):
     """
     How much understanding of the games mechanics is expected to figure out the solution to a given medal/gift/etc.

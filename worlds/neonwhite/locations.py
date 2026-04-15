@@ -4,6 +4,7 @@ from BaseClasses import Location
 
 class NWLocation(Location):
     game: str = "Neon White"
+    starting_id: int = 500
 
 
 neon_white_levels_normal = [
@@ -273,7 +274,7 @@ neon_white_level_name_internal = {
 
 def neon_white_get_locations() -> dict[str, int]:
     locations_dict: dict[str, int] = {}
-    level_id = 500
+    level_id = NWLocation.starting_id
 
     for normal_level in neon_white_levels_normal:
         for medal in neon_white_levels_medals:

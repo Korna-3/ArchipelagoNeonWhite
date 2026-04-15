@@ -2,11 +2,16 @@ from collections.abc import Iterable
 from typing import NamedTuple
 
 from BaseClasses import Item, ItemClassification
-from locations import neon_white_level_name_internal
+
+from .locations import neon_white_level_name_internal
 
 
 class NWItem(Item):
     game: str = "Neon White"
+    start_id = 500
+    level_id = 600
+
+    card_classification = ItemClassification.progression | ItemClassification.useful
 
 class NWItemData(NamedTuple):
     category: str
@@ -19,27 +24,32 @@ def get_items_from_category(category: str) -> Iterable[str]:
             yield name
 
 nw_items: dict[str, NWItemData] = {
+    "Katana":               NWItemData("Card", NWItem.start_id +  1, NWItem.card_classification),
+    "Book of Life":         NWItemData("Card", NWItem.start_id +  2, NWItem.card_classification),
+    "Purify - Fire":        NWItemData("Card", NWItem.start_id +  3, NWItem.card_classification),
+    "Purify - Discard":     NWItemData("Card", NWItem.start_id +  4, NWItem.card_classification),
+    "Elevate - Fire":       NWItemData("Card", NWItem.start_id +  5, NWItem.card_classification),
+    "Elevate - Discard":    NWItemData("Card", NWItem.start_id +  6, NWItem.card_classification),
+    "Godspeed - Fire":      NWItemData("Card", NWItem.start_id +  7, NWItem.card_classification),
+    "Godspeed - Discard":   NWItemData("Card", NWItem.start_id +  8, NWItem.card_classification),
+    "Stomp - Fire":         NWItemData("Card", NWItem.start_id +  9, NWItem.card_classification),
+    "Stomp - Discard":      NWItemData("Card", NWItem.start_id + 10, NWItem.card_classification),
+    "Fireball - Fire":      NWItemData("Card", NWItem.start_id + 11, NWItem.card_classification),
+    "Fireball - Discard":   NWItemData("Card", NWItem.start_id + 12, NWItem.card_classification),
+    "Dominion - Fire":      NWItemData("Card", NWItem.start_id + 13, NWItem.card_classification),
+    "Dominion - Discard":   NWItemData("Card", NWItem.start_id + 14, NWItem.card_classification),
 
-    "Katana":               NWItemData("Card", 501, ItemClassification.progression | ItemClassification.useful),
-    "Book of Life":         NWItemData("Card", 502, ItemClassification.progression | ItemClassification.useful),
-    "Purify - Fire":        NWItemData("Card", 503, ItemClassification.progression | ItemClassification.useful),
-    "Purify - Discard":     NWItemData("Card", 504, ItemClassification.progression | ItemClassification.useful),
-    "Elevate - Fire":       NWItemData("Card", 505, ItemClassification.progression | ItemClassification.useful),
-    "Elevate - Discard":    NWItemData("Card", 506, ItemClassification.progression | ItemClassification.useful),
-    "Godspeed - Fire":      NWItemData("Card", 507, ItemClassification.progression | ItemClassification.useful),
-    "Godspeed - Discard":   NWItemData("Card", 508, ItemClassification.progression | ItemClassification.useful),
-    "Stomp - Fire":         NWItemData("Card", 509, ItemClassification.progression | ItemClassification.useful),
-    "Stomp - Discard":      NWItemData("Card", 510, ItemClassification.progression | ItemClassification.useful),
-    "Fireball - Fire":      NWItemData("Card", 511, ItemClassification.progression | ItemClassification.useful),
-    "Fireball - Discard":   NWItemData("Card", 512, ItemClassification.progression | ItemClassification.useful),
-    "Dominion - Fire":      NWItemData("Card", 513, ItemClassification.progression | ItemClassification.useful),
-    "Dominion - Discard":   NWItemData("Card", 514, ItemClassification.progression | ItemClassification.useful),
+    "Neon Rank":            NWItemData("Progression", NWItem.start_id + 20,
+        ItemClassification.progression_deprioritized_skip_balancing),
+    "Mission Unlock":       NWItemData("Progression", NWItem.start_id + 21,
+        ItemClassification.progression),
 
-    "Neon Rank":            NWItemData("Progression", 515, ItemClassification.progression_deprioritized_skip_balancing),
-    "Mission Unlock":       NWItemData("Progression", 516, ItemClassification.progression),
-
-    "Heavenly Delight Ticket": NWItemData("Filler", 517, ItemClassification.filler | ItemClassification.useful)
-} | { f"{level}": NWItemData("Level", 518 + i, ItemClassification.progression) for i, level in enumerate(neon_white_level_name_internal.levels) }
+    "Heavenly Delight Ticket": NWItemData("Filler", NWItem.start_id + 30,
+        ItemClassification.filler | ItemClassification.useful)
+} | {
+    f"{level}": NWItemData("Level", NWItem.level_id + i, ItemClassification.progression)
+        for i, level in enumerate(neon_white_level_name_internal.keys())
+}
 
 item_categories = [
     "Progression",

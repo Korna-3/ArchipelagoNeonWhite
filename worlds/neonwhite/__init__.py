@@ -1,20 +1,24 @@
 import base64
-import io
 import json
 import zlib
 from typing import Any
 
 from BaseClasses import Tutorial
-from rule_builder.rules import CanReachLocation
+from rule_builder.rules import CanReachLocation, Rule
 from worlds.AutoWorld import WebWorld, World
 
 from .items import NWItem, get_items_from_category, nw_item_groups, nw_items
-from .locations import checks_in_sets_lvl, neon_white_get_locations, neon_white_level_name_internal
+from .locations import (
+    checks_in_sets_lvl,
+    neon_white_get_locations,
+    neon_white_level_name_internal,
+    neon_white_levels_medals,
+)
 
 #from .Locations import PTLocation, pt_locations, pt_location_groups
-from .options import Goal, NeonWhiteOptions, MissionUnlockMethod
+from .options import Goal, MissionUnlockMethod, NeonWhiteOptions
 from .regions import create_regions
-from .rules import LevelRequirements, LevelRequirementSet, Medal, get_mission_rank_required, set_rules
+from .rules import LevelRequirementSet, get_mission_rank_required, set_rules
 
 
 class NeonWhiteWeb(WebWorld):
@@ -74,6 +78,8 @@ class NeonWhiteWorld(World):
             self.options.difficulty_knowledge.value = ut_regen["difficulty_execution"]
             self.options.unlock_method = ut_regen["unlock_method"]
 
+        self.use_levels: bool = self.options.unlock_method == MissionUnlockMethod.option_levels
+
     def create_item(self, name: str) -> NWItem:
         return NWItem(name, nw_items[name].classification, nw_items[name].id, self.player)
 
@@ -91,14 +97,17 @@ class NeonWhiteWorld(World):
         if (not getattr(self.multiworld, "re_gen_passthrough", {})):
             self.ranks_required = ((loc_count - len(itempool)) * (self.options.rank_requirement / 100))
 
-        if self.options.unlock_method == MissionUnlockMethod.option_missions:
-            # Add a number of mission unlock items equal to the mission count - 1
-            itempool += [self.create_item("Mission Unlock")] * (self.options.mission_count.value - 1)
-        else:
-            # Make sure we add the neon ranks that we need
-            itempool += ([self.create_item("Neon Rank")]
-                * get_mission_rank_required(self, self.options.mission_count.value))
+        match self.options.unlock_method:
 
+            case MissionUnlockMethod.option_missions:
+                # Add a number of mission unlock items equal to the mission count - 1
+                itempool += [self.create_item("Mission Unlock")] * (self.options.mission_count.value - 1)
+            case MissionUnlockMethod.option_ranks:
+                # Make sure we add the neon ranks that we need
+                itempool += ([self.create_item("Neon Rank")]
+                    * get_mission_rank_required(self, self.options.mission_count.value))
+            case MissionUnlockMethod.option_levels:
+                itempool.extend(self.create_item(x) for x in neon_white_level_name_internal.keys())
 
         # Fill the rest with filler
         itempool += [self.create_filler() for _ in range(loc_count - len(itempool))]
@@ -111,7 +120,20 @@ class NeonWhiteWorld(World):
 
     def set_rules(self):
         set_rules(self.multiworld, self, self.options)
-        self.set_completion_rule(CanReachLocation("Absolution Ace Completion"))
+        rule: Rule | None = None
+        match self.options.goal:
+            case Goal.option_3bosses:
+                medalname = neon_white_levels_medals[self.options.bosses_goal_cap - 1]
+                rule = (
+                    CanReachLocation(f"The Clocktower {medalname} Completion") &
+                    CanReachLocation(f"The Third Temple {medalname} Completion") &
+                    CanReachLocation(f"Absolution {medalname} Completion")
+                )
+
+        if rule is None:
+            raise NotImplementedError("end goal not configured")
+
+        self.set_completion_rule(rule)
 
     def fill_slot_data(self):
         dumps = json.dumps([neon_white_level_name_internal[x] for x in self.ordered_levels], separators=(",", ":"))

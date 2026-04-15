@@ -5,17 +5,19 @@ from math import floor
 from typing import TYPE_CHECKING
 
 from BaseClasses import MultiWorld
+from rule_builder.options import OptionFilter
 from rule_builder.rules import False_, Has, HasAll, True_
-from worlds.neonwhite import NeonWhiteOptions
-from worlds.neonwhite.locations import (
+
+from . import NeonWhiteOptions, data
+from .locations import (
+    neon_white_level_name_internal,
     neon_white_levels_giftless,
     neon_white_levels_medals,
     neon_white_levels_normal,
     neon_white_levels_sidequests,
 )
-from worlds.neonwhite.options import ExecutionDifficulty, KnowledgeDifficulty, MedalCap, MissionUnlockMethod
-
-from . import data
+from .options import ExecutionDifficulty, KnowledgeDifficulty, MedalCap, MissionUnlockMethod
+from .regions import neon_white_missions
 
 if TYPE_CHECKING:
     from rule_builder.rules import Rule
@@ -185,23 +187,29 @@ def import_json_to_data(know_diff: KnowledgeDifficulty, exec_diff: ExecutionDiff
 
 # Actual functions related to rules start here
 def level_rando(world: "NeonWhiteWorld") -> list[str]:
-    # TODO: Make this smarter, e.g. fill levels on a gradient from smallest minimum requirement to most
-
-    level_queue = neon_white_levels_normal + neon_white_levels_giftless + neon_white_levels_sidequests
-    level_queue.remove("Absolution") # This will always be placed at the end
-
     # Place 2 levels where the gift and cap medal can be obtained Fist-Only at the very start
+    # TODO: use fist_only_levels as a way to set starting levels
+    # would be useful for the level-as-an-item generation
     fist_only_levels = []
-    for level in level_queue:
+    for level in neon_white_levels_normal:
         if level not in neon_white_levels_normal:
             continue
         if (world.requirements.can_complete_level(level, medal_from_medal_cap(world.options.medal_cap), LevelRequirements.FistOnly)
             and world.requirements.can_complete_level(level, Medal.Gift, LevelRequirements.FistOnly)):
             fist_only_levels.append(level)
     world.random.shuffle(fist_only_levels)
+    fist_only_levels = fist_only_levels[:2]
+
+    if world.use_levels:
+        return list(neon_white_level_name_internal.keys())
+
+    # TODO: Make this smarter, e.g. fill levels on a gradient from smallest minimum requirement to most
+
+    level_queue = neon_white_levels_normal + neon_white_levels_giftless + neon_white_levels_sidequests
+    level_queue.remove("Absolution") # This will always be placed at the end
+
     for i in range(2):
         level_queue.remove(fist_only_levels[i])
-    fist_only_levels = fist_only_levels[:2]
 
     # Shuffle the rest, append, then put Absolution at the end
     world.random.shuffle(level_queue)
@@ -226,12 +234,15 @@ def set_rules(multiworld: MultiWorld, world: "NeonWhiteWorld", options: NeonWhit
     medal_cap_typed = medal_from_medal_cap(options.medal_cap)
     world.requirements = import_json_to_data(options.difficulty_knowledge, options.difficulty_execution, medal_cap_typed)
 
-
     if not world.ordered_levels:
         world.ordered_levels = level_rando(world)
 
-    levels_norm = len(world.ordered_levels) // options.mission_count
-    offset = options.mission_count - (len(world.ordered_levels) % options.mission_count)
+    mission_count = (options.mission_count
+        if not world.use_levels
+        else len(neon_white_missions))
+
+    levels_norm = len(world.ordered_levels) // mission_count
+    offset = mission_count - (len(world.ordered_levels) % mission_count)
 
     # Place one relevant discard ability into the early items pool to give the player something to work with
     relevant_discards: set[str] = set()
@@ -245,44 +256,62 @@ def set_rules(multiworld: MultiWorld, world: "NeonWhiteWorld", options: NeonWhit
                 if cardstr and ("Discard" in cardstr or "Book of Life" in cardstr):
                     relevant_discards.add(cardstr)
     relevant_discards_list = list(relevant_discards)
-    multiworld.local_early_items[world.player][relevant_discards_list[world.random.randint(0, len(relevant_discards_list) - 1)]] = 1
+
+    if world.use_levels:
+        multiworld.random.shuffle(relevant_discards_list)
+
+    multiworld.local_early_items[world.player][relevant_discards_list
+        [world.random.randint(0, len(relevant_discards_list) - 1)]] = 1
 
     central_heaven = world.get_region("Central Heaven")
     # Connect central heaven to every mission
     level_total = 0
-    for i in range(options.mission_count):
-        mission_region = world.get_region(f"Mission {i + 1}")
-        entrance_name = f"Central Heaven to Mission {i + 1}"
-        central_heaven.connect(mission_region, entrance_name)
+    print(f"mission count {mission_count}")
+    for i in range(mission_count):
+        if world.use_levels:
+            mission_region = world.get_region(neon_white_missions[i][0])
+        else:
+            mission_region = world.get_region(f"Mission {i + 1}")
+        entrance_name = f"Central Heaven to {mission_region.name}"
+        entrance = central_heaven.connect(mission_region, entrance_name)
         if i != 0:
-            if options.unlock_method == MissionUnlockMethod.option_missions:
-                world.set_rule(world.get_entrance(entrance_name), Has("Mission Unlock", i))
-            else:
-                neonrank_count = get_mission_rank_required(world, i + 1)
-                world.set_rule(world.get_entrance(entrance_name), Has("Neon Rank", neonrank_count))
+            match options.unlock_method:
+                case MissionUnlockMethod.option_missions:
+                    world.set_rule(entrance, Has("Mission Unlock", i))
+                case MissionUnlockMethod.option_ranks:
+                    neonrank_count = get_mission_rank_required(world, i + 1)
+                    world.set_rule(entrance, Has("Neon Rank", neonrank_count))
 
-        # Connect each mission to the levels they contain
-        level_count = levels_norm
-        if i >= offset:
-            level_count += 1
+        if world.use_levels:
+            level_count = neon_white_missions[i][1]
+        else:
+            # Connect each mission to the levels they contain
+            level_count = levels_norm
+            if i >= offset:
+                level_count += 1
 
         for _ in range(level_count):
             level_name = world.ordered_levels[level_total]
             level_total += 1
+
+            level_rule = Has(level_name,
+                options=[OptionFilter(MissionUnlockMethod, MissionUnlockMethod.option_levels)],
+                filtered_resolution=True)
+
             mission_region.connect(multiworld.get_region(level_name, world.player),
                 f"{mission_region.name} to {level_name}")
             if level_name in neon_white_levels_normal or level_name in neon_white_levels_giftless:
                 for medal in range(options.medal_cap):
                     world.set_rule(world.get_location(f"{level_name} {neon_white_levels_medals[medal]} Completion"),
-                        world.requirements.make_rule(level_name, Medal(medal)))
+                        world.requirements.make_rule(level_name, Medal(medal)) & level_rule)
 
                 if level_name not in neon_white_levels_giftless:
                     world.set_rule(world.get_location(level_name + " Gift"),
-                        world.requirements.make_rule(level_name, Medal.Gift))
+                        world.requirements.make_rule(level_name, Medal.Gift) & level_rule)
 
             else:
                 world.set_rule(world.get_location(level_name + " Completion"),
-                    world.requirements.make_rule(level_name, medal_cap_typed))
+                    world.requirements.make_rule(level_name, medal_cap_typed) & level_rule)
 
     from Utils import visualize_regions
     visualize_regions(central_heaven, "neon_white_regions.puml")
