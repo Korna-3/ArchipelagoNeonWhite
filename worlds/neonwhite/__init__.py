@@ -13,12 +13,21 @@ from .locations import (
     neon_white_get_locations,
     neon_white_level_name_internal,
     neon_white_levels_medals,
+    neon_white_levels_normal,
 )
 
 #from .Locations import PTLocation, pt_locations, pt_location_groups
 from .options import Goal, MissionUnlockMethod, NeonWhiteOptions
 from .regions import create_regions
-from .rules import LevelRequirementSet, get_mission_rank_required, set_rules
+from .rules import (
+    LevelRequirements,
+    LevelRequirementSet,
+    Medal,
+    get_mission_rank_required,
+    import_json_to_data,
+    medal_from_medal_cap,
+    set_rules,
+)
 
 
 class NeonWhiteWeb(WebWorld):
@@ -57,6 +66,8 @@ class NeonWhiteWorld(World):
 
     requirements: LevelRequirementSet
 
+    early_levels: list[str]
+
     origin_region_name = "Central Heaven"
 
     web = NeonWhiteWeb()
@@ -71,6 +82,7 @@ class NeonWhiteWorld(World):
         if (self.game in ut_regen):
             ut_regen = ut_regen[self.game]
             self.ordered_levels = ut_regen["levels"]
+            self.early_levels = ut_regen["early_levels"]
             self.ranks_required = ut_regen["rank_requirement"]
             self.options.mission_count.value = ut_regen["mission_count"]
             self.options.medal_cap.value = ut_regen["medal_cap"]
@@ -79,6 +91,39 @@ class NeonWhiteWorld(World):
             self.options.unlock_method = ut_regen["unlock_method"]
 
         self.use_levels: bool = self.options.unlock_method == MissionUnlockMethod.option_levels
+
+        medal_capped = medal_from_medal_cap(self.options.medal_cap)
+
+        self.requirements = import_json_to_data(
+            self.options.difficulty_knowledge, self.options.difficulty_execution, medal_capped)
+
+        if not ut_regen:
+            self.early_levels = []
+
+            for level in neon_white_levels_normal:
+                if level not in neon_white_levels_normal:
+                    continue
+                if (self.requirements.can_complete_level(level, medal_capped, LevelRequirements.FistOnly)
+                    and self.requirements.can_complete_level(level, Medal.Gift, LevelRequirements.FistOnly)):
+                    self.early_levels.append(level)
+
+            cutoff = min(self.options.starting_level_count, len(self.early_levels))
+
+            self.multiworld.random.shuffle(self.early_levels)
+            self.early_levels = self.early_levels[:cutoff]
+
+        if self.use_levels:
+            remain = self.options.starting_level_count - len(self.early_levels)
+            if remain > 0:
+                self.early_levels += self.multiworld.random.choices(
+                    [x for x in neon_white_level_name_internal.keys() if x not in self.early_levels],
+                    k = remain)
+
+            print(self.early_levels)
+
+            for x in self.early_levels:
+                self.multiworld.push_precollected(self.create_item(x))
+
 
     def create_item(self, name: str) -> NWItem:
         return NWItem(name, nw_items[name].classification, nw_items[name].id, self.player)
@@ -107,7 +152,8 @@ class NeonWhiteWorld(World):
                 itempool += ([self.create_item("Neon Rank")]
                     * get_mission_rank_required(self, self.options.mission_count.value))
             case MissionUnlockMethod.option_levels:
-                itempool.extend(self.create_item(x) for x in neon_white_level_name_internal.keys())
+                itempool.extend(self.create_item(x) for x in neon_white_level_name_internal.keys()
+                    if x not in self.early_levels)
 
         # Fill the rest with filler
         itempool += [self.create_filler() for _ in range(loc_count - len(itempool))]
@@ -160,6 +206,7 @@ class NeonWhiteWorld(World):
 
         return {
             "level_order": encoded_levels,
+            "early_levels": self.early_levels,
             "mission_costs": mission_costs,
             "options": self.options.as_dict(*options_to_show)
         }
@@ -172,6 +219,7 @@ class NeonWhiteWorld(World):
 
         ret = {
             "levels": [reverse[x] for x in decoded],
+            "early_levels": slot_data["early_levels"],
             "rank_requirement": slot_data["mission_costs"][-1],
             "mission_count": len(slot_data["mission_costs"]),
             "medal_cap": slot_data["options"]["medal_cap"],

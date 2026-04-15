@@ -46,6 +46,16 @@ class MissionUnlockMethod(Choice):
     option_levels = 3
     default = 1
 
+class StartingLevelCount(Range):
+    """
+    The amount of Levels for you to start with for Levels unlock method.
+    This also influences how many fist-only levels are added early into the level pool for other unlock methods.
+    """
+    display_name = "Starting Level Count"
+    range_start = 1
+    default = 5
+    range_end = 10
+
 class MedalCap(Choice):
     """
     The highest medal to count for checks.
@@ -125,6 +135,7 @@ class NeonWhiteOptions(PerGameCommonOptions):
     medal_cap: MedalCap
     rank_requirement: RankRequirement
     mission_count: MissionCount
+    starting_level_count: StartingLevelCount
     difficulty_knowledge: KnowledgeDifficulty
     difficulty_execution: ExecutionDifficulty
     goal: Goal

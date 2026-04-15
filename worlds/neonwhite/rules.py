@@ -187,19 +187,6 @@ def import_json_to_data(know_diff: KnowledgeDifficulty, exec_diff: ExecutionDiff
 
 # Actual functions related to rules start here
 def level_rando(world: "NeonWhiteWorld") -> list[str]:
-    # Place 2 levels where the gift and cap medal can be obtained Fist-Only at the very start
-    # TODO: use fist_only_levels as a way to set starting levels
-    # would be useful for the level-as-an-item generation
-    fist_only_levels = []
-    for level in neon_white_levels_normal:
-        if level not in neon_white_levels_normal:
-            continue
-        if (world.requirements.can_complete_level(level, medal_from_medal_cap(world.options.medal_cap), LevelRequirements.FistOnly)
-            and world.requirements.can_complete_level(level, Medal.Gift, LevelRequirements.FistOnly)):
-            fist_only_levels.append(level)
-    world.random.shuffle(fist_only_levels)
-    fist_only_levels = fist_only_levels[:2]
-
     if world.use_levels:
         return list(neon_white_level_name_internal.keys())
 
@@ -208,12 +195,11 @@ def level_rando(world: "NeonWhiteWorld") -> list[str]:
     level_queue = neon_white_levels_normal + neon_white_levels_giftless + neon_white_levels_sidequests
     level_queue.remove("Absolution") # This will always be placed at the end
 
-    for i in range(2):
-        level_queue.remove(fist_only_levels[i])
+    level_queue = [x for x in level_queue if x not in world.early_levels]
 
     # Shuffle the rest, append, then put Absolution at the end
     world.random.shuffle(level_queue)
-    return fist_only_levels + level_queue + ["Absolution"]
+    return world.early_levels + level_queue + ["Absolution"]
 
 # Mission is 1-indexed
 def get_mission_rank_required(world: "NeonWhiteWorld", mission: int) -> int:
@@ -232,7 +218,6 @@ def get_mission_rank_required(world: "NeonWhiteWorld", mission: int) -> int:
 
 def set_rules(multiworld: MultiWorld, world: "NeonWhiteWorld", options: NeonWhiteOptions):
     medal_cap_typed = medal_from_medal_cap(options.medal_cap)
-    world.requirements = import_json_to_data(options.difficulty_knowledge, options.difficulty_execution, medal_cap_typed)
 
     if not world.ordered_levels:
         world.ordered_levels = level_rando(world)
