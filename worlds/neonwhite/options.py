@@ -83,13 +83,24 @@ class RankRequirement(Range):
 
 class MissionCount(Range):
     """
-    The amount of Missions for the game to have when mission randomization is enabled.
+    The amount of Missions for the game to have when ranks or mission unlock method is chosen.
     Spreads evenly across all levels, then spreads across the later half with the remainder.
     """
     display_name = "Mission Count"
     range_start = 3
     default = 11
     range_end = 60
+
+class LevelGradient(Range):
+    """
+    The amount of "variance" in % to have in the random level selection for the ranks/mission unlock methods.
+    A lower value means, as the levels are selected, you will, on average, need more and more cards.
+    A higher value means much more randomness in the selection.
+    """
+    display_name = "Level Selection Variance"
+    range_start = 0
+    range_end = 100
+    default = 50
 
 class ProgressiveChecks(DefaultOnToggle):
     """
@@ -135,6 +146,7 @@ class NeonWhiteOptions(PerGameCommonOptions):
     medal_cap: MedalCap
     rank_requirement: RankRequirement
     mission_count: MissionCount
+    level_gradient: LevelGradient
     starting_level_count: StartingLevelCount
     difficulty_knowledge: KnowledgeDifficulty
     difficulty_execution: ExecutionDifficulty

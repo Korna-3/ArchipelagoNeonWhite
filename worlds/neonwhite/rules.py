@@ -2,6 +2,7 @@ import itertools
 import json
 from enum import IntEnum, IntFlag, auto
 from math import floor
+import statistics
 from typing import TYPE_CHECKING
 
 from BaseClasses import MultiWorld
@@ -197,8 +198,28 @@ def level_rando(world: "NeonWhiteWorld") -> list[str]:
 
     level_queue = [x for x in level_queue if x not in world.early_levels]
 
+    # Solve weights for weighted shuffle
+    level_reqs = [world.requirements.requirements[x] for x in level_queue]
+    weights = [statistics.mean(
+            statistics.mean(
+                req.count + 1 for req in reqs
+            ) for reqs in medal_reqs if reqs
+        ) for medal_reqs in level_reqs]
+
+    variance = world.options.level_gradient / 100
+
+    # https://softwareengineering.stackexchange.com/a/344274
+    def weighted_shuffle(items):
+        norm = [x / max(weights) for x in weights]
+        v = [norm[i] + variance * (world.random.random() - norm[i]) for i in range(len(items))]
+        order = sorted(range(len(items)), key=lambda i: v[i])
+
+        for i in order:
+            yield items[i]
+
     # Shuffle the rest, append, then put Absolution at the end
-    world.random.shuffle(level_queue)
+    level_queue = list(weighted_shuffle(level_queue))
+
     return world.early_levels + level_queue + ["Absolution"]
 
 # Mission is 1-indexed
