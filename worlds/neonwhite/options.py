@@ -1,37 +1,47 @@
 from dataclasses import dataclass
 
-from Options import Choice, DeathLink, DefaultOnToggle, PerGameCommonOptions, Range, StartInventoryPool
+from Options import Choice, DeathLink, DefaultOnToggle, PerGameCommonOptions, Range, StartInventoryPool, Toggle
 
 
 class KnowledgeDifficulty(Choice):
     """
     How much understanding of the games mechanics is expected to figure out the solution to a given medal/gift/etc.
+    Vanilla: *Only* allow cards and strats the basegame shows you.
     Casual: Expects the bare minimum, only tricks that are taught with in-game tutorials to beat the vanilla game.
     Standard: Incorporates hidden but usually intended or otherwise easy to intuit tech/ideas.
     Expert: Further includes some more advanced tech that is often only relevant to speedrunners.
     Master: Encompasses everything else from level-specific tech to extremely niche game quirks or nuances.
     """
     display_name = "Knowledge Difficulty"
-    option_casual = 1
-    option_standard = 2
-    option_expert = 3
-    option_master = 4
-    default = 2
+    option_vanilla = 1
+    option_casual = 2
+    option_standard = 3
+    option_expert = 4
+    option_master = 5
+    default = 3
 
 class ExecutionDifficulty(Choice):
     """
     How hard it is to actually execute a given solution to a given medal/gift/etc, assuming all knowledge.
+    Vanilla: *Only* allow cards and strats the basegame shows you.
     Casual: Can be done by a brand-new player with minimal hassle.
     Standard: Consistently doable by a player who has all aces, especially players with dev medals.
     Expert: Doable by a player who has all dev medals and is competent with advanced tech.
     Master: Unreasonably difficult solutions that are inconsistent/overly precise to the vast majority of players.
     """
-    display_name = "Knowledge Difficulty"
-    option_casual = 1
-    option_standard = 2
-    option_expert = 3
-    option_master = 4
-    default = 2
+    display_name = "Execution Difficulty"
+    option_vanilla = 1
+    option_casual = 2
+    option_standard = 3
+    option_expert = 4
+    option_master = 5
+    default = 3
+
+class BoofShenanigans(Toggle):
+    """
+    Whether to include things like clips and far off Book of Life usages in the logic.
+    """
+    display_name = "Book of Life Shenanigans"
 
 class MissionUnlockMethod(Choice):
     """
@@ -150,6 +160,7 @@ class NeonWhiteOptions(PerGameCommonOptions):
     starting_level_count: StartingLevelCount
     difficulty_knowledge: KnowledgeDifficulty
     difficulty_execution: ExecutionDifficulty
+    boof_shenanigans: BoofShenanigans
     goal: Goal
     bosses_goal_cap: BossesCap
     unlock_method: MissionUnlockMethod

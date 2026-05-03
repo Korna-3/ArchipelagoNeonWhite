@@ -6,7 +6,6 @@ import statistics
 from typing import TYPE_CHECKING
 
 from BaseClasses import MultiWorld
-from rule_builder.options import OptionFilter
 from rule_builder.rules import False_, Has, HasAll, True_
 
 from . import NeonWhiteOptions, data
@@ -168,20 +167,21 @@ def import_json_to_data(know_diff: KnowledgeDifficulty, exec_diff: ExecutionDiff
             if LevelRequirements.FistOnly in solutions[capped]:
                 continue # don't even bother
 
-            if solution["k"] <= know_diff and solution["e"] <= exec_diff:
-                reqs = LevelRequirements(solution["r"])
+            if solution["k"] > know_diff or solution["e"] > exec_diff:
+                continue
+            reqs = LevelRequirements(solution["r"])
 
-                if solution["m"] == 5:
-                    if any(reqs.has_flags(x) for x in solutions[5]):
+            if solution["m"] == 5:
+                if any(reqs.has_flags(x) for x in solutions[5]):
+                    continue
+
+                solutions[5].add(reqs)
+            else:
+                for i in range(capped, 5):
+                    if any(reqs.has_flags(x) for x in solutions[i]):
                         continue
 
-                    solutions[5].add(reqs)
-                else:
-                    for i in range(capped, 5):
-                        if any(reqs.has_flags(x) for x in solutions[i]):
-                            continue
-
-                        solutions[i].add(reqs)
+                    solutions[i].add(reqs)
 
         new_requirements.requirements[entry] = solutions
     return new_requirements
@@ -300,24 +300,21 @@ def set_rules(multiworld: MultiWorld, world: "NeonWhiteWorld", options: NeonWhit
             level_name = world.ordered_levels[level_total]
             level_total += 1
 
-            level_rule = Has(level_name,
-                options=[OptionFilter(MissionUnlockMethod, MissionUnlockMethod.option_levels)],
-                filtered_resolution=True)
-
-            mission_region.connect(multiworld.get_region(level_name, world.player),
-                f"{mission_region.name} to {level_name}")
+            mission_region.connect(world.get_region("Level: " + level_name),
+                f"{mission_region.name} to {level_name}",
+                Has(level_name) if world.options.unlock_method == MissionUnlockMethod.option_levels else None)
             if level_name in neon_white_levels_normal or level_name in neon_white_levels_giftless:
                 for medal in range(options.medal_cap):
                     world.set_rule(world.get_location(f"{level_name} {neon_white_levels_medals[medal]} Completion"),
-                        world.requirements.make_rule(level_name, Medal(medal)) & level_rule)
+                        world.requirements.make_rule(level_name, Medal(medal)))
 
                 if level_name not in neon_white_levels_giftless:
                     world.set_rule(world.get_location(level_name + " Gift"),
-                        world.requirements.make_rule(level_name, Medal.Gift) & level_rule)
+                        world.requirements.make_rule(level_name, Medal.Gift))
 
             else:
                 world.set_rule(world.get_location(level_name + " Completion"),
-                    world.requirements.make_rule(level_name, medal_cap_typed) & level_rule)
+                    world.requirements.make_rule(level_name, medal_cap_typed))
 
     from Utils import visualize_regions
     visualize_regions(central_heaven, "neon_white_regions.puml")

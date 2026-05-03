@@ -3,7 +3,7 @@ import json
 import zlib
 from typing import Any
 
-from BaseClasses import Tutorial
+from BaseClasses import Tutorial, Item
 from rule_builder.rules import CanReachLocation, Rule
 from worlds.AutoWorld import WebWorld, World
 
@@ -17,7 +17,7 @@ from .locations import (
 )
 
 #from .Locations import PTLocation, pt_locations, pt_location_groups
-from .options import Goal, MissionUnlockMethod, NeonWhiteOptions
+from .options import ExecutionDifficulty, Goal, KnowledgeDifficulty, MissionUnlockMethod, NeonWhiteOptions
 from .regions import create_regions
 from .rules import (
     LevelRequirements,
@@ -88,6 +88,7 @@ class NeonWhiteWorld(World):
             self.options.medal_cap.value = ut_regen["medal_cap"]
             self.options.difficulty_knowledge.value = ut_regen["difficulty_knowledge"]
             self.options.difficulty_knowledge.value = ut_regen["difficulty_execution"]
+            self.options.boof_shenanigans.value = ut_regen["boof_shenanigans"]
             self.options.unlock_method = ut_regen["unlock_method"]
 
         self.use_levels: bool = self.options.unlock_method == MissionUnlockMethod.option_levels
@@ -124,6 +125,10 @@ class NeonWhiteWorld(World):
             for x in self.early_levels:
                 self.multiworld.push_precollected(self.create_item(x))
 
+        if (self.options.difficulty_knowledge <= KnowledgeDifficulty.option_vanilla
+            or self.options.difficulty_execution <= ExecutionDifficulty.option_casual):
+                self.multiworld.push_precollected(self.create_item("Katana"))
+
 
     def create_item(self, name: str) -> NWItem:
         return NWItem(name, nw_items[name].classification, nw_items[name].id, self.player)
@@ -132,7 +137,7 @@ class NeonWhiteWorld(World):
         create_regions(self.player, self.multiworld, self.options)
 
     def create_items(self):
-        itempool = []
+        itempool: list[Item] = []
 
         loc_count = len(self.get_locations())  # pyright: ignore[reportArgumentType]
 
@@ -143,7 +148,6 @@ class NeonWhiteWorld(World):
             self.ranks_required = ((loc_count - len(itempool)) * (self.options.rank_requirement / 100))
 
         match self.options.unlock_method:
-
             case MissionUnlockMethod.option_missions:
                 # Add a number of mission unlock items equal to the mission count - 1
                 itempool += [self.create_item("Mission Unlock")] * (self.options.mission_count.value - 1)
@@ -152,8 +156,20 @@ class NeonWhiteWorld(World):
                 itempool += ([self.create_item("Neon Rank")]
                     * get_mission_rank_required(self, self.options.mission_count.value))
             case MissionUnlockMethod.option_levels:
-                itempool.extend(self.create_item(x) for x in neon_white_level_name_internal.keys()
-                    if x not in self.early_levels)
+                itempool.extend(self.create_item(x) for x in neon_white_level_name_internal.keys())
+
+        prec = self.multiworld.precollected_items[self.player].copy()
+        print(len(itempool))
+        print(prec)
+
+        for item in itempool:
+            if item in prec:
+                itempool.remove(item)
+                prec.remove(item)
+
+        print(len(itempool))
+        print(prec)
+
 
         # Fill the rest with filler
         itempool += [self.create_filler() for _ in range(loc_count - len(itempool))]
@@ -198,7 +214,7 @@ class NeonWhiteWorld(World):
             ]
 
         options_to_show = [
-            "difficulty_knowledge", "difficulty_execution",
+            "difficulty_knowledge", "difficulty_execution", "boof_shenanigans",
             "medal_cap", "death_link", "unlock_method", "goal"]
 
         if self.options.goal == Goal.option_3bosses:
@@ -225,6 +241,7 @@ class NeonWhiteWorld(World):
             "medal_cap": slot_data["options"]["medal_cap"],
             "difficulty_knowledge": slot_data["options"]["difficulty_knowledge"],
             "difficulty_execution": slot_data["options"]["difficulty_execution"],
+            "boof_shenanigans": slot_data["options"]["boof_shenanigans"],
             "unlock_method": slot_data["options"]["unlock_method"]
         }
 
