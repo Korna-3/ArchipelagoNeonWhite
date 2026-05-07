@@ -191,9 +191,9 @@ def level_rando(world: "NeonWhiteWorld") -> list[str]:
     if world.use_levels:
         return list(neon_white_level_name_internal.keys())
 
-    # TODO: Make this smarter, e.g. fill levels on a gradient from smallest minimum requirement to most
-
-    level_queue = neon_white_levels_normal + neon_white_levels_giftless + neon_white_levels_sidequests
+    level_queue = neon_white_levels_normal + neon_white_levels_giftless
+    if world.options.sidequests:
+        level_queue.extend(neon_white_levels_sidequests)
     level_queue.remove("Absolution") # This will always be placed at the end
 
     level_queue = [x for x in level_queue if x not in world.early_levels]
@@ -272,7 +272,6 @@ def set_rules(multiworld: MultiWorld, world: "NeonWhiteWorld", options: NeonWhit
     central_heaven = world.get_region("Central Heaven")
     # Connect central heaven to every mission
     level_total = 0
-    print(f"mission count {mission_count}")
     for i in range(mission_count):
         if world.use_levels:
             mission_region = world.get_region(neon_white_missions[i][0])
@@ -308,11 +307,11 @@ def set_rules(multiworld: MultiWorld, world: "NeonWhiteWorld", options: NeonWhit
                     world.set_rule(world.get_location(f"{level_name} {neon_white_levels_medals[medal]} Completion"),
                         world.requirements.make_rule(level_name, Medal(medal)))
 
-                if level_name not in neon_white_levels_giftless:
+                if level_name not in neon_white_levels_giftless and world.options.gifts:
                     world.set_rule(world.get_location(level_name + " Gift"),
                         world.requirements.make_rule(level_name, Medal.Gift))
 
-            else:
+            elif world.options.sidequests:
                 world.set_rule(world.get_location(level_name + " Completion"),
                     world.requirements.make_rule(level_name, medal_cap_typed))
 

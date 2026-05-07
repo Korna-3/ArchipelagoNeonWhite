@@ -11,7 +11,7 @@ from .locations import (
 from .options import MissionUnlockMethod, NeonWhiteOptions
 
 # Mission names and their counts
-neon_white_missions: list[tuple[str, int]] = [
+neon_white_missions = [
     ("Rebirth", 10),
     ("Killer Inside", 10),
     ("Only Shallow", 10),
@@ -23,7 +23,9 @@ neon_white_missions: list[tuple[str, int]] = [
     ("Apocrypha", 10),
     ("The Third Temple", 2),
     ("Thousand Pound Butterfly", 10),
-    ("Hand of God", 2),
+    ("Hand of God", 2)
+]
+neon_white_missions_sq = [
     ("Red Sidequests", 8),
     ("Violet Sidequests", 8),
     ("Yellow Sidequests", 8),
@@ -33,6 +35,8 @@ def create_regions(player: int, multiworld: MultiWorld, options: NeonWhiteOption
     if options.unlock_method == MissionUnlockMethod.option_levels:
         # Basegame missions
         mission_list = [x[0] for x in neon_white_missions]
+        if options.sidequests:
+            mission_list.extend(x[0] for x in neon_white_missions_sq)
     else:
         # 121 levels split amongst X missions, differing from the base game
         mission_list = [f"Mission {x + 1}" for x in range(options.mission_count)]
@@ -52,10 +56,12 @@ def create_regions(player: int, multiworld: MultiWorld, options: NeonWhiteOption
             # Make the highest medal a priority location
             #if medal == options.medal_cap - 1: new_location.progress_type = LocationProgressType.PRIORITY
             check_region.locations.append(new_location)
-        check_name = level + " Gift"
-        new_location = NWLocation(player, check_name, neon_white_locations[check_name], check_region)
-        #new_location.progress_type = LocationProgressType.PRIORITY
-        check_region.locations.append(new_location)
+        if options.gifts:
+            check_name = level + " Gift"
+            new_location = NWLocation(player, check_name, neon_white_locations[check_name], check_region)
+            #new_location.progress_type = LocationProgressType.PRIORITY
+            check_region.locations.append(new_location)
+
         heaven_regions.append(check_region)
 
     for level in neon_white_levels_giftless:
@@ -68,12 +74,13 @@ def create_regions(player: int, multiworld: MultiWorld, options: NeonWhiteOption
             check_region.locations.append(new_location)
         heaven_regions.append(check_region)
 
-    for level in neon_white_levels_sidequests:
-        check_region = Region("Level: " + level, player, multiworld)
-        check_name = level + " Completion"
-        new_location = NWLocation(player, check_name, neon_white_locations[check_name], check_region)
-        #new_location.progress_type = LocationProgressType.PRIORITY
-        check_region.locations.append(new_location)
-        heaven_regions.append(check_region)
+    if options.sidequests:
+        for level in neon_white_levels_sidequests:
+            check_region = Region("Level: " + level, player, multiworld)
+            check_name = level + " Completion"
+            new_location = NWLocation(player, check_name, neon_white_locations[check_name], check_region)
+            #new_location.progress_type = LocationProgressType.PRIORITY
+            check_region.locations.append(new_location)
+            heaven_regions.append(check_region)
 
     multiworld.regions += heaven_regions

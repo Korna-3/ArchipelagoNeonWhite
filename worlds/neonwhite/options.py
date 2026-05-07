@@ -40,8 +40,19 @@ class ExecutionDifficulty(Choice):
 class BoofShenanigans(Toggle):
     """
     Whether to include things like clips and far off Book of Life usages in the logic.
+    === DOES NOT DO ANYTHING ATM ===
     """
     display_name = "Book of Life Shenanigans"
+
+class Gifts(DefaultOnToggle):
+    """
+    Whether or not to make gifts checks.
+    """
+
+class Sidequests(DefaultOnToggle):
+    """
+    Whether or not to make sidequest completions checks.
+    """
 
 class MissionUnlockMethod(Choice):
     """
@@ -116,12 +127,14 @@ class ProgressiveChecks(DefaultOnToggle):
     """
     If every medal up to the medal cap should count for checks, or if only 1 check occurs for achieving the cap medal.
     If off, the number of checks will not change with changes to the medal cap.
+    === DOES NOT DO ANYTHING ATM ===
     """
     display_name = "Progressive Checks"
 
 class Traps(DefaultOnToggle):
     """
     Whether negative effects on the Neon White world are added to the item pool.
+    === DOES NOT DO ANYTHING ATM ===
     """
     display_name = "Traps"
 
@@ -129,7 +142,7 @@ class Goal(Choice):
     """
     What the goal to complete should be.
     3bosses - Beat The Clocktower, The Third Temple, and Absolution with the goal medal cap.
-    TrueEnding - Gather all memories and write Green into the Book of Life.
+    TrueEnding - Gather all memories and write Green into the Book of Life. (WILL FAIL TO GEN)
     """
     display_name = "Goal"
     option_3bosses = 1
@@ -144,23 +157,25 @@ class BossesCap(MedalCap):
 
 class NeonWhiteDeathLink(DeathLink):
     __doc__ = (DeathLink.__doc__ + "\n\n    You can disable this or set it to give yourself a trap effect when " +  # pyright: ignore[reportOptionalOperand]
-               "another player dies in the in-game mod options.")
+               "another player dies in the in-game mod options. === DOES NOT DO ANYTHING ATM ===")
 
 
 @dataclass
 class NeonWhiteOptions(PerGameCommonOptions):
     start_inventory_from_pool: StartInventoryPool
-    death_link: NeonWhiteDeathLink
-    bad_effects: Traps
-    progressive_checks: ProgressiveChecks
+    difficulty_knowledge: KnowledgeDifficulty
+    difficulty_execution: ExecutionDifficulty
     medal_cap: MedalCap
+    gifts: Gifts
+    sidequests: Sidequests
+    unlock_method: MissionUnlockMethod
     rank_requirement: RankRequirement
     mission_count: MissionCount
     level_gradient: LevelGradient
     starting_level_count: StartingLevelCount
-    difficulty_knowledge: KnowledgeDifficulty
-    difficulty_execution: ExecutionDifficulty
-    boof_shenanigans: BoofShenanigans
     goal: Goal
     bosses_goal_cap: BossesCap
-    unlock_method: MissionUnlockMethod
+    boof_shenanigans: BoofShenanigans
+    progressive_checks: ProgressiveChecks
+    death_link: NeonWhiteDeathLink
+    bad_effects: Traps

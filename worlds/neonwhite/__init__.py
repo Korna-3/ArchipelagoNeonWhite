@@ -12,8 +12,10 @@ from .locations import (
     checks_in_sets_lvl,
     neon_white_get_locations,
     neon_white_level_name_internal,
+    neon_white_levels_giftless,
     neon_white_levels_medals,
     neon_white_levels_normal,
+    neon_white_levels_sidequests,
 )
 
 #from .Locations import PTLocation, pt_locations, pt_location_groups
@@ -102,8 +104,6 @@ class NeonWhiteWorld(World):
             self.early_levels = []
 
             for level in neon_white_levels_normal:
-                if level not in neon_white_levels_normal:
-                    continue
                 if (self.requirements.can_complete_level(level, medal_capped, LevelRequirements.FistOnly)
                     and self.requirements.can_complete_level(level, Medal.Gift, LevelRequirements.FistOnly)):
                     self.early_levels.append(level)
@@ -116,8 +116,12 @@ class NeonWhiteWorld(World):
         if self.use_levels:
             remain = self.options.starting_level_count - len(self.early_levels)
             if remain > 0:
+                levels = neon_white_levels_normal + neon_white_levels_giftless
+                if self.options.sidequests:
+                    levels.extend(neon_white_levels_sidequests)
+
                 self.early_levels += self.multiworld.random.choices(
-                    [x for x in neon_white_level_name_internal.keys() if x not in self.early_levels],
+                    [x for x in levels if x not in self.early_levels],
                     k = remain)
 
             print(self.early_levels)
@@ -159,17 +163,11 @@ class NeonWhiteWorld(World):
                 itempool.extend(self.create_item(x) for x in neon_white_level_name_internal.keys())
 
         prec = self.multiworld.precollected_items[self.player].copy()
-        print(len(itempool))
-        print(prec)
 
         for item in itempool:
             if item in prec:
                 itempool.remove(item)
                 prec.remove(item)
-
-        print(len(itempool))
-        print(prec)
-
 
         # Fill the rest with filler
         itempool += [self.create_filler() for _ in range(loc_count - len(itempool))]
@@ -215,7 +213,8 @@ class NeonWhiteWorld(World):
 
         options_to_show = [
             "difficulty_knowledge", "difficulty_execution", "boof_shenanigans",
-            "medal_cap", "death_link", "unlock_method", "goal"]
+            "medal_cap", "gifts", "sidequests", "unlock_method", "goal",
+            "death_link"]
 
         if self.options.goal == Goal.option_3bosses:
             options_to_show.append("bosses_goal_cap")
