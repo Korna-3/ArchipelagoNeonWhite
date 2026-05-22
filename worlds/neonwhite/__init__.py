@@ -124,8 +124,6 @@ class NeonWhiteWorld(World):
                     [x for x in levels if x not in self.early_levels],
                     k = remain)
 
-            print(self.early_levels)
-
             for x in self.early_levels:
                 self.multiworld.push_precollected(self.create_item(x))
 
@@ -160,7 +158,11 @@ class NeonWhiteWorld(World):
                 itempool += ([self.create_item("Neon Rank")]
                     * get_mission_rank_required(self, self.options.mission_count.value))
             case MissionUnlockMethod.option_levels:
-                itempool.extend(self.create_item(x) for x in neon_white_level_name_internal.keys())
+                levels = neon_white_levels_normal + neon_white_levels_giftless
+                if self.options.sidequests:
+                    levels.extend(neon_white_levels_sidequests)
+
+                itempool.extend(self.create_item(x) for x in levels)
 
         prec = self.multiworld.precollected_items[self.player].copy()
 
@@ -200,8 +202,6 @@ class NeonWhiteWorld(World):
 
         cpobj = zlib.compressobj(level=9, wbits=-15, memLevel=9)
         encoded_levels = base64.a85encode(cpobj.compress(dumps.encode()) + cpobj.flush()).decode()
-        # print(len(encoded_levels))
-        # print(len(dumps))
 
         if self.options.unlock_method == MissionUnlockMethod.option_missions:
             mission_costs = list(range(self.options.mission_count))

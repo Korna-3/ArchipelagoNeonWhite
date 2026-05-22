@@ -17,7 +17,7 @@ from .locations import (
     neon_white_levels_sidequests,
 )
 from .options import ExecutionDifficulty, KnowledgeDifficulty, MedalCap, MissionUnlockMethod
-from .regions import neon_white_missions
+from .regions import neon_white_missions, neon_white_missions_sq
 
 if TYPE_CHECKING:
     from rule_builder.rules import Rule
@@ -243,9 +243,16 @@ def set_rules(multiworld: MultiWorld, world: "NeonWhiteWorld", options: NeonWhit
     if not world.ordered_levels:
         world.ordered_levels = level_rando(world)
 
-    mission_count = (options.mission_count
-        if not world.use_levels
-        else len(neon_white_missions))
+    if options.unlock_method == MissionUnlockMethod.option_levels:
+        # Basegame missions
+        mission_list = [x[0] for x in neon_white_missions]
+        if options.sidequests:
+            mission_list.extend(x[0] for x in neon_white_missions_sq)
+    else:
+        # 121 levels split amongst X missions, differing from the base game
+        mission_list = [f"Mission {x + 1}" for x in range(options.mission_count)]
+
+    mission_count = len(mission_list)
 
     levels_norm = len(world.ordered_levels) // mission_count
     offset = mission_count - (len(world.ordered_levels) % mission_count)
@@ -273,10 +280,7 @@ def set_rules(multiworld: MultiWorld, world: "NeonWhiteWorld", options: NeonWhit
     # Connect central heaven to every mission
     level_total = 0
     for i in range(mission_count):
-        if world.use_levels:
-            mission_region = world.get_region(neon_white_missions[i][0])
-        else:
-            mission_region = world.get_region(f"Mission {i + 1}")
+        mission_region = world.get_region(mission_list[i])
         entrance_name = f"Central Heaven to {mission_region.name}"
         entrance = central_heaven.connect(mission_region, entrance_name)
         if i != 0:
@@ -288,7 +292,7 @@ def set_rules(multiworld: MultiWorld, world: "NeonWhiteWorld", options: NeonWhit
                     world.set_rule(entrance, Has("Neon Rank", neonrank_count))
 
         if world.use_levels:
-            level_count = neon_white_missions[i][1]
+            level_count = (neon_white_missions + neon_white_missions_sq)[i][1]
         else:
             # Connect each mission to the levels they contain
             level_count = levels_norm
@@ -311,7 +315,7 @@ def set_rules(multiworld: MultiWorld, world: "NeonWhiteWorld", options: NeonWhit
                     world.set_rule(world.get_location(level_name + " Gift"),
                         world.requirements.make_rule(level_name, Medal.Gift))
 
-            elif world.options.sidequests:
+            else:
                 world.set_rule(world.get_location(level_name + " Completion"),
                     world.requirements.make_rule(level_name, medal_cap_typed))
 
