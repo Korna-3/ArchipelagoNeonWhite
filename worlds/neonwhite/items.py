@@ -47,7 +47,7 @@ nw_items: dict[str, NWItemData] = {
         ItemClassification.progression),
 
     "Heavenly Delight Ticket": NWItemData("Filler", NWItem.misc_id + 0,
-        ItemClassification.filler | ItemClassification.useful)
+        ItemClassification.filler)
 } | {
     f"{level}": NWItemData("Level", NWItem.level_id + i, ItemClassification.progression)
         for i, level in enumerate(neon_white_level_name_internal.keys())
